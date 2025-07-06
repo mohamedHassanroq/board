@@ -2,6 +2,7 @@
   --primary-color: #243348;
   --secondery-color: #3b6da7;
   --text-color: #1b1d1e;
+  --gray-color: #606060;
   --black-color: #000000;
   --white-color: #ffffff;
   --body-bg: #efefef;
@@ -55,6 +56,18 @@ input {
 .custom-anc:hover {
   text-decoration: none;
 }
+.custom-btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+.custom-btn:hover {
+  opacity: 0.8;
+}
 .custom-h,
 .custom-p {
   margin: 0;
@@ -98,16 +111,31 @@ html[dir="rtl"] [type="url"] {
 .fw-500 {
   font-weight: 500;
 }
+.fw-600 {
+  font-weight: 600;
+}
 .fw-700 {
   font-weight: 700;
 }
 .primary {
-  background-color: var(--primary-color);
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 .secondary {
-  background-color: var(--secondery-color);
+  color: var(--secondery-color) !important;
+}
+.white {
   color: var(--white-color);
+}
+.primary-bg {
+  background-color: var(--primary-color);
+}
+.secondary-bg {
+  background-color: var(--secondery-color);
+}
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 24px;
 }
 .grid-2 {
   -ms-grid-template-columns: repeat(2, 1fr);
