@@ -1,0 +1,30 @@
+@import url(./theme.css);
+.header {
+  position: fixed;
+  top: 0;
+  inset-inline-end: 0;
+  width: calc(100% - 67px);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  z-index: 999;
+}
+.header-content {
+  height: 71px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  height: 100vh;
+  width: fit-content;
+  min-width: 68px;
+  background-color: #f4f4f4;
+  color: var(--secondery-color);
+  z-index: 999;
+  padding: 15px 11px;
+}
+.main {
+  width: calc(100% - 68px);
+  margin-inline-start: auto;
+}
