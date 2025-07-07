@@ -12,6 +12,7 @@
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
     <link rel="stylesheet" href="./assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
@@ -191,39 +192,358 @@
       </div>
     </header>
 
-    <div id="content">
-      <!-- Start breadcrumb -->
-      <div class="breadcrumb-content">
-        <div class="container-fluid">
-          <ul class="breadcrumb custom-ul d-flex">
-            <li class="active">
-              <a href="index.html" class="custom-anc"
-                ><i class="board-user--1-"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">المهام</a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">الإجتماعات</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc"
+              ><i class="board-user--1-"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">المهام</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+        </ul>
       </div>
-      <!-- End breadcrumb -->
-
-      <div class="filters">
-        <div class="container-fluid">
-          <div class="filters-box bg-white">
+    </div>
+    <!-- End breadcrumb -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="filters bg-white">
             <div class="head-content p-3">
               <h1 class="custom-h title fs-16 fw-500">فلتر</h1>
             </div>
-            <div class="filters-row">
-              <div class="form-group">
-                <label class="custom-label" for="main-word">
-                  الكلمة الرئيسية</label
+            <form action="" class="">
+              <div class="filters-row p-3">
+                <div class="form-group">
+                  <label class="custom-label" for="main-word">
+                    الكلمة الرئيسية</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="الكلمة الرئيسية"
+                    class="form-control"
+                    id="main-word"
+                    name="main-word"
+                  />
+                </div>
+                <div class="form-group date-input">
+                  <label for="date" class="custom-label">تاريخ النشر</label>
+                  <input
+                    type="text"
+                    placeholder="التاريخ"
+                    id="date"
+                    name="date"
+                    class="form-control datepicker"
+                  />
+                  <span class="date-icon">
+                    <i class="board-calendar"></i>
+                  </span>
+                </div>
+                <div class="form-group">
+                  <label for="setBy" class="custom-label">تعيين من قبل</label>
+                  <select class="form-control" name="setBy" id="setBy">
+                    <option selected disabled>الكل</option>
+                    <option>من قبل</option>
+                    <option>من قبل</option>
+                    <option>من قبل</option>
+                    <option>من قبل</option>
+                    <option>من قبل</option>
+                    <option>من قبل</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="setTo" class="custom-label">تعيين الي</label>
+                  <select class="form-control" name="setTo" id="setTo">
+                    <option selected disabled>الكل</option>
+                    <option>تعيين الي</option>
+                    <option>تعيين الي</option>
+                    <option>تعيين الي</option>
+                    <option>تعيين الي</option>
+                    <option>تعيين الي</option>
+                    <option>تعيين الي</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="status" class="custom-label"> الحالة</label>
+                  <select class="form-control" name="status" id="status">
+                    <option selected disabled>الكل</option>
+                    <option>الحالة</option>
+                    <option>الحالة</option>
+                    <option>الحالة</option>
+                    <option>الحالة</option>
+                    <option>الحالة</option>
+                    <option>الحالة</option>
+                  </select>
+                </div>
+                <div class="form-group fltr-btns flex-end gap-3">
+                  <button
+                    class="custom-btn reset-btn fltr-btn secondary"
+                    type="reset"
+                  >
+                    إعادة تعين
+                  </button>
+                  <button
+                    class="custom-btn search-btn fltr-btn secondary-bg text-white"
+                    type="submit"
+                  >
+                    بحث الأن
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="missions p-3 bg-white">
+            <div class="head flex-between">
+              <h1 class="custom-h title fs-16 fw-500">المهام</h1>
+              <div class="actions flex-center gap-2">
+                <a
+                  href="add-mission.html"
+                  class="custom-anc action-btn flex-center primary-bg text-white fs-12"
                 >
-                <input type="text" class="form-control" id="main-word" />
+                  <i class="board-add"></i>
+                </a>
+                <div class="dropdown printing-dropdown">
+                  <button
+                    class="dropdown-toggle primary-bg text-white border-0 action-btn"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="board-printing"></i>
+                    <i class="board-arrow-down-sign-to-navigate fs-12 me-2"></i>
+                  </button>
+                  <ul class="dropdown-menu primary-bg text-white text-end">
+                    <li>
+                      <a class="dropdown-item" href="#">طباعة كل المهام</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >طباعة المهام المطلوبة
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">طباعة المهام السابقة</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="missions-data mt-4">
+              <div class="tab-head mb-3">
+                <ul
+                  class="nav navTabs custom-tabs custom-ul tabs-with-bg"
+                  role="tablist"
+                >
+                  <li class="nav-item">
+                    <button
+                      class="nav-link active"
+                      data-bs-toggle="tab"
+                      data-bs-target="#allMissions"
+                      aria-selected="true"
+                      role="tab"
+                    >
+                      كل المهام
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#requiredMissions"
+                      aria-selected="false"
+                      tabindex="-1"
+                      role="tab"
+                    >
+                      المهام المطلوبة
+                    </button>
+                  </li>
+                  <li class="nav-item">
+                    <button
+                      class="nav-link"
+                      data-bs-toggle="tab"
+                      data-bs-target="#prevMissions"
+                      aria-selected="false"
+                      tabindex="-1"
+                      role="tab"
+                    >
+                      السابق
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div
+                  class="tab-pane fade show active"
+                  id="allMissions"
+                  role="tabpanel"
+                >
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="thead-custom">
+                        <tr>
+                          <th width="4%">#</th>
+                          <th width="16%">محتوى المهمة</th>
+                          <th width="16%">تعيين من قبل</th>
+                          <th width="16%">تعيين إلى</th>
+                          <th width="16%">التاريخ</th>
+                          <th width="16%">الحالة</th>
+                          <th width="16%"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="prevMettings" role="tabpanel">
+                  2
+                </div>
+                <div class="tab-pane fade" id="myTasks" role="tabpanel">3</div>
               </div>
             </div>
           </div>
@@ -232,7 +552,7 @@
     </div>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/flatpickr.min.js"></script>
     <script src="./assets/js/custom.js"></script>
   </body>
 </html>
