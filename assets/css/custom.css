@@ -142,7 +142,7 @@
 }
 .sidebar:hover {
   width: fit-content;
-  width: 210px;
+  min-width: 210px;
 }
 .sidebar:hover .parent-nav-item {
   display: flex;
