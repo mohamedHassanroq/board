@@ -33,6 +33,7 @@
   color: var(--primary-color);
   border: 0px;
   top: 5px !important;
+  z-index: 3;
 }
 .custom-dropdown-menu .dropdown-item {
   border-radius: 6px;
@@ -157,3 +158,126 @@
 .sidebar:hover .aside_footer_title {
   display: block;
 } 
+.statics-content {
+  margin-top: 23px;
+  margin-bottom: 29px;
+}
+.stat-item {
+  border-radius: var(--raduis-md);
+  position: relative;
+  border: 1px solid #ddd;
+}
+.stat-count {
+  font-size: 48px;
+}
+.stat-icon {
+  position: absolute;
+  inset-inline-start: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.stat-cont {
+  position: relative;
+  z-index: 1;
+}
+.boxs-content .box {
+  border-radius: var(--raduis-lg);
+  border: 1px solid #ccc;
+}
+.box-head {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.box-head .box-title {
+  color: var(--gray-color);
+}
+.mettings-box .box-head .box-title {
+  color: var(--white-color);
+}
+.box-body {
+  padding: 20px 24px;
+}
+.box .box-cell {
+  padding: 10px 0;
+}
+.attendance-box .box-cell {
+  padding: 18px 0;
+}
+.attendance-box .box-cell {
+  border-bottom: 1px solid #e4e4e4;
+}
+.attendance-box .box-cell:last-child {
+  border-bottom: none;
+}
+.cell-info > li,
+.cell-info .view {
+  color: #dce7eb;
+  font-size: 13px;
+}
+.custom-tabs {
+  gap: 12px;
+}
+.custom-tabs .nav-item .nav-link {
+  border: 1px solid #ededed;
+  border-radius: var(--raduis-md);
+  color: #939393;
+  font-size: 13px;
+  font-weight: 500;
+}
+.custom-tabs .nav-item .nav-link.active {
+  background-color: rgba(42, 102, 188, 0.05);
+  color: var(--secondery-color);
+}
+.task-status {
+  padding: 2px 6px;
+  position: relative;
+  border-radius: var(--raduis-lg);
+}
+.task-status::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-inline-end: 5px;
+}
+.task-status.pending {
+  background-color: #fff6ed;
+  color: #fb6514;
+}
+.task-status.pending::before {
+  background-color: #fb6514;
+}
+.task-status.active {
+  background-color: #d7e5f8;
+  color: var(--secondery-color);
+}
+.task-status.active::before {
+  background-color: var(--secondery-color);
+}
+.task-date {
+  display: inline-block;
+  color: #a7a7a7;
+}
+.edit-task {
+  color: #309b0f;
+}
+.fastLinks-box .box-body {
+  padding: 10px 0;
+}
+.fastLinks-box .box-cell {
+  padding: 0;
+}
+.fast-link {
+  width: 100%;
+  padding: 10px 24px;
+}
+.fast-link:hover {
+  background-color: #f4f4f4;
+}
+
+@media screen and (max-width: 767px) {
+  .stat-count {
+    font-size: 30px;
+  }
+}
