@@ -6,7 +6,7 @@
   width: calc(100% - var(--aside-width));
   background-color: var(--primary-color);
   color: var(--white-color);
-  z-index: 1;
+  z-index: 99;
 }
 .header-content {
   padding: 14px 24px;
@@ -19,7 +19,7 @@
   height: 100vh;
   width: var(--aside-width);
   color: var(--secondery-color);
-  z-index: 2;
+  z-index: 100;
   transition: width 0.3s ease-in-out;
 }
 #content {
