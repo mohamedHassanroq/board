@@ -92,6 +92,17 @@ html[dir="rtl"] [type="url"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 10px;
+}
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .fs-12 {
   font-size: 12px;
@@ -146,8 +157,20 @@ html[dir="rtl"] [type="url"] {
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 991px) {
-  body {
-    padding-bottom: calc(var(--footer-height) + 58px);
+  .fs-12 {
+    font-size: 8px;
+  }
+  .fs-14 {
+    font-size: 10px;
+  }
+  .fs-16 {
+    font-size: 12px;
+  }
+  .fs-20 {
+    font-size: 16px;
+  }
+  .fs-24 {
+    font-size: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
