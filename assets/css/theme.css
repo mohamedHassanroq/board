@@ -8,9 +8,9 @@
   --light-primary-color: #24334832;
   --red: #ff3d54;
   --body-bg: #efefef;
-  --raduis-lg: 15px;
+  --raduis-lg: 12px;
   --raduis-md: 10px;
-  --raduis-sm: 5px;
+  --raduis-sm: 8px;
   --aside-width: 75px;
 }
 body {
@@ -152,10 +152,10 @@ html[dir="rtl"] [type="url"] {
   color: var(--white-color);
 }
 .primary-bg {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 .secondary-bg {
-  background-color: var(--secondery-color);
+  background-color: var(--secondery-color) !important;
 }
 .grid {
   display: -ms-grid;
