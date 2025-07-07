@@ -58,6 +58,9 @@ input {
 .custom-anc:hover {
   text-decoration: none;
 }
+.icon {
+  cursor: pointer;
+}
 .custom-btn {
   border: none;
   background-color: transparent;
