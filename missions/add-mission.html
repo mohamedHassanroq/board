@@ -219,10 +219,10 @@
             <div class="head-content p-3">
               <h1 class="custom-h title fs-16 fw-500">اضافة مهمة</h1>
             </div>
-            <form action="">
-              <div class="row">
+            <form action="" class="p-3">
+              <div class="row g-3">
                 <div class="col-lg-4">
-                  <div class="form-group">
+                  <div class="form-group date-input required">
                     <label for="date" class="custom-label"> تاريخ المهمة</label>
                     <input
                       type="text"
@@ -234,6 +234,50 @@
                     <span class="date-icon">
                       <i class="board-calendar"></i>
                     </span>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group required">
+                    <label for="setTo" class="custom-label">
+                      حدد تعيين مهمة إلى</label
+                    >
+                    <select class="form-control" name="setTo" id="setTo">
+                      <option selected disabled>عضو</option>
+                      <option>عضو</option>
+                      <option>عضو</option>
+                      <option>عضو</option>
+                      <option>عضو</option>
+                      <option>عضو</option>
+                      <option>عضو</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group required">
+                    <label for="dragTo" class="custom-label">
+                      إدراج الملفات من خلال</label
+                    >
+                    <select class="form-control" name="dragTo" id="dragTo">
+                      <option selected disabled>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                      <option>إدراج الملفات من خلال</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group required">
+                    <label for="missions" class="form-label"> المهمة </label>
+                    <textarea
+                      class="form-control"
+                      name="missions"
+                      id="missions"
+                      rows="3"
+                      placeholder="  ادخل تفاصيل المهمة"
+                    ></textarea>
                   </div>
                 </div>
               </div>
