@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="./assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
     <link rel="stylesheet" href="./assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
@@ -20,18 +21,12 @@
     <!-- aside -->
     <aside class="sidebar">
       <div class="aside_container">
-<<<<<<< HEAD
         <div class="aside_logo flex-start gap-2">
-          <img src="assets/images/favicon.svg" class="img max-height">
-          <img src="assets/images/logo_text.svg" class="img max-height logo_title">
-=======
-        <div class="aside_logo flex-center gap-2">
-          <img src="assets/images/favicon.svg" class="img max-height" />
+          <img src="./assets/images/favicon.svg" class="img max-height" />
           <img
-            src="assets/images/logo_text.svg"
+            src="./assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
->>>>>>> origin/mohamed
         </div>
         <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
           <!-- active li -->
@@ -100,18 +95,12 @@
             <i class="board-activities"></i>
           </li>
         </ul>
-<<<<<<< HEAD
-        <div class="aside_footer_logo text-center flex-end gap-2">
-            <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
-            <img src="assets/images/mazaya_logo.svg" class="img max-height mx-0"> 
-=======
         <div class="aside_footer_logo text-center flex-center gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="assets/images/mazaya_logo.svg"
+            src="./assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
->>>>>>> origin/mohamed
         </div>
       </div>
     </aside>
@@ -120,30 +109,24 @@
       <div class="container-fluid">
         <div class="header-content flex-between flex-wrap gap-3">
           <div class="mainNav">
-            <div class="custom-ul flex-start mainNav-list">
-              <a href="#" class="mainNav-item flex-column-center custom-anc">
+            <ul class="custom-ul flex-start mainNav-list">
+              <li class="mainNav-item flex-column-center">
                 <i class="board-calendar"></i>
                 <h4 class="mainNav-title custom-h">التقويم</h4>
-              </a>
-              <a href="#" class="mainNav-item flex-column-center custom-anc">
+              </li>
+              <li class="mainNav-item flex-column-center">
                 <i class="board-meeting"></i>
                 <h4 class="mainNav-title custom-h">الاجتماعات</h4>
-              </a>
-              <a href="#" class="mainNav-item flex-column-center custom-anc">
+              </li>
+              <li class="mainNav-item flex-column-center">
                 <i class="board-megaphone"></i>
                 <h4 class="mainNav-title custom-h">الاعلانات</h4>
-              </a>
-              <a href="#" class="mainNav-item flex-column-center custom-anc">
+              </li>
+              <li class="mainNav-item flex-column-center">
                 <i class="board-advance-search"></i>
                 <h4 class="mainNav-title custom-h">بحث متقدم</h4>
-<<<<<<< HEAD
-              </a>
-            </div>
-        
-=======
               </li>
             </ul>
->>>>>>> origin/mohamed
           </div>
           <div class="navActions flex-center gap-2">
             <div class="dropdown notification navAction_item">
@@ -155,7 +138,7 @@
               >
                 <i class="board-report"></i>
               </button>
-              <div class="indicator icon">10</div>
+              <div class="indicator">10</div>
               <ul class="dropdown-menu custom-dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -209,44 +192,6 @@
       </div>
     </header>
 
-<<<<<<< HEAD
-      <!-- Start breadcrumb -->
-      <div class="breadcrumb-content">
-        <div class="container-fluid">
-          <ul class="breadcrumb custom-ul d-flex">
-            <li class="active">
-              <a href="index.html" class="custom-anc"
-                ><i class="board-user--1-"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">المهام</a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">الإجتماعات</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- End breadcrumb -->
-      <!-- main -->
-      <div id="content">
-        <div class="container-fluid">
-          <div class="main-content">
-            <div class="statics-content">
-              <div class="row g-3">
-                <div class="col-6 col-sm-4 col-lg-2">
-                  <div class="stat-item bg-white p-2">
-                    <span class="stat-icon"
-                      ><img
-                        src="./assets/images/icons/meeting-room 1.svg"
-                        alt="background-icon"
-                    /></span>
-                    <div class="stat-cont flex-center flex-column">
-                      <span class="stat-count fw-600 mb-1">20</span>
-                      <h4 class="custom-h secondary fs-14">الإجتماعات</h4>
-                    </div>
-=======
     <!-- Start breadcrumb -->
     <div class="breadcrumb-content">
       <div class="container-fluid">
@@ -266,6 +211,7 @@
       </div>
     </div>
     <!-- End breadcrumb -->
+
     <!-- main -->
     <div id="content">
       <div class="container-fluid">
@@ -282,7 +228,6 @@
                   <div class="stat-cont flex-center flex-column">
                     <span class="stat-count fw-600 mb-1">20</span>
                     <h4 class="custom-h secondary fs-14">الإجتماعات</h4>
->>>>>>> origin/mohamed
                   </div>
                 </div>
               </div>
@@ -358,7 +303,7 @@
               <div class="box mettings-box secondary-bg">
                 <div class="box-head flex-between">
                   <h4 class="box-title custom-h fw-700 fs-20">الإجتماعات</h4>
-                  <button class="box-btn custom-btn white fw-700">
+                  <button class="box-btn custom-btn white fw-700 p-0">
                     <i class="board-add ms-2 fs-12"></i> اضافة اجتماع
                   </button>
                 </div>
@@ -470,7 +415,7 @@
               <div class="box attendance-box bg-white">
                 <div class="box-head flex-between">
                   <h4 class="box-title custom-h fw-700 fs-20">المهام</h4>
-                  <button class="box-btn custom-btn secondary fw-700">
+                  <button class="box-btn custom-btn secondary fw-700 p-0">
                     <i class="board-add ms-2 fs-12"></i> اضافة مهمة
                   </button>
                 </div>
@@ -1000,10 +945,7 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
     </div>
->>>>>>> origin/mohamed
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/custom.js"></script>
