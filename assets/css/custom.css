@@ -734,6 +734,10 @@ select.flatpickr-monthDropdown-months:hover ,
   color: #848A9C;
   background-color: #FAFAFA;
 }
+.status.danger {
+  color: #FF3D54;
+  background-color: #FFECEE;
+}
 .add-mission {
   border-radius: var(--raduis-lg);
 }
@@ -789,12 +793,26 @@ select.flatpickr-monthDropdown-months:hover ,
 }
 .Details_item_icon {
   border-radius: 50%;
-  padding: 7px;
-  overflow: visible;
+  padding: 6px 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--secondary-light);
+  background: var(--light-secondary-color);
+  color: var(--third-color);
+}
+.Details_item_icon i::before {
+  transform: translate(0px, 1px);
+}
+.Agenda_Details_item {
+  position: relative;
+}
+.Agenda_Details_item:not(:last-child)::before{
+  position: absolute;
+  content: " ";
+  height: 104%;
+  inset-inline-start: 13px;
+  inset-block-start: 50%;
+  border: 1px solid var(--light-secondary-color);
 }
 
 
@@ -824,6 +842,13 @@ select.flatpickr-monthDropdown-months:hover ,
   }
   .inputs-grid-4 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .links-deatils {
+    flex-wrap: wrap;
+  }
+  .links-data , .links-records{
+    width: 100%;
+    max-width: unset;
   }
 }
 
