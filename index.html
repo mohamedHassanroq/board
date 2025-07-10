@@ -22,8 +22,11 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="assets/images/favicon.svg" class="img max-height">
-          <img src="assets/images/logo_text.svg" class="img max-height logo_title">
+          <img src="./assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="./assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
         </div>
         <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
           <!-- active li -->
@@ -92,9 +95,12 @@
             <i class="board-activities"></i>
           </li>
         </ul>
-        <div class="aside_footer_logo text-center flex-end gap-2">
-            <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
-            <img src="assets/images/mazaya_logo.svg" class="img max-height mx-0"> 
+        <div class="aside_footer_logo text-center flex-center gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="./assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
         </div>
       </div>
     </aside>
@@ -119,9 +125,8 @@
               <li class="mainNav-item flex-column-center">
                 <i class="board-advance-search"></i>
                 <h4 class="mainNav-title custom-h">بحث متقدم</h4>
-              </a>
-            </div>
-        
+              </li>
+            </ul>
           </div>
           <div class="navActions flex-center gap-2">
             <div class="dropdown notification navAction_item">
@@ -187,42 +192,42 @@
       </div>
     </header>
 
-      <!-- Start breadcrumb -->
-      <div class="breadcrumb-content">
-        <div class="container-fluid">
-          <ul class="breadcrumb custom-ul d-flex">
-            <li class="active">
-              <a href="index.html" class="custom-anc"
-                ><i class="board-user--1-"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">المهام</a>
-            </li>
-            <li>
-              <a href="#" class="custom-anc">الإجتماعات</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc"
+              ><i class="board-user--1-"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+        </ul>
       </div>
-      <!-- End breadcrumb -->
-      <!-- main -->
-      <div id="content">
-        <div class="container-fluid">
-          <div class="main-content">
-            <div class="statics-content">
-              <div class="row g-3">
-                <div class="col-6 col-sm-4 col-lg-2">
-                  <div class="stat-item bg-white p-2">
-                    <span class="stat-icon"
-                      ><img
-                        src="./assets/images/icons/meeting-room 1.svg"
-                        alt="background-icon"
-                    /></span>
-                    <div class="stat-cont flex-center flex-column">
-                      <span class="stat-count fw-600 mb-1">20</span>
-                      <h4 class="custom-h secondary fs-14">الإجتماعات</h4>
-                    </div>
+    </div>
+    <!-- End breadcrumb -->
+
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="statics-content">
+            <div class="row g-3">
+              <div class="col-6 col-sm-4 col-lg-2">
+                <div class="stat-item bg-white p-2">
+                  <span class="stat-icon"
+                    ><img
+                      src="./assets/images/icons/meeting-room 1.svg"
+                      alt="background-icon"
+                  /></span>
+                  <div class="stat-cont flex-center flex-column">
+                    <span class="stat-count fw-600 mb-1">20</span>
+                    <h4 class="custom-h secondary fs-14">الإجتماعات</h4>
                   </div>
                 </div>
               </div>
@@ -940,6 +945,7 @@
           </div>
         </div>
       </div>
+    </div>
 
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/custom.js"></script>
