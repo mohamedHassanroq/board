@@ -6,12 +6,12 @@
   --black-color: #000000;
   --white-color: #ffffff;
   --light-primary-color: #24334832;
-  --light-secondary-color: #EAF0F9;
+  --light-secondary-color: #eaf0f9;
   --red: #ff3d54;
   --body-bg: #efefef;
   --raduis-lg: 12px;
   --raduis-md: 10px;
-  --raduis-sm: 6px;
+  --raduis-sm: 8px;
   --aside-width: 75px;
 }
 body {
@@ -32,9 +32,9 @@ body {
 }
 
 ::-webkit-scrollbar {
-   width: 8px;
-   height: 6px;
-   background-color: #c3cec991;
+  width: 8px;
+  height: 6px;
+  background-color: #c3cec991;
 }
 /* ::-webkit-scrollbar-track {
   background: var(--white-color);
@@ -91,18 +91,18 @@ label.form-label {
   font-weight: 400;
   margin-bottom: 8px;
 }
-select.form-control ,
+select.form-control,
 input.form-select {
   border-radius: var(--raduis-sm);
-  border: 1px solid #D5D7DA;
-  background-color: #FFF;
+  border: 1px solid #d5d7da;
+  background-color: #fff;
 }
-.form-control:focus , 
+.form-control:focus,
 .form-select:focus {
   border: 1px solid #448bda;
   box-shadow: 1px 1px 5px 1px #448ada34;
-} 
-select.form-control ,
+}
+select.form-control,
 select.form-select {
   appearance: none;
   background-image: url(../images/arrow.svg);
@@ -110,7 +110,7 @@ select.form-select {
   background-size: 14px;
   background-position: top 50% right 14px;
 }
-html[dir="rtl"] select.form-control ,
+html[dir="rtl"] select.form-control,
 html[dir="rtl"] select.form-select {
   background-position: top 50% left 14px;
 }
@@ -118,8 +118,7 @@ html[dir="rtl"] select.form-select {
 html[dir="rtl"] [type="email"],
 html[dir="rtl"] [type="number"],
 html[dir="rtl"] [type="tel"],
-html[dir="rtl"] [type="url"]
-{
+html[dir="rtl"] [type="url"] {
   direction: rtl;
 }
 .flex-center {
@@ -216,11 +215,16 @@ html[dir="rtl"] [type="url"]
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  height: 40px;
   padding: 8px 14px;
-  border-radius: 6px;
+  border-radius: var(--raduis-sm);
 }
 .custom-btn:hover {
   opacity: 0.8;
+}
+.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 .secondary-btn {
   background-color: var(--secondery-color);

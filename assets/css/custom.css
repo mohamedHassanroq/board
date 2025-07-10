@@ -352,7 +352,7 @@ aside .aside_container::-webkit-scrollbar {
 .form-control {
   height: 40px;
   padding: 10px 14px;
-  border-radius: var(--raduis-md);
+  border-radius: var(--raduis-sm) !important;
   border: 1px solid #d5d7da;
   -webkit-text-fill-color: #939393;
   font-size: 14px;
@@ -377,6 +377,40 @@ html[dir="rtl"] select.form-control {
 }
 textarea.form-control {
   height: auto;
+}
+.form-check-inline {
+  margin: 0;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.form-check .form-check-input {
+  margin: 0;
+  float: none;
+}
+.form-check-input:focus {
+  box-shadow: none;
+}
+.form-check-input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9da4b0;
+  border-radius: 50%;
+  outline: none;
+}
+.form-check-input[type="radio"]:checked {
+  border-color: var(--secondery-color);
+  background: radial-gradient(
+    var(--secondery-color) 0%,
+    var(--secondery-color) 40%,
+    transparent 50%
+  );
+}
+.form-check-label {
+  color: var(--text-color);
+  -webkit-text-fill-color: var(--text-color);
 }
 /* mettings style */
 .metting-grid-container {
@@ -615,7 +649,9 @@ textarea.form-control {
 .add-mission {
   border-radius: var(--raduis-lg);
 }
-
+.submit-btn {
+  min-width: 116px;
+}
 @media screen and (max-width: 991px) {
   .box-head .box-title {
     font-size: 15px;

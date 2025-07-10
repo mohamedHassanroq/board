@@ -280,6 +280,80 @@
                     ></textarea>
                   </div>
                 </div>
+                <div class="col-lg-4">
+                  <div class="form-group required">
+                    <label for="dragTo" class="custom-label">
+                      طريقة تحميل المرفقات</label
+                    >
+                    <select class="form-control" name="dragTo" id="dragTo">
+                      <option selected disabled>تحميل</option>
+                      <option>تحميل</option>
+                      <option>تحميل</option>
+                      <option>تحميل</option>
+                      <option>تحميل</option>
+                      <option>تحميل</option>
+                      <option>تحميل</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group required">
+                    <label for="file-upload" class="custom-label"
+                      >المرفقات</label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="استعراض"
+                        readonly
+                        id="file-name"
+                        style="cursor: pointer"
+                      />
+                      <input type="file" id="file-upload" hidden />
+                    </div>
+                    <div id="file-info"></div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group required">
+                    <label class="custom-label">يتكرر</label>
+                    <div class="custom-radio flex-between form-control">
+                      <span class="text-muted">اختر</span>
+                      <div class="radio-group">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="repeated"
+                            id="yes"
+                            value="yes"
+                            checked
+                          />
+                          <label class="form-check-label" for="yes"> نعم</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="repeated"
+                            id="no"
+                            value="no"
+                          />
+                          <label class="form-check-label" for="no"> لا</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    class="custom-btn primary-btn submit-btn"
+                    type="submit"
+                  >
+                    حفظ
+                  </button>
+                </div>
               </div>
             </form>
           </div>
