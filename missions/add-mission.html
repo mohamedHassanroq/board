@@ -222,18 +222,16 @@
             <form action="" class="p-3">
               <div class="row g-3">
                 <div class="col-lg-4">
-                  <div class="form-group date-input required">
+                  <div class="form-group required position-relative">
                     <label for="date" class="custom-label"> تاريخ المهمة</label>
                     <input
-                      type="text"
+                      type="datetime-local"
                       placeholder="تاريخ المهمة"
                       id="date"
                       name="date"
-                      class="form-control datepicker"
+                      class="form-control input_flat_picker"
                     />
-                    <span class="date-icon">
-                      <i class="board-calendar"></i>
-                    </span>
+                    <i class="board-calendar flat_picker_icon"></i>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -347,10 +345,7 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <button
-                    class="custom-btn primary-btn submit-btn"
-                    type="submit"
-                  >
+                  <button class="custom-btn primary-btn form-btn" type="submit">
                     حفظ
                   </button>
                 </div>
@@ -363,6 +358,7 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/flatpickr.min.js"></script>
+    <script src="../assets/js/flatpicker-custom.js"></script>
     <script src="../assets/js/custom.js"></script>
   </body>
 </html>

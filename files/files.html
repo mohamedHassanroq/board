@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">المستندات</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="metting-sidebar custom-card w-100">
+                <h2 class="heading custom-h fs-16 fw-500">نماذج الملفات</h2>
+                <div class="searchBox">
+                  <input
+                    type="search"
+                    class="form-control search-input"
+                    placeholder="ابحث هنا"
+                  />
+                  <span class="search-icon">
+                    <i data-icons8="&#xf132;"></i>
+                  </span>
+                </div>
+                <ul class="custom-ul flex-column-start gap-2 search-results">
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                  <li class="file-item flex-between w-100">
+                    <div class="file-content flex-center gap-3">
+                      <span class="file-icon">
+                        <i class="board-open-folder"></i>
+                      </span>
+                      <div class="file-info">
+                        <h4 class="file-title custom-h fs-14">
+                          General Folder
+                        </h4>
+                        <p class="file-description custom-p gray fs-12">
+                          أضيفت من قبل :
+                          <a class="custom-anc" href="#"> النظام</a>
+                        </p>
+                        <span class="file-time gray fs-12"
+                          >2021/1/11 9:40 ص</span
+                        >
+                      </div>
+                    </div>
+                    <a href="#" class="view-icon custom-anc secondary"
+                      ><i class="board-eye-close-up"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="files-content bg-white">
+                <div class="head flex-between">
+                  <h2 class="custom-h fs-16 fw-500">
+                    محتوى محاضر إجتماعات مجلس الإدارة واللجان
+                  </h2>
+                  <div class="btn-group">
+                    <button
+                      class="custom-btn primary-btn fs-20 ms-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#addFolder"
+                    >
+                      <i class="board-open-folder"></i>
+                    </button>
+                    <button
+                      class="custom-btn primary-btn fs-20 ms-2"
+                      data-bs-toggle="modal"
+                      data-bs-target="#addFile"
+                    >
+                      <i class="board-open-folder"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row g-2">
+                  <div class="col-lg-6">
+                    <div class="file-item flex-between">
+                      <div class="file-content flex-center gap-3">
+                        <span class="file-icon">
+                          <i class="board-open-folder"></i>
+                        </span>
+                        <div class="file-info">
+                          <h4 class="file-title custom-h fs-14">
+                            General Folder
+                          </h4>
+                          <p class="file-description custom-p gray fs-12">
+                            أضيفت من قبل :
+                            <a class="custom-anc" href="#"> النظام</a>
+                          </p>
+                          <span class="file-time gray fs-12"
+                            >2021/1/11 9:40 ص</span
+                          >
+                        </div>
+                      </div>
+                      <a href="#" class="view-icon custom-anc secondary"
+                        ><i class="board-eye-close-up"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="file-item flex-between">
+                      <div class="file-content flex-center gap-3">
+                        <span class="file-icon">
+                          <i class="board-open-folder"></i>
+                        </span>
+                        <div class="file-info">
+                          <h4 class="file-title custom-h fs-14">
+                            General Folder
+                          </h4>
+                          <p class="file-description custom-p gray fs-12">
+                            أضيفت من قبل :
+                            <a class="custom-anc" href="#"> النظام</a>
+                          </p>
+                          <span class="file-time gray fs-12"
+                            >2021/1/11 9:40 ص</span
+                          >
+                        </div>
+                      </div>
+                      <a href="#" class="view-icon custom-anc secondary"
+                        ><i class="board-eye-close-up"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="file-item flex-between">
+                      <div class="file-content flex-center gap-3">
+                        <span class="file-icon">
+                          <i class="board-open-folder"></i>
+                        </span>
+                        <div class="file-info">
+                          <h4 class="file-title custom-h fs-14">
+                            General Folder
+                          </h4>
+                          <p class="file-description custom-p gray fs-12">
+                            أضيفت من قبل :
+                            <a class="custom-anc" href="#"> النظام</a>
+                          </p>
+                          <span class="file-time gray fs-12"
+                            >2021/1/11 9:40 ص</span
+                          >
+                        </div>
+                      </div>
+                      <a href="#" class="view-icon custom-anc secondary"
+                        ><i class="board-eye-close-up"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="file-item flex-between">
+                      <div class="file-content flex-center gap-3">
+                        <span class="file-icon">
+                          <i class="board-open-folder"></i>
+                        </span>
+                        <div class="file-info">
+                          <h4 class="file-title custom-h fs-14">
+                            General Folder
+                          </h4>
+                          <p class="file-description custom-p gray fs-12">
+                            أضيفت من قبل :
+                            <a class="custom-anc" href="#"> النظام</a>
+                          </p>
+                          <span class="file-time gray fs-12"
+                            >2021/1/11 9:40 ص</span
+                          >
+                        </div>
+                      </div>
+                      <a href="#" class="view-icon custom-anc secondary"
+                        ><i class="board-eye-close-up"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add folder modal -->
+    <div
+      class="modal fade custom-modal"
+      id="addFolder"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-white">
+          <div class="modal-header">
+            <h5 class="modal-title custom-h fs-20 fw-700">انشاء مجلد</h5>
+            <button
+              type="button"
+              class="close custom-btn primary-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group mb-3">
+                <label for="folderName" class="custom-label">اسم المجلد</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="folderName"
+                  id="folderName"
+                  placeholder="اسم المجلد"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label class="custom-label">الخصوصية</label>
+                <div class="custom-radio flex-between form-control">
+                  <span class="text-muted">اختر</span>
+                  <div class="radio-group">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="privacy"
+                        id="public"
+                        value="public"
+                        checked
+                      />
+                      <label class="form-check-label" for="public"> عام</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="privacy"
+                        id="private "
+                        value="private "
+                      />
+                      <label class="form-check-label" for="private"> خاص</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group flex-end">
+                <button class="custom-btn primary-btn form-btn" type="submit">
+                  تأكيد
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add file modal -->
+    <div
+      class="modal fade custom-modal"
+      id="addFile"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-white">
+          <div class="modal-header">
+            <h5 class="modal-title custom-h fs-20 fw-700">انشاء ملف</h5>
+            <button
+              type="button"
+              class="close custom-btn primary-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group mb-3">
+                <label for="addFile" class="custom-label">
+                  اضافة ملف في: General folder</label
+                >
+                <select class="form-control" name="addFile" id="addFile">
+                  <option selected disabled>General folder</option>
+                  <option>General folder</option>
+                  <option>General folder</option>
+                  <option>General folder</option>
+                  <option>General folder</option>
+                  >
+                </select>
+              </div>
+              <div class="form-group mb-3">
+                <label for="fileName" class="custom-label">اسم الملف</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="fileName"
+                  id="fileName"
+                  placeholder="اسم الملف"
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="file-upload" class="custom-label"
+                  >تحميل الملف</label
+                >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="استعراض"
+                    readonly
+                    id="file-name"
+                    style="cursor: pointer"
+                  />
+                  <input type="file" id="file-upload" hidden />
+                </div>
+                <div id="file-info"></div>
+              </div>
+              <div class="form-group flex-end">
+                <button class="custom-btn primary-btn form-btn" type="submit">
+                  تأكيد
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+  </body>
+</html>

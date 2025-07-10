@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
   </head>
   <body>
     <!-- aside -->
@@ -27,73 +32,73 @@
             class="img max-height logo_title"
           />
         </div>
-        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+        <div class="aside_menu flex-column-center" id="aside_menu">
           <!-- active li -->
-          <li class="parent-nav-item aside_active">
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
             <i class="board-dashboard"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="../mettings/Meeting_Minutes.html" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">الإجتماعات</h6>
             <i class="board-meeting--1-"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="../missions/missions.html" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">المهام</h6>
             <i class="board-task"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="../Disclosures/Disclosures.html" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="../rating/rating.html" class="custom-anc parent-nav-item aside_active">
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
             <i class="board-kpis"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">روابط سريعة</h6>
             <i class="board-link--1-"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
             <i class="board-open-folder"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">المستندات</h6>
             <i class="board-document"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
             <i class="board-training"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
             <i class="board-enterprise"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
             <i class="board-book"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
             <i class="board-democracy"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">تقارير</h6>
             <i class="board-report"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">الإعداادات</h6>
             <i class="board-settings"></i>
-          </li>
-          <li class="parent-nav-item">
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">نشاط السجل</h6>
             <i class="board-activities"></i>
-          </li>
-        </ul>
+          </a>
+        </div>
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
@@ -201,10 +206,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="custom-anc">الإجتماعات</a>
-          </li>
-          <li>
-            <a href="#" class="custom-anc">محاضر الإجتماعات</a>
+            <a href="#" class="custom-anc">التقيمات</a>
           </li>
         </ul>
       </div>
@@ -217,14 +219,23 @@
           <div class="metting-grid-container">
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="rating.html">مؤشرات الأداء لعضو اللجنة</a>
+                </li>
                 <li class="metting_list_item active">
-                  <a class="custom-anc" href="Meeting_Minutes.html">محاضر الاجتماعات</a>
+                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html">مؤشرات الأداء الخاصة بالتدريب</a>
                 </li>
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Resolution.html">قرار الاجتماع</a>
+                  <a class="custom-anc" href="#">مؤشرات الأداء للجنة</a>
                 </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Circular_Resolutions.html">قرارات بالتمرير</a>
+                 <li class="metting_list_item">
+                  <a class="custom-anc" href="#">مؤشرات الأداء للرئيس التنفيذي</a>
+                </li>
+                 <li class="metting_list_item">
+                  <a class="custom-anc" href="#">مؤشرات الأداء لعضو مجلس الإدارة</a>
+                </li>
+                 <li class="metting_list_item">
+                  <a class="custom-anc" href="#">مؤشر أداء مجلس الإدارة</a>
                 </li>
               </ul>
             </div>
@@ -232,22 +243,11 @@
               <!-- filter section -->
               <div class="filter-section custom-card w-100">
                 <div class="card-header">فلتر</div>
-                <div class="card-body flex-center flex-wrap gap-2">
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingName" class="form-label"
-                      >اسم الاجتماع</label
-                    >
-                    <input
-                      type="text"
-                      id="meetingName"
-                      class="form-control"
-                      placeholder="الاسم"
-                    />
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingStatus" class="form-label">الحالة</label>
-                    <select id="meetingStatus" class="form-select">
-                      <option value="">الكل</option>
+                <div class="card-body">
+                   <div class="col-sm-12 col-md-5">
+                    <label for="rating-year" class="form-label">سنة التقيم</label>
+                    <select id="rating-year" class="form-select">
+                      <option selected disabled>الكل</option>
                       <option>في انتظار التوقيع</option>
                       <option>غير مسموح بالتوقيع</option>
                     </select>
@@ -263,53 +263,50 @@
 
               <!-- Table Section -->
               <div class="meetings-table-section custom-card w-100">
-                <div class="table-title">سجل محاضر الاجتماعات</div>
+                <div class="head flex-between gap-2 mb-3">
+                   <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
+                </div>
                 <div class="table-responsive">
                   <table class="table custom-table">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>اسم الاجتماع</th>
-                        <th>تاريخ</th>
-                        <th>حالة التوقيع</th>
-                        <th></th>
+                        <th>سنة التقييم</th>
+                        <th>اسم العضو</th>
+                        <th>التقيم</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-pending-review"
-                            >في انتظار نتيجة الاجتماع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>اجتماع لجنة التدقيق 2025/25</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-waiting"
-                            >في انتظار التوقيع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-disabled"
-                            >Not allowed to sign</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <!-- باقي الصفوف هنا -->
+                        <tbody>
+                             <tr>
+                                <th>1</th>
+                                <td>2024</td>
+                                <td>احمد علي</td>
+                                <td>
+                                    <div class="table-actions flex-start gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                    </div>
+                                </td>
+                            </tr>
+                                <tr>
+                                <th>1</th>
+                                <td>2024</td>
+                                <td>احمد علي</td>
+                                <td>
+                                    <div class="table-actions flex-start gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                    </div>
+                                </td>
+                            </tr>
+                                <tr>
+                                <th>1</th>
+                                <td>2024</td>
+                                <td>احمد علي</td>
+                                <td>
+                                    <div class="table-actions flex-start gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                    </div>
+                                </td>
+                            </tr>
                     </tbody>
                   </table>
                 </div>
@@ -327,6 +324,7 @@
                     <a class="next" href="#">التالي</a>
                   </div>
                 </nav>
+
               </div>
             </div>
           </div>
@@ -336,5 +334,6 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/custom.js"></script>
+
   </body>
 </html>

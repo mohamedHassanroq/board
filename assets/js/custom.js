@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Your existing datepicker code
-  flatpickr(".datepicker", {
-    dateFormat: "d/m/Y",
-    locale: "en",
-    disableMobile: true,
-    static: true,
-  });
-
   // Set up file input functionality
   const fileNameDisplay = document.getElementById("file-name");
   const fileInput = document.getElementById("file-upload");

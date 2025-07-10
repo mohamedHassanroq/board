@@ -302,15 +302,15 @@
             <div class="head flex-between">
               <h1 class="custom-h title fs-16 fw-500">المهام</h1>
               <div class="actions flex-center gap-2">
-                <a
+                <button
                   href="add-mission.html"
-                  class="custom-anc action-btn flex-center primary-bg text-white fs-12"
+                  class="custom-btn primary-btn fs-12"
                 >
                   <i class="board-add"></i>
-                </a>
+                </button>
                 <div class="dropdown printing-dropdown">
                   <button
-                    class="dropdown-toggle primary-bg text-white border-0 action-btn"
+                    class="dropdown-toggle custom-btn primary-btn"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -318,9 +318,11 @@
                     <i class="board-printing"></i>
                     <i class="board-arrow-down-sign-to-navigate fs-12 me-2"></i>
                   </button>
-                  <ul class="dropdown-menu primary-bg text-white text-end">
+                  <ul
+                    class="dropdown-menu primary-bg text-white text-end customDrop-menu"
+                  >
                     <li>
-                      <a class="dropdown-item" href="#">طباعة كل المهام</a>
+                      <a class="dropdown-item" href="#"> كل المهام</a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
@@ -385,8 +387,8 @@
                   role="tabpanel"
                 >
                   <div class="table-responsive">
-                    <table class="table">
-                      <thead class="thead-custom">
+                    <table class="table custom-table">
+                      <thead>
                         <tr>
                           <th width="4%">#</th>
                           <th width="16%">محتوى المهمة</th>
@@ -445,7 +447,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
+                          <td>3</td>
                           <td>مهمه اختبار</td>
                           <td>احمد علي</td>
                           <td>مدير الموقع</td>
@@ -466,7 +468,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>2</td>
+                          <td>4</td>
                           <td>مهمه اختبار</td>
                           <td>احمد علي</td>
                           <td>مدير الموقع</td>
@@ -491,7 +493,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
+                          <td>5</td>
                           <td>مهمه اختبار</td>
                           <td>احمد علي</td>
                           <td>مدير الموقع</td>
@@ -512,7 +514,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>2</td>
+                          <td>6</td>
                           <td>مهمه اختبار</td>
                           <td>احمد علي</td>
                           <td>مدير الموقع</td>
@@ -539,11 +541,364 @@
                       </tbody>
                     </table>
                   </div>
+                  <!-- Pagination -->
+                  <nav aria-label="Page navigation w-100">
+                    <div class="pagination">
+                      <a class="prev" href="#">السابق</a>
+                      <div class="flex-center gap-2">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                      </div>
+
+                      <a class="next" href="#">التالي</a>
+                    </div>
+                  </nav>
                 </div>
-                <div class="tab-pane fade" id="prevMettings" role="tabpanel">
-                  2
+                <div
+                  class="tab-pane fade"
+                  id="requiredMissions"
+                  role="tabpanel"
+                >
+                  <div class="table-responsive">
+                    <table class="table custom-table">
+                      <thead>
+                        <tr>
+                          <th width="4%">#</th>
+                          <th width="16%">محتوى المهمة</th>
+                          <th width="16%">تعيين من قبل</th>
+                          <th width="16%">تعيين إلى</th>
+                          <th width="16%">التاريخ</th>
+                          <th width="16%">الحالة</th>
+                          <th width="16%"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Pagination -->
+                  <nav aria-label="Page navigation w-100">
+                    <div class="pagination">
+                      <a class="prev" href="#">السابق</a>
+                      <div class="flex-center gap-2">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                      </div>
+
+                      <a class="next" href="#">التالي</a>
+                    </div>
+                  </nav>
                 </div>
-                <div class="tab-pane fade" id="myTasks" role="tabpanel">3</div>
+                <div class="tab-pane fade" id="prevMissions" role="tabpanel">
+                  <div class="table-responsive">
+                    <table class="table custom-table">
+                      <thead>
+                        <tr>
+                          <th width="4%">#</th>
+                          <th width="16%">محتوى المهمة</th>
+                          <th width="16%">تعيين من قبل</th>
+                          <th width="16%">تعيين إلى</th>
+                          <th width="16%">التاريخ</th>
+                          <th width="16%">الحالة</th>
+                          <th width="16%"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td>
+                            <span class="status pending">معلق</span>
+                          </td>
+                          <td>
+                            <div class="flex-start table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up fs-16"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>مهمه اختبار</td>
+                          <td>احمد علي</td>
+                          <td>مدير الموقع</td>
+                          <td>15-5-2025</td>
+                          <td><span class="status completed">تم</span></td>
+                          <td>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn table-action"
+                                data-toggle="modal"
+                                data-target="#modalName"
+                              >
+                                <i class="board-eye-close-up"></i>
+                              </button>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-edit--1-"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-bin"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- Pagination -->
+                  <nav aria-label="Page navigation w-100">
+                    <div class="pagination">
+                      <a class="prev" href="#">السابق</a>
+                      <div class="flex-center gap-2">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                      </div>
+
+                      <a class="next" href="#">التالي</a>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
           </div>

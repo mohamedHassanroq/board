@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
   </head>
   <body>
     <!-- aside -->
@@ -201,10 +206,10 @@
             </a>
           </li>
           <li>
-            <a href="#" class="custom-anc">الإجتماعات</a>
+            <a href="#" class="custom-anc">نماذج الملفات</a>
           </li>
           <li>
-            <a href="#" class="custom-anc">محاضر الإجتماعات</a>
+            <a href="#" class="custom-anc">إضافة قالب ملف</a>
           </li>
         </ul>
       </div>
@@ -214,127 +219,40 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="metting-grid-container">
-            <div class="metting-sidebar custom-card w-100">
-              <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item active">
-                  <a class="custom-anc" href="Meeting_Minutes.html">محاضر الاجتماعات</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Resolution.html">قرار الاجتماع</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Circular_Resolutions.html">قرارات بالتمرير</a>
-                </li>
-              </ul>
-            </div>
-            <div class="metting-details flex-column-center">
-              <!-- filter section -->
-              <div class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body flex-center flex-wrap gap-2">
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingName" class="form-label"
-                      >اسم الاجتماع</label
-                    >
-                    <input
-                      type="text"
-                      id="meetingName"
-                      class="form-control"
-                      placeholder="الاسم"
-                    />
-                  </div>
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingStatus" class="form-label">الحالة</label>
-                    <select id="meetingStatus" class="form-select">
-                      <option value="">الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
-                </div>
-              </div>
-
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="table-title">سجل محاضر الاجتماعات</div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>اسم الاجتماع</th>
-                        <th>تاريخ</th>
-                        <th>حالة التوقيع</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-pending-review"
-                            >في انتظار نتيجة الاجتماع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>اجتماع لجنة التدقيق 2025/25</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-waiting"
-                            >في انتظار التوقيع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-disabled"
-                            >Not allowed to sign</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <!-- باقي الصفوف هنا -->
-                    </tbody>
-                  </table>
-                </div>
-
-                <!-- Pagination -->
-                <nav aria-label="Page navigation w-100">
-                  <div class="pagination">
-                    <a class="prev" href="#">السابق</a>
-                    <div class="flex-center gap-2">
-                      <a href="#" class="pagination-item active">1</a>
-                      <a href="#" class="pagination-item">2</a>
-                      <a href="#" class="pagination-item">3</a>
+            <form class="filter-section custom-card w-100">
+                <div class="card-header">إضافة قالب ملف</div>
+                
+                <div class="card-body flex-column-start gap-4"> 
+                    <div class="d-flex flex-column gap-3 w-100">
+                        <div class="required">
+                            <label for="template-name" class="form-label">اسم القالب<span class="red">*</span> </label>
+                            <input
+                                type="text"
+                                id="template-name"
+                                class="form-control"
+                                placeholder="عضو"
+                            />
+                        </div>
+                        <div class="required">
+                            <label for="template-content" class="form-label">محتوي القالب <span class="red">*</span></label>
+                            <textarea class="form-control custom-textarea" id="template-content" rows="4" placeholder="ادخل تفاصيل المهمة" required></textarea>
+                        </div>
                     </div>
+                </div>
 
-                    <a class="next" href="#">التالي</a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
+                <div class="card-footer flex-end gap-2">
+                  <button class="custom-btn primary-btn px-5">حفظ</button>
+                </div>
+            </form>
         </div>
       </div>
     </div>
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   </body>
 </html>

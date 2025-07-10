@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
   </head>
   <body>
     <!-- aside -->
@@ -204,7 +209,7 @@
             <a href="#" class="custom-anc">الإجتماعات</a>
           </li>
           <li>
-            <a href="#" class="custom-anc">محاضر الإجتماعات</a>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
           </li>
         </ul>
       </div>
@@ -217,13 +222,13 @@
           <div class="metting-grid-container">
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item active">
+                <li class="metting_list_item">
                   <a class="custom-anc" href="Meeting_Minutes.html">محاضر الاجتماعات</a>
                 </li>
                 <li class="metting_list_item">
                   <a class="custom-anc" href="Meeting_Resolution.html">قرار الاجتماع</a>
                 </li>
-                <li class="metting_list_item">
+                <li class="metting_list_item active">
                   <a class="custom-anc" href="Circular_Resolutions.html">قرارات بالتمرير</a>
                 </li>
               </ul>
@@ -232,8 +237,8 @@
               <!-- filter section -->
               <div class="filter-section custom-card w-100">
                 <div class="card-header">فلتر</div>
-                <div class="card-body flex-center flex-wrap gap-2">
-                  <div class="col-sm-12 col-md">
+                <div class="card-body inputs-grid-4">
+                  <div>
                     <label for="meetingName" class="form-label"
                       >اسم الاجتماع</label
                     >
@@ -244,13 +249,34 @@
                       placeholder="الاسم"
                     />
                   </div>
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingStatus" class="form-label">الحالة</label>
-                    <select id="meetingStatus" class="form-select">
+                   <div>
+                    <label for="resolution-type" class="form-label">نوع القرار</label>
+                    <select id="resolution-type" class="form-select">
                       <option value="">الكل</option>
                       <option>في انتظار التوقيع</option>
                       <option>غير مسموح بالتوقيع</option>
                     </select>
+                  </div>
+                  <div>
+                    <label for="location" class="form-label"
+                      >العنوان</label
+                    >
+                    <input
+                      type="text"
+                      id="location"
+                      class="form-control"
+                      placeholder="العنوان"
+                    />
+                  </div>
+                  <div class="position-relative">
+                    <label for="meetingStatus" class="form-label">التاريخ من</label>
+                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
+                        <i class="board-calendar flat_picker_icon"></i>
+                  </div>
+                   <div class="position-relative">
+                    <label for="meetingStatus" class="form-label">التاريخ إلي</label>
+                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
+                        <i class="board-calendar flat_picker_icon"></i>
                   </div>
                 </div>
                 <div class="card-footer flex-end gap-2">
@@ -263,55 +289,83 @@
 
               <!-- Table Section -->
               <div class="meetings-table-section custom-card w-100">
-                <div class="table-title">سجل محاضر الاجتماعات</div>
+                <div class="head flex-between gap-2 mb-3">
+                   <div class="table-title">سجل قررات الإجتماعات</div>
+                   <a href="Add_Resolutions.html" class="custom-anc action-btn flex-center primary-bg text-white fs-12">
+                        <i class="board-add"></i>
+                    </a>
+                </div>
                 <div class="table-responsive">
                   <table class="table custom-table">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>اسم الاجتماع</th>
-                        <th>تاريخ</th>
-                        <th>حالة التوقيع</th>
-                        <th></th>
+                        <th>الرقم التسلسلي</th>
+                        <th>العنوان</th>
+                        <th>تاريخ القرار</th>
+                        <th>اللجنة</th>
+                        <th>الحالة</th>
+                        <th>النتيجة</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-pending-review"
-                            >في انتظار نتيجة الاجتماع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>اجتماع لجنة التدقيق 2025/25</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-waiting"
-                            >في انتظار التوقيع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-disabled"
-                            >Not allowed to sign</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <!-- باقي الصفوف هنا -->
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>8/24</td>
+                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
+                                <td>12/5/2025</td>
+                                <td>لجنة الترشيحات والمكافآت</td>
+                                <td>
+                                <span class="status pending">معلق</span>
+                                </td>
+                                <td>
+                                    <div class="table-actions flex-end gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                        <i class="board-view icon"></i>
+                                        <i class="board-edit--1- icon"></i>
+                                        <i class="board-bin icon"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8/24</td>
+                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
+                                <td>12/5/2025</td>
+                                <td>لجنة الترشيحات والمكافآت</td>
+                                <td>
+                                <span class="status waiting">بإنتظار توقيع الاعضاء</span>
+                                </td>
+                                <td>
+                                    <div class="table-actions flex-end gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                        <i class="board-view icon"></i>
+                                        <i class="board-edit--1- icon"></i>
+                                        <i class="board-bin icon"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>8/24</td>
+                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
+                                <td>12/5/2025</td>
+                                <td>لجنة الترشيحات والمكافآت</td>
+                                <td>
+                                <span class="status pending">معلق</span>
+                                </td>
+                                <td>
+                                    <div class="table-actions flex-end gap-3">
+                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                        <i class="board-view icon"></i>
+                                        <i class="board-edit--1- icon"></i>
+                                        <i class="board-bin icon"></i>
+                                    </div>
+                                </td>
+                            </tr>
                     </tbody>
                   </table>
+             
                 </div>
 
                 <!-- Pagination -->
@@ -327,6 +381,7 @@
                     <a class="next" href="#">التالي</a>
                   </div>
                 </nav>
+
               </div>
             </div>
           </div>
@@ -336,5 +391,14 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=datetime-local]", {
+            dateFormat: "d / M / Y",
+            // defaultDate: new Date(),
+        });
+    </script>
   </body>
 </html>
