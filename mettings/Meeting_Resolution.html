@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
   </head>
   <body>
     <!-- aside -->
@@ -204,7 +209,7 @@
             <a href="#" class="custom-anc">الإجتماعات</a>
           </li>
           <li>
-            <a href="#" class="custom-anc">محاضر الإجتماعات</a>
+            <a href="#" class="custom-anc">قرارات الإجتماع</a>
           </li>
         </ul>
       </div>
@@ -217,10 +222,10 @@
           <div class="metting-grid-container">
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item active">
+                <li class="metting_list_item">
                   <a class="custom-anc" href="Meeting_Minutes.html">محاضر الاجتماعات</a>
                 </li>
-                <li class="metting_list_item">
+                <li class="metting_list_item active">
                   <a class="custom-anc" href="Meeting_Resolution.html">قرار الاجتماع</a>
                 </li>
                 <li class="metting_list_item">
@@ -232,8 +237,8 @@
               <!-- filter section -->
               <div class="filter-section custom-card w-100">
                 <div class="card-header">فلتر</div>
-                <div class="card-body flex-center flex-wrap gap-2">
-                  <div class="col-sm-12 col-md">
+                <div class="card-body inputs-grid-4">
+                  <div>
                     <label for="meetingName" class="form-label"
                       >اسم الاجتماع</label
                     >
@@ -244,13 +249,15 @@
                       placeholder="الاسم"
                     />
                   </div>
-                  <div class="col-sm-12 col-md">
-                    <label for="meetingStatus" class="form-label">الحالة</label>
-                    <select id="meetingStatus" class="form-select">
-                      <option value="">الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
+                  <div class="position-relative">
+                    <label for="meetingStatus" class="form-label">التاريخ من</label>
+                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
+                        <i class="board-calendar flat_picker_icon"></i>
+                  </div>
+                   <div class="position-relative">
+                    <label for="meetingStatus" class="form-label">التاريخ إلي</label>
+                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
+                        <i class="board-calendar flat_picker_icon"></i>
                   </div>
                 </div>
                 <div class="card-footer flex-end gap-2">
@@ -263,70 +270,30 @@
 
               <!-- Table Section -->
               <div class="meetings-table-section custom-card w-100">
-                <div class="table-title">سجل محاضر الاجتماعات</div>
+                <div class="table-title">سجل قررات الإجتماعات</div>
                 <div class="table-responsive">
                   <table class="table custom-table">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>اسم الاجتماع</th>
-                        <th>تاريخ</th>
-                        <th>حالة التوقيع</th>
-                        <th></th>
+                        <th>المهمة</th>
+                        <th>التاريخ</th>
+                        <th>الجهة المختصة بالتنفيذ</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-pending-review"
-                            >في انتظار نتيجة الاجتماع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>اجتماع لجنة التدقيق 2025/25</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-waiting"
-                            >في انتظار التوقيع</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>اجتماع مجلس الإدارة 2025/24</td>
-                        <td>12/5/2025</td>
-                        <td>
-                          <span class="status-badge status-disabled"
-                            >Not allowed to sign</span
-                          >
-                        </td>
-                        <td><i class="board-view icon"></i></td>
-                      </tr>
-                      <!-- باقي الصفوف هنا -->
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
                     </tbody>
                   </table>
-                </div>
-
-                <!-- Pagination -->
-                <nav aria-label="Page navigation w-100">
-                  <div class="pagination">
-                    <a class="prev" href="#">السابق</a>
-                    <div class="flex-center gap-2">
-                      <a href="#" class="pagination-item active">1</a>
-                      <a href="#" class="pagination-item">2</a>
-                      <a href="#" class="pagination-item">3</a>
-                    </div>
-
-                    <a class="next" href="#">التالي</a>
+                  <!-- If No results found  -->
+                  <div class="flex-column-center gap-1" >
+                    <img src="../assets/images/search.svg" class="no_result_img" />
+                    <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
                   </div>
-                </nav>
+                </div>
               </div>
             </div>
           </div>
@@ -336,5 +303,14 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=datetime-local]", {
+            dateFormat: "d / M / Y",
+            // defaultDate: new Date(),
+        });
+    </script>
   </body>
 </html>
