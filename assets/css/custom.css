@@ -383,6 +383,7 @@ aside .aside_container::-webkit-scrollbar {
   border: 1px solid #d5d7da;
   -webkit-text-fill-color: #939393;
   font-size: 14px;
+  height: 40px;
 }
 select.form-control {
   appearance: none;
@@ -717,6 +718,7 @@ select.flatpickr-monthDropdown-months:hover,
 .table-action {
   color: var(--gray-color);
   font-size: 16px;
+  padding: 0;
 }
 .table-action:hover {
   color: var(--secondery-color);
@@ -879,6 +881,15 @@ select.flatpickr-monthDropdown-months:hover,
   font-weight: 300;
   opacity: 1;
   margin: -1rem auto -1rem 0;
+}
+.tableBtn {
+  background-color: rgba(42, 102, 188, 0.05);
+  padding: 2px 8px;
+  border-radius: var(--raduis-sm);
+}
+.noResults-icon {
+  max-width: 150px;
+  max-height: 170px;
 }
 @media screen and (max-width: 991px) {
   .box-head .box-title {

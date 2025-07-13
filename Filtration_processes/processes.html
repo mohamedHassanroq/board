@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-center gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <ul class="custom-ul flex-start mainNav-list">
+              <li class="mainNav-item flex-column-center">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </li>
+              <li class="mainNav-item flex-column-center">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </li>
+              <li class="mainNav-item flex-column-center">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </li>
+              <li class="mainNav-item flex-column-center">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </li>
+            </ul>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc"
+              ><i class="board-user--1-"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc"> عمليات الترشيح</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="filters bg-white">
+            <div class="head-content p-3">
+              <h1 class="custom-h title fs-16 fw-500">فلتر</h1>
+            </div>
+            <form action="" class="">
+              <div class="row p-3 g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="year" class="custom-label"> سنة التقيم</label>
+                    <select class="form-control" name="year" id="year">
+                      <option selected disabled>الكل</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex align-items-end">
+                  <div class="form-group fltr-btns d-flex gap-3">
+                    <button
+                      class="custom-btn reset-btn fltr-btn secondary"
+                      type="reset"
+                    >
+                      إعادة تعين
+                    </button>
+                    <button
+                      class="custom-btn search-btn fltr-btn secondary-bg text-white"
+                      type="submit"
+                    >
+                      بحث الأن
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="plans p-3 bg-white">
+            <div class="head flex-between">
+              <h1 class="custom-h title fs-16 fw-500">عمليات الترشيح</h1>
+              <div class="actions flex-center gap-2">
+                <button href="#" class="custom-btn primary-btn fs-12">
+                  <i class="board-add"></i>
+                </button>
+              </div>
+            </div>
+            <div class="plans-data mt-4">
+              <div class="table-responsive">
+                <table class="table custom-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>اسم العضو</th>
+                      <th>تاريخ الإنشاء</th>
+                      <th>تاريخ إضافة العضو</th>
+                      <th>نموذج العضو</th>
+                      <th>نموذج أمين السر</th>
+                      <th>الحالة</th>
+                      <th>حالة العضو</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="8">
+                        <div class="noResults flex-center flex-column p-5">
+                          <div class="noResults-icon">
+                            <img
+                              src="../assets/images/search.svg"
+                              alt="no results"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <h5 class="custom-h noResults-text gray">
+                            لا يوجد نتائج متاحة
+                          </h5>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/flatpickr.min.js"></script>
+    <script src="../assets/js/flatpicker-custom.js"></script>
+    <script src="../assets/js/custom.js"></script>
+  </body>
+</html>

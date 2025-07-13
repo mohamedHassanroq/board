@@ -232,18 +232,16 @@
                     name="main-word"
                   />
                 </div>
-                <div class="form-group date-input">
+                <div class="form-group position-relative">
                   <label for="date" class="custom-label">تاريخ النشر</label>
                   <input
-                    type="text"
+                    type="datetime-local"
+                    class="form-control input_flat_picker"
                     placeholder="التاريخ"
                     id="date"
                     name="date"
-                    class="form-control datepicker"
                   />
-                  <span class="date-icon">
-                    <i class="board-calendar"></i>
-                  </span>
+                  <i class="board-calendar flat_picker_icon"></i>
                 </div>
                 <div class="form-group">
                   <label for="setBy" class="custom-label">تعيين من قبل</label>
@@ -908,6 +906,7 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/flatpickr.min.js"></script>
+    <script src="../assets/js/flatpicker-custom.js"></script>
     <script src="../assets/js/custom.js"></script>
   </body>
 </html>
