@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <div class="aside_menu flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </a>
+          <a
+            href="../mettings/Meeting_Minutes.html"
+            class="custom-anc parent-nav-item"
+          >
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </a>
+          <a
+            href="../missions/missions.html"
+            class="custom-anc parent-nav-item"
+          >
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </a>
+          <a
+            href="../Disclosures/Disclosures.html"
+            class="custom-anc parent-nav-item"
+          >
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </a>
+          <a
+            href="../rating/rating.html"
+            class="custom-anc parent-nav-item aside_active"
+          >
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </a>
+          <a href="" class="custom-anc parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </a>
+        </div>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">التقيمات</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="row g-3">
+            <div class="col-lg-3">
+              <div class="metting-sidebar custom-card w-100">
+                <ul class="custom-ul flex-column-start gap-2">
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="rating.html">
+                      تقرير معلومات عامة لأعضاء مجلس الإدارة</a
+                    >
+                  </li>
+                  <li class="metting_list_item active">
+                    <a class="custom-anc" href="(KPIs)CommitteeMembers.html"
+                      >تقرير حضور إجتماعات مجلس الإدارة واللجان
+                    </a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#"> تقرير محضر إجتماع</a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#"> تقرير قرارات بالتمرير</a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#">
+                      متابعة قرارات الإجتماعات
+                    </a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#"> تقرير اللجان</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="metting-details flex-column-center">
+                <!-- filter section -->
+                <div class="filters bg-white w-100">
+                  <div class="head-content p-3">
+                    <h1 class="custom-h title fs-16 fw-500">فلتر</h1>
+                  </div>
+                  <form action="" class="">
+                    <div class="row p-3 g-3">
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label class="custom-label" for="name"> الإسم</label>
+                          <input
+                            type="text"
+                            placeholder=" الإسم"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label for="position" class="custom-label">
+                            منصب</label
+                          >
+                          <select
+                            class="form-control"
+                            name="position"
+                            id="position"
+                          >
+                            <option selected disabled>الكل</option>
+                            <option>منصب</option>
+                            <option>منصب</option>
+                            <option>منصب</option>
+                            <option>منصب</option>
+                            <option>منصب</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label for="company" class="custom-label">
+                            الشركة</label
+                          >
+                          <select
+                            class="form-control"
+                            name="company"
+                            id="company"
+                          >
+                            <option selected disabled>الكل</option>
+                            <option>الشركة</option>
+                            <option>الشركة</option>
+                            <option>الشركة</option>
+                            <option>الشركة</option>
+                            <option>الشركة</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label for="committee" class="custom-label">
+                            اللجنة</label
+                          >
+                          <select
+                            class="form-control"
+                            name="committee"
+                            id="committee"
+                          >
+                            <option selected disabled>الكل</option>
+                            <option>اللجنة</option>
+                            <option>اللجنة</option>
+                            <option>اللجنة</option>
+                            <option>اللجنة</option>
+                            <option>اللجنة</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label for="civilId" class="custom-label">
+                            البطاقة المدنية</label
+                          >
+                          <select
+                            class="form-control"
+                            name="civilId"
+                            id="civilId"
+                          >
+                            <option selected disabled>الكل</option>
+                            <option>البطاقة المدنية</option>
+                            <option>البطاقة المدنية</option>
+                            <option>البطاقة المدنية</option>
+                            <option>البطاقة المدنية</option>
+                            <option>البطاقة المدنية</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-lg-4">
+                        <div class="form-group">
+                          <label for="status" class="custom-label">
+                            الحالة</label
+                          >
+                          <select
+                            class="form-control"
+                            name="status"
+                            id="status"
+                          >
+                            <option selected disabled>الكل</option>
+                            <option>الحالة</option>
+                            <option>الحالة</option>
+                            <option>الحالة</option>
+                            <option>الحالة</option>
+                            <option>الحالة</option>
+                            <option>الحالة</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-group fltr-btns flex-end gap-3">
+                          <button
+                            class="custom-btn reset-btn fltr-btn secondary"
+                            type="reset"
+                          >
+                            إعادة تعين
+                          </button>
+                          <button
+                            class="custom-btn search-btn fltr-btn secondary-bg text-white"
+                            type="submit"
+                          >
+                            بحث الأن
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Table Section -->
+                <div class="meetings-table-section custom-card w-100">
+                  <div class="head flex-between">
+                    <h1 class="custom-h title fs-16 fw-500">
+                      سجل قرارات بالتمرير
+                    </h1>
+                    <div class="actions flex-center gap-2">
+                      <button href="#" class="custom-btn primary-btn fs-12">
+                        <i class="board-add"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table custom-table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>الإسم</th>
+                          <th>المنصب</th>
+                          <th>ممثل عن</th>
+                          <th>الحضور</th>
+                          <th>مجلس الإدارة / اللجنة</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>1</th>
+                          <td>سعود فريد سعود</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>شركة وهران القابضة</td>
+                          <td>25</td>
+                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>
+                            <div
+                              class="flex-start gap-3 table-actions flex-end"
+                            >
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-eye-close-up"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-printing"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>2</th>
+                          <td>سعود فريد سعود</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>شركة وهران القابضة</td>
+                          <td>25</td>
+                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>
+                            <div
+                              class="flex-start gap-3 table-actions flex-end"
+                            >
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-eye-close-up"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-printing"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>3</th>
+                          <td>سعود فريد سعود</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>شركة وهران القابضة</td>
+                          <td>25</td>
+                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>
+                            <div
+                              class="flex-start gap-3 table-actions flex-end"
+                            >
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-eye-close-up"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-printing"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>4</th>
+                          <td>سعود فريد سعود</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>شركة وهران القابضة</td>
+                          <td>25</td>
+                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>
+                            <div
+                              class="flex-start gap-3 table-actions flex-end"
+                            >
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-eye-close-up"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-printing"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>5</th>
+                          <td>سعود فريد سعود</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>شركة وهران القابضة</td>
+                          <td>25</td>
+                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>
+                            <div
+                              class="flex-start gap-3 table-actions flex-end"
+                            >
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-eye-close-up"></i>
+                              </a>
+                              <a href="#" class="custom-anc table-action">
+                                <i class="board-printing"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Pagination -->
+                  <nav aria-label="Page navigation w-100">
+                    <div class="pagination">
+                      <a class="prev" href="#">السابق</a>
+                      <div class="flex-center gap-2">
+                        <a href="#" class="pagination-item active">1</a>
+                        <a href="#" class="pagination-item">2</a>
+                        <a href="#" class="pagination-item">3</a>
+                      </div>
+
+                      <a class="next" href="#">التالي</a>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+  </body>
+</html>
