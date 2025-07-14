@@ -128,7 +128,7 @@
   padding: 0px !important;
 }
 .navAction_item .dropdown-toggle {
-  padding: 8px;
+  padding: 8px 10px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 0px;
@@ -496,7 +496,12 @@ select.flatpickr-monthDropdown-months:hover,
 .numInputWrapper:hover {
   background-color: transparent !important;
 }
-/* calender body */
+/* calendar body */
+.calendar-toolbar {
+  background: #FFF;
+  border-radius: var(--raduis-md);
+  padding: 16px;
+}
 .flatpickr-day {
   border-radius: 50% !important;
   border: 0px !important;
@@ -891,6 +896,212 @@ select.flatpickr-monthDropdown-months:hover,
   max-width: 150px;
   max-height: 170px;
 }
+
+
+/* full calendar style */
+.full_Calendar {
+  min-height: max-content;
+  overflow: auto;
+}
+/* prev / next bts style */
+.calendar-toolbar .fc-header-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.calendar-toolbar .fc-button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.calendar-toolbar .fc-toolbar-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+  white-space: nowrap;
+}
+.calendar-toolbar .fc-prev-button,
+.calendar-toolbar .fc-next-button {
+  background: transparent;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: var(--secondary);
+  font-weight: 900;
+  padding-inline: 0px;
+}
+.calendar-toolbar .fc-today-button {
+  display: none;
+}
+/* end btns style */
+.full_Calendar .presentation {
+  padding: 0px;
+}
+.full_Calendar .fc-theme-standard .fc-scrollgrid {
+  border: 0px;
+}
+
+.full_Calendar table.fc-col-header th,
+.full_Calendar table.fc-col-header td,
+.full_Calendar table.fc-scrollgrid-sync-table th,
+.full_Calendar table.fc-scrollgrid-sync-table td {
+  background-color: #fff;
+  border: 0px;
+  border-radius: 8px;
+  padding: 8px;
+}
+.full_Calendar .fc .fc-scroller {
+  width: 100%;
+}
+
+.full_Calendar table.fc-col-header,
+.full_Calendar table.fc-scrollgrid-sync-table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  background-color: var(--body-bg);
+}
+.full_Calendar table.fc-col-header {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+  background-color: var(--body-bg);
+}
+.full_Calendar .fc-col-header,
+.full_Calendar .fc-scrollgrid-sync-table {
+  min-width: 600px;
+}
+.full_Calendar .fc-col-header-cell-cushion {
+  font-size: 14px;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+}
+.full_Calendar .fc-daygrid-day-number {
+  color: #848a9c !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+.full_Calendar .fc-theme-standard td,
+.full_Calendar .fc-theme-standard th {
+  border: 0px;
+}
+.full_Calendar .fc-daygrid-day-events::after,
+.full_Calendar .fc-daygrid-day-events::before,
+.full_Calendar .fc-daygrid-day-frame::after,
+.full_Calendar .fc-daygrid-day-frame::before,
+.full_Calendar.fc-daygrid-event-harness::after,
+.fc-daygrid-event-harness::before {
+  content: none;
+}
+.full_Calendar .fc .fc-daygrid-day-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.full_Calendar .fc-daygrid-day-bottom {
+  display: none;
+}
+
+.full_Calendar .fc .fc-daygrid-day.fc-day-today {
+  background-color: #fff;
+}
+.full_Calendar .fc-day-today .fc-daygrid-day-number {
+  color: var(--secondery-color) !important;
+  background-color: var(--light-secondary-color) !important;
+}
+.full_Calendar .fc .fc-daygrid-day-number {
+  max-height: max-content;
+  text-decoration: none;
+}
+.full_Calendar .fc .fc-scroller {
+  overflow: auto !important;
+}
+.fc-view-harness {
+  height: max-content;
+  min-height: 710px;
+}
+/* events style */
+.full_Calendar .fc-daygrid-event-harness::after {
+  content: none;
+}
+.full_Calendar .fc .fc-daygrid-day-top {
+  flex-direction: row;
+  flex-grow: 1;
+}
+.full_Calendar .event {
+  padding: 4px;
+  font-weight: 400;
+  border-radius: 8px;
+  border: 0px;
+  position: relative;
+  text-align: center;
+}
+.event.meeting {
+  background-color: var(--secondery-color);
+  color: #fff;
+}
+.fc-h-event .event-title {
+  white-space: wrap;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  width: 60%;
+}
+.event-time {
+  padding: 8px;
+  border-radius: 4px;
+  background: #F5F7FA;
+  width: 50px;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 15px;
+  color: var(--secondery-color);
+  width: 30%;
+  min-width: min-content;
+}
+.event-tooltip {
+  z-index: 9999;
+  min-width: 180px;
+  direction: rtl;
+  text-align: right;
+  color: #333;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  width: 20vw;
+  box-shadow: 0px 0px 12px -2px rgba(16, 24, 40, 0.12);
+}
+.event-tooltip h4 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #000;
+}
+.event-tooltip p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.tooltip-title {
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f1f3;
+}
+.form-check-input:checked[type=checkbox] {
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b6da7' stroke-width='1.5'%3E%3Cpath d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
+  background-size: 17px 17px;
+  background-position: 25% 29%;
+}
+.form-check-input:checked {
+  border-color: var(--secondery-color);
+  background-color: #fff;
+}
+
 @media screen and (max-width: 991px) {
   .box-head .box-title {
     font-size: 15px;
