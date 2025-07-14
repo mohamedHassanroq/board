@@ -202,10 +202,10 @@
             ></a>
           </li>
           <li>
-            <a href="#" class="custom-anc">المهام</a>
+            <a href="#" class="custom-anc">شركات الاعضاء</a>
           </li>
           <li>
-            <a href="#" class="custom-anc">الإجتماعات</a>
+            <a href="#" class="custom-anc">إضافة شركة</a>
           </li>
         </ul>
       </div>
@@ -217,136 +217,107 @@
         <div class="main-content">
           <div class="add-mission bg-white">
             <div class="head-content p-3">
-              <h1 class="custom-h title fs-16 fw-500">اضافة مهمة</h1>
+              <h1 class="custom-h title fs-16 fw-500">إضافة شركة</h1>
             </div>
             <form action="" class="p-3">
               <div class="row g-3">
-                <div class="col-lg-4">
-                  <div class="form-group required position-relative">
-                    <label for="date" class="custom-label"> تاريخ المهمة</label>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="custom-label" for="name_ar">
+                      الاسم باللغة العربية </label
+                    >
                     <input
-                      type="datetime-local"
-                      placeholder="تاريخ المهمة"
-                      id="date"
-                      name="date"
-                      class="form-control input_flat_picker"
+                      type="text"
+                      placeholder=" الاسم باللغة العربية "
+                      class="form-control"
+                      id="name_ar"
+                      name="name_ar"
                     />
-                    <i class="board-calendar flat_picker_icon"></i>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="setTo" class="custom-label">
-                      حدد تعيين مهمة إلى</label
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="custom-label" for="name_en">
+                      الاسم باللغة الإنجليزية</label
                     >
-                    <select class="form-control" name="setTo" id="setTo">
-                      <option selected disabled>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                    </select>
+                    <input
+                      type="text"
+                      placeholder=" الاسم باللغة الإنجليزية"
+                      class="form-control"
+                      id="name_en"
+                      name="name_en"
+                    />
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      إدراج الملفات من خلال</label
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="custom-label" for="email">
+                      الموقع الإلكتروني</label
                     >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                    </select>
+                    <input
+                      type="email"
+                      placeholder="الموقع الإلكتروني"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                    />
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="form-group required">
-                    <label for="missions" class="form-label"> المهمة </label>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="custom-label" for="company_number">
+                      رقم تدوال الشركه</label
+                    >
+                    <input
+                      type="number"
+                      placeholder=" رقم تدوال الشركة"
+                      class="form-control"
+                      id="company_number"
+                      name="company_number"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="description_ar" class="form-label">
+                      الوصف باللغة العربية
+                    </label>
                     <textarea
                       class="form-control"
-                      name="missions"
-                      id="missions"
-                      rows="3"
-                      placeholder="  ادخل تفاصيل المهمة"
+                      name="description_ar"
+                      id="description_ar"
+                      rows="6"
+                      placeholder="الوصف باللغة العربية"
                     ></textarea>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      طريقة تحميل المرفقات</label
-                    >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>الكل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                    </select>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="description_en" class="form-label">
+                      الوصف باللغة الإنجليزية
+                    </label>
+                    <textarea
+                      class="form-control"
+                      name="description_en"
+                      id="description_en"
+                      rows="6"
+                      placeholder="الوصف باللغة الإنجليزية"
+                    ></textarea>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="file-upload" class="custom-label"
-                      >المرفقات</label
-                    >
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="استعراض"
-                        readonly
-                        id="file-name"
-                        style="cursor: pointer"
-                      />
-                      <input type="file" id="file-upload" hidden />
-                    </div>
-                    <div id="file-info"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label class="custom-label">يتكرر</label>
-                    <div class="custom-radio flex-between form-control">
-                      <span class="text-muted">اختر</span>
-                      <div class="radio-group">
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="yes"
-                            value="yes"
-                            checked
-                          />
-                          <label class="form-check-label" for="yes"> نعم</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="no"
-                            value="no"
-                          />
-                          <label class="form-check-label" for="no"> لا</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="custom-btn primary-btn form-btn" type="submit">
-                    حفظ
+                <div class="col-12 flex-start gap-3">
+                  <button
+                    class="custom-btn border-seconadry-btn form-btn fw-500"
+                    type="submit"
+                  >
+                    مسح
+                  </button>
+                  <button
+                    class="custom-btn secondary-btn form-btn fw-500"
+                    type="submit"
+                  >
+                    إضافة
                   </button>
                 </div>
               </div>

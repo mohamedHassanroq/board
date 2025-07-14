@@ -60,10 +60,7 @@
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
           </a>
-          <a
-            href="../rating/rating.html"
-            class="custom-anc parent-nav-item aside_active"
-          >
+          <a href="../rating/rating.html" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
           </a>
@@ -103,7 +100,7 @@
             <h6 class="aside_item_title custom-h">تقارير</h6>
             <i class="board-report"></i>
           </a>
-          <a href="" class="custom-anc parent-nav-item">
+          <a href="" class="custom-anc parent-nav-item aside_active">
             <h6 class="aside_item_title custom-h">الإعداادات</h6>
             <i class="board-settings"></i>
           </a>
@@ -219,7 +216,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="custom-anc">تقارير</a>
+            <a href="#" class="custom-anc"> أنواع الـ إفصاح / إقرار</a>
           </li>
         </ul>
       </div>
@@ -234,28 +231,19 @@
               <div class="metting-sidebar custom-card w-100">
                 <ul class="custom-ul flex-column-start gap-2">
                   <li class="metting_list_item">
-                    <a class="custom-anc" href="rating.html">
-                      تقرير معلومات عامة لأعضاء مجلس الإدارة</a
-                    >
+                    <a class="custom-anc" href="#"> شركات الاعضاء</a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#"> اللجان </a>
+                  </li>
+                  <li class="metting_list_item">
+                    <a class="custom-anc" href="#"> المناصب</a>
                   </li>
                   <li class="metting_list_item active">
-                    <a class="custom-anc" href="(KPIs)CommitteeMembers.html"
-                      >تقرير حضور إجتماعات مجلس الإدارة واللجان
-                    </a>
+                    <a class="custom-anc" href="#"> أنواع الإفصاح / إقرار</a>
                   </li>
                   <li class="metting_list_item">
-                    <a class="custom-anc" href="#"> تقرير محضر إجتماع</a>
-                  </li>
-                  <li class="metting_list_item">
-                    <a class="custom-anc" href="#"> تقرير قرارات بالتمرير</a>
-                  </li>
-                  <li class="metting_list_item">
-                    <a class="custom-anc" href="#">
-                      متابعة قرارات الإجتماعات
-                    </a>
-                  </li>
-                  <li class="metting_list_item">
-                    <a class="custom-anc" href="#"> تقرير اللجان</a>
+                    <a class="custom-anc" href="#"> المناطق</a>
                   </li>
                 </ul>
               </div>
@@ -269,99 +257,21 @@
                   </div>
                   <form action="" class="">
                     <div class="row p-3 g-3">
-                      <div class="col-md-6 col-lg-4">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label class="custom-label" for="name"> الإسم</label>
+                          <label class="custom-label" for="committee_name">
+                            اسم أنواع الافصاحات / إقرار</label
+                          >
                           <input
                             type="text"
-                            placeholder=" الإسم"
+                            placeholder="  اسم أنواع الافصاحات / إقرار "
                             class="form-control"
-                            id="name"
-                            name="name"
+                            id="committee_name"
+                            name="committee_name"
                           />
                         </div>
                       </div>
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="position" class="custom-label">
-                            منصب</label
-                          >
-                          <select
-                            class="form-control"
-                            name="position"
-                            id="position"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="company" class="custom-label">
-                            الشركة</label
-                          >
-                          <select
-                            class="form-control"
-                            name="company"
-                            id="company"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="committee" class="custom-label">
-                            اللجنة</label
-                          >
-                          <select
-                            class="form-control"
-                            name="committee"
-                            id="committee"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="civilId" class="custom-label">
-                            البطاقة المدنية</label
-                          >
-                          <select
-                            class="form-control"
-                            name="civilId"
-                            id="civilId"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label for="status" class="custom-label">
                             الحالة</label
@@ -372,7 +282,6 @@
                             id="status"
                           >
                             <option selected disabled>الكل</option>
-                            <option>الحالة</option>
                             <option>الحالة</option>
                             <option>الحالة</option>
                             <option>الحالة</option>
@@ -406,13 +315,13 @@
                 <div class="meetings-table-section custom-card w-100">
                   <div class="head flex-between mb-4">
                     <h1 class="custom-h title fs-16 fw-500">
-                      سجل تقرير معلومات عامة لأعضاء مجلس الإدارة
+                      أنواع الـ إفصاح / إقرار
                     </h1>
-                    <div class="actions flex-center gap-2">
-                      <a href="#" class="custom-btn primary-btn fs-12">
-                        <i class="board-document"></i>
-                      </a>
-                      <a href="#" class="custom-btn primary-btn fs-12">
+                    <div class="actions">
+                      <a
+                        href="add_disclosure-declaration.html"
+                        class="custom-btn primary-btn fs-12"
+                      >
                         <i class="board-add"></i>
                       </a>
                     </div>
@@ -422,22 +331,32 @@
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>الإسم</th>
-                          <th>المنصب</th>
-                          <th>ممثل عن</th>
-                          <th>الحضور</th>
-                          <th>مجلس الإدارة / اللجنة</th>
+                          <th>اسم أنواع الافصاحات / إقرار</th>
+                          <th>يرسل الي</th>
+                          <th>اعادة ارسال تلقائية</th>
+                          <th>الحالة</th>
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
                           <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>مفعل</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input custom-switch"
+                                type="checkbox"
+                                value=""
+                                id="checkNativeSwitch"
+                                switch
+                                checked
+                              />
+                            </div>
+                          </td>
+                          <td></td>
                           <td>
                             <div
                               class="flex-start gap-3 table-actions flex-end"
@@ -446,18 +365,28 @@
                                 <i class="board-eye-close-up"></i>
                               </a>
                               <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
+                                <i class="board-edit"></i>
                               </a>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
+                          <td>2</td>
                           <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>مفعل</td>
+                          <td>
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input custom-switch"
+                                type="checkbox"
+                                value=""
+                                id="checkNativeSwitch"
+                                switch
+                              />
+                            </div>
+                          </td>
+                          <td></td>
                           <td>
                             <div
                               class="flex-start gap-3 table-actions flex-end"
@@ -466,38 +395,29 @@
                                 <i class="board-eye-close-up"></i>
                               </a>
                               <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
+                                <i class="board-edit"></i>
                               </a>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
+                          <td>3</td>
                           <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>عضو مجلس الإدارة</td>
+                          <td>غير مفعل</td>
                           <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input custom-switch"
+                                type="checkbox"
+                                value=""
+                                id="checkNativeSwitch"
+                                switch
+                                checked
+                              />
                             </div>
                           </td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td></td>
                           <td>
                             <div
                               class="flex-start gap-3 table-actions flex-end"
@@ -506,27 +426,7 @@
                                 <i class="board-eye-close-up"></i>
                               </a>
                               <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
-                          <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
+                                <i class="board-edit"></i>
                               </a>
                             </div>
                           </td>
