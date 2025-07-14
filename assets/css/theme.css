@@ -1,6 +1,7 @@
 :root {
   --primary-color: #243348;
   --secondery-color: #3b6da7;
+  --third-color: #2A66BC;
   --text-color: #181d27;
   --gray-color: #606060;
   --light-gray: #75797b;
@@ -203,6 +204,9 @@ html[dir="rtl"] [type="url"] {
 .secondary {
   color: var(--secondery-color) !important;
 }
+.third {
+    color: var(--third-color);
+}
 .white {
   color: var(--white-color);
 }
@@ -268,8 +272,9 @@ html[dir="rtl"] [type="url"] {
 .max-height {
   max-height: 100%;
 }
+
 @media (max-width: 991px) {
-  .fs-12 {
+  /* .fs-12 {
     font-size: 8px;
   }
   .fs-14 {
@@ -283,7 +288,7 @@ html[dir="rtl"] [type="url"] {
   }
   .fs-24 {
     font-size: 20px;
-  }
+  } */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .grid-3 {

@@ -107,6 +107,9 @@
   gap: 24px;
 }
 .mainNav-item {
+  color: #d9d8d8c4;
+}
+.mainNav-item.active {
   color: #fff;
 }
 .mainNav-item i {
@@ -755,7 +758,8 @@ select.flatpickr-monthDropdown-months:hover,
 .table .status.pending::before {
   background-color: #fb6514;
 }
-.status.completed {
+.status.completed ,
+.status.active {
   color: #309b0f;
   background-color: #e5fadf;
 }
@@ -772,6 +776,10 @@ select.flatpickr-monthDropdown-months:hover,
 .status-disabled {
   color: #848a9c;
   background-color: #fafafa;
+}
+.status.danger {
+  color: #FF3D54;
+  background-color: #FFECEE;
 }
 .add-mission {
   border-radius: var(--raduis-lg);
@@ -831,12 +839,26 @@ select.flatpickr-monthDropdown-months:hover,
 }
 .Details_item_icon {
   border-radius: 50%;
-  padding: 7px;
-  overflow: visible;
+  padding: 6px 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--secondary-light);
+  background: var(--light-secondary-color);
+  color: var(--third-color);
+}
+.Details_item_icon i::before {
+  transform: translate(0px, 1px);
+}
+.Agenda_Details_item {
+  position: relative;
+}
+.Agenda_Details_item:not(:last-child)::before{
+  position: absolute;
+  content: " ";
+  height: 104%;
+  inset-inline-start: 13px;
+  inset-block-start: 50%;
+  border: 1px solid var(--light-secondary-color);
 }
 .metting-sidebar .heading {
   padding: 22px 12px;
@@ -1111,7 +1133,9 @@ select.flatpickr-monthDropdown-months:hover,
   border-color: var(--secondery-color);
   background-color: #fff;
 }
-
+.no_result_img {
+  height: 200px;
+}
 @media screen and (max-width: 991px) {
   .box-head .box-title {
     font-size: 15px;
@@ -1138,6 +1162,13 @@ select.flatpickr-monthDropdown-months:hover,
   }
   .inputs-grid-4 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .links-deatils {
+    flex-wrap: wrap;
+  }
+  .links-data , .links-records{
+    width: 100%;
+    max-width: unset;
   }
 }
 
