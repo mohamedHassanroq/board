@@ -1123,7 +1123,9 @@ select.flatpickr-monthDropdown-months:hover,
   border-color: var(--secondery-color);
   background-color: #fff;
 }
-
+.no_result_img {
+  height: 200px;
+}
 @media screen and (max-width: 991px) {
   .box-head .box-title {
     font-size: 15px;
