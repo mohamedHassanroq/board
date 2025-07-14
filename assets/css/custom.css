@@ -209,7 +209,7 @@ aside .aside_container::-webkit-scrollbar {
   margin-top: 60px;
   height: 31px;
   color: #1d5166;
-  padding-inline: 10px;
+  padding-inline: 15px;
   transition: padding-inline 0.3s ease-in-out;
 }
 .aside_footer_title {
@@ -1141,17 +1141,19 @@ select.flatpickr-monthDropdown-months:hover,
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
+  border: 0px;
 }
 .top-tabs-item {
-  border-radius: var(--raduis-md);
-  padding: 8px 12px;
-  color: #939393;
-  border: 1px solid #EDEDED;
+  border-radius: var(--raduis-md) !important;
+  padding: 8px 12px !important;
+  color: #939393 !important;
+  border: 1px solid #EDEDED !important;
+  cursor: pointer;
 }
 .top-tabs-item.active {
-  color: var(--secondery-color);
-  background-color: var(--light-secondary-color);
-  border: 0px;
+  color: var(--secondery-color) !important;
+  background-color: var(--light-secondary-color) !important;
+  border-color: var(--light-secondary-color) !important;
 }
 
 
