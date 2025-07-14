@@ -60,10 +60,7 @@
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
           </a>
-          <a
-            href="../rating/rating.html"
-            class="custom-anc parent-nav-item aside_active"
-          >
+          <a href="../rating/rating.html" class="custom-anc parent-nav-item">
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
           </a>
@@ -99,7 +96,7 @@
             <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
             <i class="board-democracy"></i>
           </a>
-          <a href="" class="custom-anc parent-nav-item">
+          <a href="" class="custom-anc parent-nav-item aside_active">
             <h6 class="aside_item_title custom-h">تقارير</h6>
             <i class="board-report"></i>
           </a>
@@ -269,120 +266,20 @@
                   </div>
                   <form action="" class="">
                     <div class="row p-3 g-3">
-                      <div class="col-md-6 col-lg-4">
+                      <div class="col-md-6">
                         <div class="form-group">
-                          <label class="custom-label" for="name"> الإسم</label>
-                          <input
-                            type="text"
-                            placeholder=" الإسم"
-                            class="form-control"
-                            id="name"
-                            name="name"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="position" class="custom-label">
-                            منصب</label
-                          >
-                          <select
-                            class="form-control"
-                            name="position"
-                            id="position"
-                          >
+                          <label for="year" class="custom-label"> السنة</label>
+                          <select class="form-control" name="year" id="year">
                             <option selected disabled>الكل</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
-                            <option>منصب</option>
+                            <option>السنة</option>
+                            <option>السنة</option>
+                            <option>السنة</option>
+                            <option>السنة</option>
+                            <option>السنة</option>
                           </select>
                         </div>
                       </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="company" class="custom-label">
-                            الشركة</label
-                          >
-                          <select
-                            class="form-control"
-                            name="company"
-                            id="company"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                            <option>الشركة</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="committee" class="custom-label">
-                            اللجنة</label
-                          >
-                          <select
-                            class="form-control"
-                            name="committee"
-                            id="committee"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                            <option>اللجنة</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="civilId" class="custom-label">
-                            البطاقة المدنية</label
-                          >
-                          <select
-                            class="form-control"
-                            name="civilId"
-                            id="civilId"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                            <option>البطاقة المدنية</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-md-6 col-lg-4">
-                        <div class="form-group">
-                          <label for="status" class="custom-label">
-                            الحالة</label
-                          >
-                          <select
-                            class="form-control"
-                            name="status"
-                            id="status"
-                          >
-                            <option selected disabled>الكل</option>
-                            <option>الحالة</option>
-                            <option>الحالة</option>
-                            <option>الحالة</option>
-                            <option>الحالة</option>
-                            <option>الحالة</option>
-                            <option>الحالة</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="col-12">
+                      <div class="col-md-6 d-flex align-items-end">
                         <div class="form-group fltr-btns flex-end gap-3">
                           <button
                             class="custom-btn reset-btn fltr-btn secondary"
@@ -406,128 +303,70 @@
                 <div class="meetings-table-section custom-card w-100">
                   <div class="head flex-between mb-4">
                     <h1 class="custom-h title fs-16 fw-500">
-                      سجل تقرير معلومات عامة لأعضاء مجلس الإدارة
+                      سجل تقرير حضور إجتماعات مجلس الإدارة واللجان
                     </h1>
-                    <div class="actions flex-center gap-2">
-                      <a href="#" class="custom-btn primary-btn fs-12">
-                        <i class="board-document"></i>
-                      </a>
-                      <a href="#" class="custom-btn primary-btn fs-12">
-                        <i class="board-add"></i>
-                      </a>
-                    </div>
                   </div>
                   <div class="table-responsive">
                     <table class="table custom-table">
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>الإسم</th>
-                          <th>المنصب</th>
-                          <th>ممثل عن</th>
-                          <th>الحضور</th>
-                          <th>مجلس الإدارة / اللجنة</th>
-                          <th></th>
+                          <th>السنة</th>
+                          <th>تقيم</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>2024</td>
                           <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات مجلس الإدارة
+                              </button>
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات اللجان
+                              </button>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>2</td>
+                          <td>2024</td>
                           <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات مجلس الإدارة
+                              </button>
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات اللجان
+                              </button>
                             </div>
                           </td>
                         </tr>
                         <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
+                          <td>3</td>
+                          <td>2024</td>
                           <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
-                          <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>سعود فريد سعود</td>
-                          <td>عضو مجلس الإدارة</td>
-                          <td>شركة وهران القابضة</td>
-                          <td>25</td>
-                          <td>عضو مجلس الإدارة عضو اللجنة</td>
-                          <td>
-                            <div
-                              class="flex-start gap-3 table-actions flex-end"
-                            >
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-eye-close-up"></i>
-                              </a>
-                              <a href="#" class="custom-anc table-action">
-                                <i class="board-printing"></i>
-                              </a>
+                            <div class="flex-start gap-3 table-actions">
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات مجلس الإدارة
+                              </button>
+                              <button
+                                class="custom-btn border-seconadry-btn fw-500"
+                              >
+                                حضور إجتماعات اللجان
+                              </button>
                             </div>
                           </td>
                         </tr>
