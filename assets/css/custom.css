@@ -107,6 +107,9 @@
   gap: 24px;
 }
 .mainNav-item {
+  color: #d9d8d8c4;
+}
+.mainNav-item.active {
   color: #fff;
 }
 .mainNav-item i {
@@ -755,7 +758,8 @@ select.flatpickr-monthDropdown-months:hover,
 .table .status.pending::before {
   background-color: #fb6514;
 }
-.status.completed {
+.status.completed ,
+.status.active {
   color: #309b0f;
   background-color: #e5fadf;
 }
