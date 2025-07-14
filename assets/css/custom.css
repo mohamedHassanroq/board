@@ -498,7 +498,7 @@ select.flatpickr-monthDropdown-months:hover,
 }
 /* calendar body */
 .calendar-toolbar {
-  background: #FFF;
+  background: #fff;
   border-radius: var(--raduis-md);
   padding: 16px;
 }
@@ -896,7 +896,6 @@ select.flatpickr-monthDropdown-months:hover,
   max-width: 150px;
   max-height: 170px;
 }
-<<<<<<< HEAD
 .form-switch .form-check-input.custom-switch {
   width: 40px;
   height: 20px;
@@ -908,9 +907,7 @@ select.flatpickr-monthDropdown-months:hover,
 .form-switch .form-check-input.custom-switch:checked {
   background-color: #17af3f;
   border-color: #17af3f;
-=======
-
-
+}
 /* full calendar style */
 .full_Calendar {
   min-height: max-content;
@@ -1066,7 +1063,7 @@ select.flatpickr-monthDropdown-months:hover,
 .event-time {
   padding: 8px;
   border-radius: 4px;
-  background: #F5F7FA;
+  background: #f5f7fa;
   width: 50px;
   white-space: normal;
   font-size: 14px;
@@ -1105,15 +1102,14 @@ select.flatpickr-monthDropdown-months:hover,
   padding-bottom: 8px;
   border-bottom: 1px solid #f0f1f3;
 }
-.form-check-input:checked[type=checkbox] {
- background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b6da7' stroke-width='1.5'%3E%3Cpath d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
+.custom-checkbox.form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b6da7' stroke-width='1.5'%3E%3Cpath d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
   background-size: 17px 17px;
   background-position: 25% 29%;
 }
-.form-check-input:checked {
+.custom-checkbox.form-check-input:checked {
   border-color: var(--secondery-color);
   background-color: #fff;
->>>>>>> dda36d40e8b2a214481aad89f1b863b413f25c01
 }
 
 @media screen and (max-width: 991px) {
