@@ -4,17 +4,17 @@
   --third-color: #2A66BC;
   --text-color: #181d27;
   --gray-color: #606060;
-  --light-gray: #75797B;
+  --light-gray: #75797b;
   --black-color: #000000;
   --white-color: #ffffff;
   --light-primary-color: #24334832;
-  --light-secondary-color: #EAF0F9;
+  --light-secondary-color: #eaf0f9;
   --placeholder: #939393;
   --red: #ff3d54;
   --body-bg: #efefef;
   --raduis-lg: 12px;
   --raduis-md: 10px;
-  --raduis-sm: 6px;
+  --raduis-sm: 8px;
   --aside-width: 75px;
   --form-control-padding: 8px 14px;
 }
@@ -36,9 +36,9 @@ body {
 }
 
 ::-webkit-scrollbar {
-   width: 8px;
-   height: 6px;
-   background-color: #c3cec991;
+  width: 8px;
+  height: 6px;
+  background-color: #c3cec991;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--secondery-color);
@@ -89,26 +89,26 @@ label.form-label {
 .form-select {
   -webkit-text-fill-color: #939393;
 }
-select.form-control ,
+select.form-control,
 select.form-select {
   border-radius: var(--raduis-sm);
-  padding:var(--form-control-padding);
-  border: 1px solid #D5D7DA;
-  background-color: #FFF;
+  padding: var(--form-control-padding);
+  border: 1px solid #d5d7da;
+  background-color: #fff;
   line-height: unset;
 }
-select.form-control:disabled ,
+select.form-control:disabled,
 select.form-select:disabled {
   appearance: none;
   -webkit-appearance: none;
   color: red;
 }
-.form-control:focus , 
+.form-control:focus,
 .form-select:focus {
   border: 1px solid #448bda;
   box-shadow: 1px 1px 5px 1px #448ada34;
-} 
-select.form-control ,
+}
+select.form-control,
 select.form-select {
   appearance: none;
   background-image: url(../images/arrow.svg);
@@ -125,11 +125,11 @@ select.form-select {
 }
 .file-label-style {
   height: 42.5px;
-  background: #F9F9FA;
+  background: #f9f9fa;
   cursor: pointer;
 }
 
-html[dir="rtl"] select.form-control ,
+html[dir="rtl"] select.form-control,
 html[dir="rtl"] select.form-select {
   background-position: top 50% left 14px;
 }
@@ -137,8 +137,7 @@ html[dir="rtl"] select.form-select {
 html[dir="rtl"] [type="email"],
 html[dir="rtl"] [type="number"],
 html[dir="rtl"] [type="tel"],
-html[dir="rtl"] [type="url"]
-{
+html[dir="rtl"] [type="url"] {
   direction: rtl;
 }
 .flex-center {
@@ -247,8 +246,9 @@ html[dir="rtl"] [type="url"]
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  height: 40px;
   padding: 8px 14px;
-  border-radius: 6px;
+  border-radius: var(--raduis-sm);
 }
 .custom-btn:hover {
   opacity: 0.7;

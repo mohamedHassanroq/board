@@ -8,23 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
   </head>
   <body>
     <!-- aside -->
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="./assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="./assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -98,7 +98,7 @@
         <div class="aside_footer_logo text-center flex-center gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="./assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -202,163 +202,120 @@
             ></a>
           </li>
           <li>
-            <a href="#" class="custom-anc">المهام</a>
-          </li>
-          <li>
-            <a href="#" class="custom-anc">الإجتماعات</a>
+            <a href="#" class="custom-anc">التقويم</a>
           </li>
         </ul>
       </div>
     </div>
     <!-- End breadcrumb -->
 
+    <!-- main -->
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="add-mission bg-white">
-            <div class="head-content p-3">
-              <h1 class="custom-h title fs-16 fw-500">اضافة مهمة</h1>
+          <div class="calendar flex-column-start gap-3 w-100">
+            <!-- filter -->
+            <div class="calendar-toolbar flex-between flex-wrap gap-2 w-100">
+                <div class="d-flex align-items-center gap-2" id="toolbar_parent" > </div>
+                <div class="">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                      <label class="form-check-label" for="inlineCheckbox1">المهام</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                      <label class="form-check-label" for="inlineCheckbox2">الإجتماعات</label>
+                    </div>
+                </div>
             </div>
-            <form action="" class="p-3">
-              <div class="row g-3">
-                <div class="col-lg-4">
-                  <div class="form-group required position-relative">
-                    <label for="date" class="custom-label"> تاريخ المهمة</label>
-                    <input
-                      type="datetime-local"
-                      placeholder="تاريخ المهمة"
-                      id="date"
-                      name="date"
-                      class="form-control input_flat_picker"
-                    />
-                    <i class="board-calendar flat_picker_icon"></i>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="setTo" class="custom-label">
-                      حدد تعيين مهمة إلى</label
-                    >
-                    <select class="form-control" name="setTo" id="setTo">
-                      <option selected disabled>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      إدراج الملفات من خلال</label
-                    >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group required">
-                    <label for="missions" class="form-label"> المهمة </label>
-                    <textarea
-                      class="form-control"
-                      name="missions"
-                      id="missions"
-                      rows="3"
-                      placeholder="  ادخل تفاصيل المهمة"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      طريقة تحميل المرفقات</label
-                    >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="file-upload" class="custom-label"
-                      >المرفقات</label
-                    >
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="استعراض"
-                        readonly
-                        id="file-name"
-                        style="cursor: pointer"
-                      />
-                      <input type="file" id="file-upload" hidden />
-                    </div>
-                    <div id="file-info"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label class="custom-label">يتكرر</label>
-                    <div class="custom-radio flex-between form-control">
-                      <span class="text-muted">اختر</span>
-                      <div class="radio-group">
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="yes"
-                            value="yes"
-                            checked
-                          />
-                          <label class="form-check-label" for="yes"> نعم</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="no"
-                            value="no"
-                          />
-                          <label class="form-check-label" for="no"> لا</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="custom-btn primary-btn form-btn" type="submit">
-                    حفظ
-                  </button>
-                </div>
-              </div>
-            </form>
+            <div class="full_Calendar w-100">
+                <div id='examinationCalendar' ></div>
+            </div>
+            <div id="eventTooltip" class="event-tooltip" style="display: none; position: absolute;"></div>
           </div>
+     
+
+         
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/flatpickr.min.js"></script>
-    <script src="../assets/js/flatpicker-custom.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+
+    <!-- calender js -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/locales/ar.global.min.js"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    let calendarEl = document.getElementById('examinationCalendar');
+    let tooltip = document.getElementById('eventTooltip');
+
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: 'ar', // 👉 Arabic language
+      direction: 'rtl',  
+      initialView: 'dayGridMonth',
+      initialDate: '2025-07-01',
+          events: [
+            {
+              // exam date
+              title: 'إجتماع مجلس الإدارة 32/5025',
+              start: '2025-07-15',
+              className: 'event meeting',
+              time:'5:00 ص',
+            },
+            {
+              title: 'إجتماع مجلس الإدارة 32/5025',
+              start: '2025-07-20',
+              className: 'event meeting',
+              time:'6:00 ص',
+            },
+            {
+            // ended exam
+              title: 'إجتماع مجلس الإدارة 32/5025',
+              start: '2025-07-02',
+              className: 'event meeting',
+              time:'5:00 ص'
+            },
+            {
+              title: 'إجتماع مجلس الإدارة 32/5025',
+              start: '2025-07-18',
+              className: 'event meeting',
+              time:'7:00 ص'
+            }
+          ],
+
+        eventContent: function(arg) {
+          // 👇 هنا نخصص الشكل داخل الحدث
+          return {
+            html: `
+              <div class="flex-start flex-wrap gap-2">
+                <div class="event-time">${arg.event.extendedProps.time || ''}</div>
+                <div class="event-title">${arg.event.title}</div>
+              </div>
+            `
+          };
+        }
+    });
+    calendar.render();
+     // إخفاء التولتيب عند الضغط خارج الحدث
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.fc-event')) {
+        tooltip.style.display = 'none';
+      }
+    });
+  });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let headerToolbar = document.querySelector('.fc-header-toolbar');
+        let targetContainer = document.querySelector('#toolbar_parent');
+        if (headerToolbar && targetContainer && targetContainer.firstChild) {
+           targetContainer.insertBefore(headerToolbar, targetContainer.firstChild);
+        }
+    });
+</script>
   </body>
 </html>

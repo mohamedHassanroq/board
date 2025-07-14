@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- aside -->
@@ -38,15 +39,24 @@
             <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
             <i class="board-dashboard"></i>
           </a>
-          <a href="../mettings/Meeting_Minutes.html" class="custom-anc parent-nav-item">
+          <a
+            href="../mettings/Meeting_Minutes.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">الإجتماعات</h6>
             <i class="board-meeting--1-"></i>
           </a>
-          <a href="../missions/missions.html" class="custom-anc parent-nav-item">
+          <a
+            href="../missions/missions.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">المهام</h6>
             <i class="board-task"></i>
           </a>
-          <a href="../Disclosures/Disclosures.html" class="custom-anc parent-nav-item">
+          <a
+            href="../Disclosures/Disclosures.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
           </a>
@@ -54,7 +64,10 @@
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
           </a>
-          <a href="../Performance_Indicators/PerformanceIndicators.html" class="custom-anc parent-nav-item aside_active">
+          <a
+            href="../Performance_Indicators/PerformanceIndicators.html"
+            class="custom-anc parent-nav-item aside_active"
+          >
             <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
             <i class="board-kpis"></i>
           </a>
@@ -215,209 +228,381 @@
     <!-- main -->
     <div id="content">
       <div class="container-fluid">
-      <div class="main-content">
-            <div class="metting-details flex-column-center">
-              <!-- filter section -->
-              <form class="filter-section custom-card w-100">
-                <div class="card-header">تقييم أداء عضو مجلس الإدارة</div>
-                <div class="card-body flex-column-center flex-wrap w-100 gap-3">
-                    <div class="inputs-grid-3 w-100">
-                        <div>
-                    <label for="member_name" class="form-label">اسم العضو</label>
+        <div class="main-content">
+          <div class="metting-details flex-column-center">
+            <!-- filter section -->
+            <form class="filter-section custom-card w-100">
+              <div class="card-header">تقييم أداء عضو مجلس الإدارة</div>
+              <div class="card-body flex-column-center flex-wrap w-100 gap-3">
+                <div class="inputs-grid-3 w-100">
+                  <div>
+                    <label for="member_name" class="form-label"
+                      >اسم العضو</label
+                    >
                     <input
                       type="text"
                       id="member_name"
                       class="form-control"
                       placeholder="الاسم"
                     />
-                        </div>
-                        <div>
-                            <label for="member_name" class="form-label">المنصب</label>
-                            <input
-                            type="text"
-                            id="member_name"
-                            class="form-control"
-                            placeholder="المنصب"
-                            />
-                        </div>
-                        <div class="position-relative">
-                                <label for="appointment-date" class="form-label">تاريخ التعيين </label>
-                                <input type="datetime-local" class="form-control input_flat_picker" id="appointment-date" placeholder="اختر">
-                                <i class="board-calendar flat_picker_icon"></i>
-                        </div>
-                        <div class="position-relative">
-                                <label for="date_from" class="form-label">الفترة من </label>
-                                <input type="datetime-local" class="form-control input_flat_picker" id="date_from" placeholder="اختر">
-                                <i class="board-calendar flat_picker_icon"></i>
-                        </div>
-                        <div class="position-relative">
-                                <label for="date_to" class="form-label">الفترة الي </label>
-                                <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
-                                <i class="board-calendar flat_picker_icon"></i>
-                        </div>
-                    </div>
-                    <div class="inputs-grid-2 w-100 ">
-                        <div>
-                            <label for="member_name" class="form-label">حضور إجتماعات مجلس الإدارة بصورة منتظمة</label>
-                            <div class="radio_container flex-between flex-wrap gap-2">
-                                <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ممتاز </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد جدا</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">متوسط</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ضعيف</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="member_name" class="form-label">تناسب مهارات وخبرات عضو مجلس الإدارة مع أنشطة الشركة</label>
-                            <div class="radio_container flex-between flex-wrap gap-2">
-                                <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ممتاز </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد جدا</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">متوسط</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ضعيف</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="member_name" class="form-label">الإلتزام بمواعيد بدء وإنتهاء إجتماعات المجلس</label>
-                            <div class="radio_container flex-between flex-wrap gap-2">
-                                <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ممتاز </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد جدا</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">متوسط</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ضعيف</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="member_name" class="form-label">الفهم الكامل للقطاع الإقتصادي الخاص بالشركة</label>
-                            <div class="radio_container flex-between flex-wrap gap-2">
-                                <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ممتاز </label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد جدا</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">جيد</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">متوسط</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                                 <div class="form-check custom-radio-check">
-                                    <label class="form-check-label" for="flexRadioDefault1">ضعيف</label>
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+                  <div>
+                    <label for="member_name" class="form-label">المنصب</label>
+                    <input
+                      type="text"
+                      id="member_name"
+                      class="form-control"
+                      placeholder="المنصب"
+                    />
+                  </div>
+                  <div class="position-relative">
+                    <label for="appointment-date" class="form-label"
+                      >تاريخ التعيين
+                    </label>
+                    <input
+                      type="datetime-local"
+                      class="form-control input_flat_picker"
+                      id="appointment-date"
+                      placeholder="اختر"
+                    />
+                    <i class="board-calendar flat_picker_icon"></i>
+                  </div>
+                  <div class="position-relative">
+                    <label for="date_from" class="form-label">الفترة من </label>
+                    <input
+                      type="datetime-local"
+                      class="form-control input_flat_picker"
+                      id="date_from"
+                      placeholder="اختر"
+                    />
+                    <i class="board-calendar flat_picker_icon"></i>
+                  </div>
+                  <div class="position-relative">
+                    <label for="date_to" class="form-label">الفترة الي </label>
+                    <input
+                      type="datetime-local"
+                      class="form-control input_flat_picker"
+                      id="date_to"
+                      placeholder="اختر"
+                    />
+                    <i class="board-calendar flat_picker_icon"></i>
+                  </div>
                 </div>
-                <div class="card-footer flex-between gap-2 w-100">
-                    <button class="custom-btn border-seconadry-btn">حفظ كمسودة</button>
-                    <div class="flex-end gap-2">
-                        <button class="custom-btn border-seconadry-btn">
-                            مسح
-                        </button>
-                        <button class="custom-btn secondary-btn">حفظ وإرسال</button>
+                <div class="inputs-grid-2 w-100">
+                  <div>
+                    <label for="member_name" class="form-label"
+                      >حضور إجتماعات مجلس الإدارة بصورة منتظمة</label
+                    >
+                    <div class="radio_container flex-between flex-wrap gap-2">
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ممتاز
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد جدا</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >متوسط</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ضعيف</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
                     </div>
+                  </div>
+                  <div>
+                    <label for="member_name" class="form-label"
+                      >تناسب مهارات وخبرات عضو مجلس الإدارة مع أنشطة
+                      الشركة</label
+                    >
+                    <div class="radio_container flex-between flex-wrap gap-2">
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ممتاز
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد جدا</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >متوسط</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ضعيف</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="member_name" class="form-label"
+                      >الإلتزام بمواعيد بدء وإنتهاء إجتماعات المجلس</label
+                    >
+                    <div class="radio_container flex-between flex-wrap gap-2">
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ممتاز
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد جدا</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >متوسط</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ضعيف</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="member_name" class="form-label"
+                      >الفهم الكامل للقطاع الإقتصادي الخاص بالشركة</label
+                    >
+                    <div class="radio_container flex-between flex-wrap gap-2">
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ممتاز
+                        </label>
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد جدا</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >جيد</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >متوسط</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                      <div class="form-check custom-radio-check">
+                        <label class="form-check-label" for="flexRadioDefault1"
+                          >ضعيف</label
+                        >
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="flexRadioDefault1"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </form>
+              </div>
+              <div class="card-footer flex-between gap-2 w-100">
+                <button class="custom-btn border-seconadry-btn">
+                  حفظ كمسودة
+                </button>
+                <div class="flex-end gap-2">
+                  <button class="custom-btn border-seconadry-btn">مسح</button>
+                  <button class="custom-btn secondary-btn">حفظ وإرسال</button>
+                </div>
+              </div>
+            </form>
 
-              <form class="filter-section custom-card w-100">
-                <div class="card-header">تقييم اداء عضو مجلس الادارة</div>
-                <div class="card-body flex-column-center flex-wrap w-100 gap-3">
-                    <div class="inputs-grid-2 w-100 ">
-                        <div>
-                            <label for="acheviement" class="form-label">1 - الإنجازات الرئيسية المحققة خلال فترة التقييم .</label>
-                            <input
-                            type="text"
-                            id="acheviement"
-                            class="form-control"
-                            />
-                        </div>
-                        <div>
-                            <label for="Strengths-point" class="form-label">2 - نقاط القوة التي يمكن الإستفادة منها .</label>
-                            <input
-                            type="text"
-                            id="Strengths-point"
-                            class="form-control"
-                            />
-                        </div>
-                         <div>
-                            <label for="Weaknesses-point" class="form-label">3 - نقاط الضعف التي يجب علاجها .</label>
-                            <input
-                            type="text"
-                            id="Weaknesses-point"
-                            class="form-control"
-                            />
-                        </div>
-                        <div>
-                            <label for="recommendation" class="form-label">4 - مقترحات برامج التدريب .</label>
-                            <input
-                            type="text"
-                            id="recommendation"
-                            class="form-control"
-                            />
-                        </div>
-                    </div>
+            <form class="filter-section custom-card w-100">
+              <div class="card-header">تقييم اداء عضو مجلس الادارة</div>
+              <div class="card-body flex-column-center flex-wrap w-100 gap-3">
+                <div class="inputs-grid-2 w-100">
+                  <div>
+                    <label for="acheviement" class="form-label"
+                      >1 - الإنجازات الرئيسية المحققة خلال فترة التقييم .</label
+                    >
+                    <input type="text" id="acheviement" class="form-control" />
+                  </div>
+                  <div>
+                    <label for="Strengths-point" class="form-label"
+                      >2 - نقاط القوة التي يمكن الإستفادة منها .</label
+                    >
+                    <input
+                      type="text"
+                      id="Strengths-point"
+                      class="form-control"
+                    />
+                  </div>
+                  <div>
+                    <label for="Weaknesses-point" class="form-label"
+                      >3 - نقاط الضعف التي يجب علاجها .</label
+                    >
+                    <input
+                      type="text"
+                      id="Weaknesses-point"
+                      class="form-control"
+                    />
+                  </div>
+                  <div>
+                    <label for="recommendation" class="form-label"
+                      >4 - مقترحات برامج التدريب .</label
+                    >
+                    <input
+                      type="text"
+                      id="recommendation"
+                      class="form-control"
+                    />
+                  </div>
                 </div>
-                <div class="card-footer flex-between gap-2 w-100">
-                    <button class="custom-btn border-seconadry-btn">حفظ كمسودة</button>
-                    <div class="flex-end gap-2">
-                        <button class="custom-btn border-seconadry-btn">
-                            مسح
-                        </button>
-                    </div>
+              </div>
+              <div class="card-footer flex-between gap-2 w-100">
+                <button class="custom-btn border-seconadry-btn">
+                  حفظ كمسودة
+                </button>
+                <div class="flex-end gap-2">
+                  <button class="custom-btn border-seconadry-btn">مسح</button>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -427,29 +612,23 @@
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
     <!-- script to appear choosen file -->
     <script>
-    const input = document.getElementById("myFiles");
-    const label = document.getElementById("fileLabel");
+      const input = document.getElementById("myFiles");
+      const label = document.getElementById("fileLabel");
 
-    input.addEventListener("change", function () {
+      input.addEventListener("change", function () {
         if (this.files.length > 0) {
-        const names = Array.from(this.files).map(file => file.name).join(", ");
-        label.textContent = names;
-        label.classList.remove("text-muted"); // يشيل لون النص الرمادي
+          const names = Array.from(this.files)
+            .map((file) => file.name)
+            .join(", ");
+          label.textContent = names;
+          label.classList.remove("text-muted"); // يشيل لون النص الرمادي
         } else {
-        label.textContent = "";
-        label.classList.add("text-muted");
+          label.textContent = "";
+          label.classList.add("text-muted");
         }
-    });
+      });
     </script>
-
-
   </body>
 </html>

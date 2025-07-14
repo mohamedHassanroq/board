@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
@@ -202,155 +202,99 @@
             ></a>
           </li>
           <li>
-            <a href="#" class="custom-anc">المهام</a>
-          </li>
-          <li>
-            <a href="#" class="custom-anc">الإجتماعات</a>
+            <a href="#" class="custom-anc"> عمليات الترشيح</a>
           </li>
         </ul>
       </div>
     </div>
     <!-- End breadcrumb -->
-
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="add-mission bg-white">
+          <div class="filters bg-white">
             <div class="head-content p-3">
-              <h1 class="custom-h title fs-16 fw-500">اضافة مهمة</h1>
+              <h1 class="custom-h title fs-16 fw-500">فلتر</h1>
             </div>
-            <form action="" class="p-3">
-              <div class="row g-3">
-                <div class="col-lg-4">
-                  <div class="form-group required position-relative">
-                    <label for="date" class="custom-label"> تاريخ المهمة</label>
-                    <input
-                      type="datetime-local"
-                      placeholder="تاريخ المهمة"
-                      id="date"
-                      name="date"
-                      class="form-control input_flat_picker"
-                    />
-                    <i class="board-calendar flat_picker_icon"></i>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="setTo" class="custom-label">
-                      حدد تعيين مهمة إلى</label
-                    >
-                    <select class="form-control" name="setTo" id="setTo">
-                      <option selected disabled>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
-                      <option>عضو</option>
+            <form action="" class="">
+              <div class="row p-3 g-3">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="year" class="custom-label"> سنة التقيم</label>
+                    <select class="form-control" name="year" id="year">
+                      <option selected disabled>الكل</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
+                      <option>سنة التقيم</option>
                     </select>
                   </div>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      إدراج الملفات من خلال</label
+
+                <div class="col-12 col-md-6 d-flex align-items-end">
+                  <div class="form-group fltr-btns d-flex gap-3">
+                    <button
+                      class="custom-btn reset-btn fltr-btn secondary"
+                      type="reset"
                     >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                      <option>إدراج الملفات من خلال</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group required">
-                    <label for="missions" class="form-label"> المهمة </label>
-                    <textarea
-                      class="form-control"
-                      name="missions"
-                      id="missions"
-                      rows="3"
-                      placeholder="  ادخل تفاصيل المهمة"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="dragTo" class="custom-label">
-                      طريقة تحميل المرفقات</label
+                      إعادة تعين
+                    </button>
+                    <button
+                      class="custom-btn search-btn fltr-btn secondary-bg text-white"
+                      type="submit"
                     >
-                    <select class="form-control" name="dragTo" id="dragTo">
-                      <option selected disabled>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                      <option>تحميل</option>
-                    </select>
+                      بحث الأن
+                    </button>
                   </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label for="file-upload" class="custom-label"
-                      >المرفقات</label
-                    >
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="استعراض"
-                        readonly
-                        id="file-name"
-                        style="cursor: pointer"
-                      />
-                      <input type="file" id="file-upload" hidden />
-                    </div>
-                    <div id="file-info"></div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="form-group required">
-                    <label class="custom-label">يتكرر</label>
-                    <div class="custom-radio flex-between form-control">
-                      <span class="text-muted">اختر</span>
-                      <div class="radio-group">
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="yes"
-                            value="yes"
-                            checked
-                          />
-                          <label class="form-check-label" for="yes"> نعم</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input
-                            class="form-check-input"
-                            type="radio"
-                            name="repeated"
-                            id="no"
-                            value="no"
-                          />
-                          <label class="form-check-label" for="no"> لا</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button class="custom-btn primary-btn form-btn" type="submit">
-                    حفظ
-                  </button>
                 </div>
               </div>
             </form>
+          </div>
+          <div class="plans p-3 bg-white">
+            <div class="head flex-between">
+              <h1 class="custom-h title fs-16 fw-500">عمليات الترشيح</h1>
+              <div class="actions flex-center gap-2">
+                <button href="#" class="custom-btn primary-btn fs-12">
+                  <i class="board-add"></i>
+                </button>
+              </div>
+            </div>
+            <div class="plans-data mt-4">
+              <div class="table-responsive">
+                <table class="table custom-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>اسم العضو</th>
+                      <th>تاريخ الإنشاء</th>
+                      <th>تاريخ إضافة العضو</th>
+                      <th>نموذج العضو</th>
+                      <th>نموذج أمين السر</th>
+                      <th>الحالة</th>
+                      <th>حالة العضو</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="8">
+                        <div class="noResults flex-center flex-column p-5">
+                          <div class="noResults-icon">
+                            <img
+                              src="../assets/images/search.svg"
+                              alt="no results"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <h5 class="custom-h noResults-text gray">
+                            لا يوجد نتائج متاحة
+                          </h5>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
