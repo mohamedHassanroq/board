@@ -742,7 +742,7 @@ select.flatpickr-monthDropdown-months:hover,
 }
 .custom-card .status {
   padding: 8px 15px;
-  border-radius: 8px;
+  border-radius: 50px;
 }
 .table .status:before {
   content: "";
