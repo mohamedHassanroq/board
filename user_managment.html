@@ -8,27 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- aside -->
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -38,19 +39,31 @@
             <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
             <i class="board-dashboard"></i>
           </a>
-          <a href="../mettings/Meeting_Minutes.html" class="custom-anc parent-nav-item">
+          <a
+            href="../mettings/Meeting_Minutes.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">الإجتماعات</h6>
             <i class="board-meeting--1-"></i>
           </a>
-          <a href="../missions/missions.html" class="custom-anc parent-nav-item">
+          <a
+            href="../missions/missions.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">المهام</h6>
             <i class="board-task"></i>
           </a>
-          <a href="../Disclosures/Disclosures.html" class="custom-anc parent-nav-item">
+          <a
+            href="../Disclosures/Disclosures.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
           </a>
-          <a href="../rating/rating.html" class="custom-anc parent-nav-item aside_active">
+          <a
+            href="../rating/rating.html"
+            class="custom-anc parent-nav-item aside_active"
+          >
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
           </a>
@@ -102,7 +115,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -223,183 +236,243 @@
                   <a class="custom-anc" href="rating.html">شركات الاعضاء</a>
                 </li>
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html">اللجان</a>
+                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html"
+                    >اللجان</a
+                  >
                 </li>
                 <li class="metting_list_item">
                   <a class="custom-anc" href="#">المناصب</a>
                 </li>
-                 <li class="metting_list_item">
+                <li class="metting_list_item">
                   <a class="custom-anc" href="#">أنواع الإفصاح / إقرار</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء لعضو مجلس الإدارة</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#"
+                    >مؤشرات الأداء لعضو مجلس الإدارة</a
+                  >
                 </li>
-                 <li class="metting_list_item">
+                <li class="metting_list_item">
                   <a class="custom-anc" href="#">مؤشر أداء مجلس الإدارة</a>
                 </li>
               </ul>
             </div>
-            <div class="metting-details flex-column-start justify-content-start">
-            <!-- filter section -->
-            <ul class="top-tabs-section custom-card w-100 nav-tabs custom-ul" id="mainTabs" role="tablist">
-                <li class="top-tabs-item nav-link active" data-bs-toggle="tab" data-bs-target="#Board-member">عضو مجلس الادارة</li>
-                <li class="top-tabs-item nav-link" data-bs-toggle="tab" data-bs-target="#Committee-members">أعضاء اللجنة</li>
-                <li class="top-tabs-item nav-link" data-bs-toggle="tab" data-bs-target="#Committee">اللجان</li>
-                <li class="top-tabs-item nav-link" data-bs-toggle="tab" data-bs-target="#training">التدريب</li>
-            </ul>
+            <div
+              class="metting-details flex-column-start justify-content-start"
+            >
+              <!-- filter section -->
+              <ul
+                class="top-tabs-section custom-card w-100 nav-tabs custom-ul"
+                id="mainTabs"
+                role="tablist"
+              >
+                <li
+                  class="top-tabs-item nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#Board-member"
+                >
+                  عضو مجلس الادارة
+                </li>
+                <li
+                  class="top-tabs-item nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#Committee-members"
+                >
+                  أعضاء اللجنة
+                </li>
+                <li
+                  class="top-tabs-item nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#Committee"
+                >
+                  اللجان
+                </li>
+                <li
+                  class="top-tabs-item nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#training"
+                >
+                  التدريب
+                </li>
+              </ul>
 
-            <!-- tabs -->
-             <div class="tab-content w-100">
+              <!-- tabs -->
+              <div class="tab-content w-100">
                 <!-- Board-member -->
                 <div class="tab-pane fade show active" id="Board-member">
-                    <!-- Table Section -->
-                    <div class="meetings-table-section custom-card w-100" id="Board-member">
-                        <div class="head flex-between gap-2 mb-3">
-                        <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
-                            <a href="Add_Disclosures.html" class="custom-anc action-btn flex-center primary-bg text-white fs-12">
-                                <i class="board-add"></i>
-                            </a>
-                        </div>
-                        <ul class="top-tabs-section custom-card w-100 nav-tabs custom-ul px-0 pt-0" id="PerformanceTabs" role="tablist">
-                            <li class="top-tabs-item nav-link active" data-bs-toggle="tab" data-bs-target="#Performance-member-board">مؤشرات الأداء لعضو مجلس الادارة</li>
-                            <li class="top-tabs-item nav-link" data-bs-toggle="tab" data-bs-target="#Performance-Secretary-indicators">مؤشرات الأداء لأمين السر</li>
-                        </ul>
-                        
-                        <!-- start inside tabs -->
-                        <div class="tab-content w-100">
-                            <!-- Performance-member-board tab -->
-                             <div class="tab-pane fade show active" id="Performance-member-board">
-                                <div class="table-responsive">
-                                <table class="table custom-table">
-                                <thead>
-                                    <tr>
-                                    <th>#</th>
-                                    <th>سؤال باللغة العربية</th>
-                                    <th>سؤال باللغة الانجليزية</th>
-                                    <th>اللجنة/الخطة التدريبية</th>
-                                    <th>الحالة</th>
-                                    <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                    <td>1</td>
-                                    <td>الإنجازات الرئيسية المحققة خلال فترة التقييم .</td>
-                                    <td>شركة المستقبل للإستثمار</td>
-                                    <td>laila@mustinvest.com.kw</td>
-                                    <td>
-                                        <div class="form-check form-switch">
-                                        <input
-                                            class="form-check-input custom-switch"
-                                            type="checkbox"
-                                            value=""
-                                            id="checkNativeSwitch"
-                                            switch
-                                        />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                        class="flex-start gap-3 table-actions flex-end"
-                                        >
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-eye-close-up"></i>
-                                        </a>
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-edit"></i>
-                                        </a>
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-bin"></i>
-                                        </a>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>1</td>
-                                    <td>الإنجازات الرئيسية المحققة خلال فترة التقييم .</td>
-                                    <td>شركة المستقبل للإستثمار</td>
-                                    <td>laila@mustinvest.com.kw</td>
-                                    <td>
-                                        <div class="form-check form-switch">
-                                        <input
-                                            class="form-check-input custom-switch"
-                                            type="checkbox"
-                                            value=""
-                                            id="checkNativeSwitch"
-                                            switch
-                                        />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                        class="flex-start gap-3 table-actions flex-end"
-                                        >
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-eye-close-up"></i>
-                                        </a>
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-edit"></i>
-                                        </a>
-                                        <a href="#" class="custom-anc table-action">
-                                            <i class="board-bin"></i>
-                                        </a>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                </tbody>
-                                </table>
-                                </div>
-                                <!-- Pagination -->
-                                <nav aria-label="Page navigation w-100">
-                                    <div class="pagination">
-                                    <a class="prev" href="#">السابق</a>
-                                    <div class="flex-center gap-2">
-                                        <a href="#" class="pagination-item active">1</a>
-                                        <a href="#" class="pagination-item">2</a>
-                                        <a href="#" class="pagination-item">3</a>
-                                    </div>
-
-                                    <a class="next" href="#">التالي</a>
-                                    </div>
-                                </nav>
-                             </div>
-                             <!-- Performance-Secretary-indicators -->
-                              <div class="tab-pane fade show" id="Performance-Secretary-indicators">
-                                Performance-Secretary-indicators
-                              </div>
-                        </div>
-                        <!-- end inside tabs -->
-
+                  <!-- Table Section -->
+                  <div
+                    class="meetings-table-section custom-card w-100"
+                    id="Board-member"
+                  >
+                    <div class="head flex-between gap-2 mb-3">
+                      <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
+                      <a
+                        href="Add_Disclosures.html"
+                        class="custom-anc action-btn flex-center primary-bg text-white fs-12"
+                      >
+                        <i class="board-add"></i>
+                      </a>
                     </div>
+                    <ul
+                      class="top-tabs-section custom-card w-100 nav-tabs custom-ul px-0 pt-0"
+                      id="PerformanceTabs"
+                      role="tablist"
+                    >
+                      <li
+                        class="top-tabs-item nav-link active"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Performance-member-board"
+                      >
+                        مؤشرات الأداء لعضو مجلس الادارة
+                      </li>
+                      <li
+                        class="top-tabs-item nav-link"
+                        data-bs-toggle="tab"
+                        data-bs-target="#Performance-Secretary-indicators"
+                      >
+                        مؤشرات الأداء لأمين السر
+                      </li>
+                    </ul>
+
+                    <!-- start inside tabs -->
+                    <div class="tab-content w-100">
+                      <!-- Performance-member-board tab -->
+                      <div
+                        class="tab-pane fade show active"
+                        id="Performance-member-board"
+                      >
+                        <div class="table-responsive">
+                          <table class="table custom-table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>سؤال باللغة العربية</th>
+                                <th>سؤال باللغة الانجليزية</th>
+                                <th>اللجنة/الخطة التدريبية</th>
+                                <th>الحالة</th>
+                                <th></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  الإنجازات الرئيسية المحققة خلال فترة التقييم .
+                                </td>
+                                <td>شركة المستقبل للإستثمار</td>
+                                <td>laila@mustinvest.com.kw</td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <input
+                                      class="form-check-input custom-switch"
+                                      type="checkbox"
+                                      value=""
+                                      id="checkNativeSwitch"
+                                      switch
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div
+                                    class="flex-start gap-3 table-actions flex-end"
+                                  >
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-eye-close-up"></i>
+                                    </a>
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-edit"></i>
+                                    </a>
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-bin"></i>
+                                    </a>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>1</td>
+                                <td>
+                                  الإنجازات الرئيسية المحققة خلال فترة التقييم .
+                                </td>
+                                <td>شركة المستقبل للإستثمار</td>
+                                <td>laila@mustinvest.com.kw</td>
+                                <td>
+                                  <div class="form-check form-switch">
+                                    <input
+                                      class="form-check-input custom-switch"
+                                      type="checkbox"
+                                      value=""
+                                      id="checkNativeSwitch"
+                                      switch
+                                    />
+                                  </div>
+                                </td>
+                                <td>
+                                  <div
+                                    class="flex-start gap-3 table-actions flex-end"
+                                  >
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-eye-close-up"></i>
+                                    </a>
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-edit"></i>
+                                    </a>
+                                    <a href="#" class="custom-anc table-action">
+                                      <i class="board-bin"></i>
+                                    </a>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation w-100">
+                          <div class="pagination">
+                            <a class="prev" href="#">السابق</a>
+                            <div class="flex-center gap-2">
+                              <a href="#" class="pagination-item active">1</a>
+                              <a href="#" class="pagination-item">2</a>
+                              <a href="#" class="pagination-item">3</a>
+                            </div>
+
+                            <a class="next" href="#">التالي</a>
+                          </div>
+                        </nav>
+                      </div>
+                      <!-- Performance-Secretary-indicators -->
+                      <div
+                        class="tab-pane fade show"
+                        id="Performance-Secretary-indicators"
+                      >
+                        Performance-Secretary-indicators
+                      </div>
+                    </div>
+                    <!-- end inside tabs -->
+                  </div>
                 </div>
                 <div class="tab-pane fade" id="Committee-members">
-                    Committee-members
+                  Committee-members
                 </div>
-                  <div class="tab-pane fade" id="Committee">
-                    Committee
-                </div>
-                  <div class="tab-pane fade" id="training">
-                    training
-                </div>
-             </div>
-             <!-- end of tabs -->
+                <div class="tab-pane fade" id="Committee">Committee</div>
+                <div class="tab-pane fade" id="training">training</div>
+              </div>
+              <!-- end of tabs -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
+      flatpickr("input[type=datetime-local]", {
+        dateFormat: "d / M / Y",
+        // defaultDate: new Date(),
+      });
     </script>
-
   </body>
 </html>

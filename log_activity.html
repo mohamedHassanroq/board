@@ -8,27 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- aside -->
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -38,15 +39,24 @@
             <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
             <i class="board-dashboard"></i>
           </a>
-          <a href="../mettings/Meeting_Minutes.html" class="custom-anc parent-nav-item">
+          <a
+            href="../mettings/Meeting_Minutes.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">الإجتماعات</h6>
             <i class="board-meeting--1-"></i>
           </a>
-          <a href="../missions/missions.html" class="custom-anc parent-nav-item">
+          <a
+            href="../missions/missions.html"
+            class="custom-anc parent-nav-item"
+          >
             <h6 class="aside_item_title custom-h">المهام</h6>
             <i class="board-task"></i>
           </a>
-          <a href="../Disclosures/Disclosures.html" class="custom-anc parent-nav-item aside_active">
+          <a
+            href="../Disclosures/Disclosures.html"
+            class="custom-anc parent-nav-item aside_active"
+          >
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
           </a>
@@ -102,7 +112,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -215,105 +225,103 @@
     <!-- main -->
     <div id="content">
       <div class="container-fluid">
-      <div class="main-content">
-            <div class="metting-details flex-column-center">
-              <!-- filter section -->
-              <div class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body inputs-grid-4">
-                  <div>
-                    <label for="all" class="form-label">الكل</label>
-                    <select id="all" class="form-select">
-                      <option selected disabled>الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
-                  </div>
-                  <div>
-                        <label for="action-type" class="form-label">نوع الإجراء</label>
-                        <select id="action-type" class="form-select">
-                        <option selected disabled>الكل</option>
-                        <option>في انتظار التوقيع</option>
-                        <option>غير مسموح بالتوقيع</option>
-                        </select>
-                  </div>
+        <div class="main-content">
+          <div class="metting-details flex-column-center">
+            <!-- filter section -->
+            <div class="filter-section custom-card w-100">
+              <div class="card-header">فلتر</div>
+              <div class="card-body inputs-grid-4">
+                <div>
+                  <label for="all" class="form-label">الكل</label>
+                  <select id="all" class="form-select">
+                    <option selected disabled>الكل</option>
+                    <option>في انتظار التوقيع</option>
+                    <option>غير مسموح بالتوقيع</option>
+                  </select>
                 </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
+                <div>
+                  <label for="action-type" class="form-label"
+                    >نوع الإجراء</label
+                  >
+                  <select id="action-type" class="form-select">
+                    <option selected disabled>الكل</option>
+                    <option>في انتظار التوقيع</option>
+                    <option>غير مسموح بالتوقيع</option>
+                  </select>
                 </div>
               </div>
-
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="head flex-between gap-2 mb-3">
-                   <div class="table-title">نشاط السجل</div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>الإجراء</th>
-                        <th>الوصف</th>
-                        <th>التاريخ</th>
-                      </tr>
-                    </thead>
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>جورجيت جورج ليون created agenda details</td>
-                                <td>name_endescription_ar description</td>
-                                <td>12/5/2025</td>
-                            </tr>
-                             <tr>
-                                <th>1</th>
-                                <td>جورجيت جورج ليون created agenda details</td>
-                                <td>name_endescription_ar description</td>
-                                <td>12/5/2025</td>
-                            </tr>
-                              <tr>
-                                <th>1</th>
-                                <td>جورجيت جورج ليون created agenda details</td>
-                                <td>name_endescription_ar description</td>
-                                <td>12/5/2025</td>
-                            </tr>
-                            <tr>
-                                <th>1</th>
-                                <td>جورجيت جورج ليون created agenda details</td>
-                                <td>name_endescription_ar description</td>
-                                <td>12/5/2025</td>
-                            </tr>
-                    </tbody>
-                  </table>
-             
-                </div>
-
-                 <!-- Pagination -->
-                <nav aria-label="Page navigation w-100">
-                  <div class="pagination">
-                    <a class="prev" href="#">السابق</a>
-                    <div class="flex-center gap-2">
-                      <a href="#" class="pagination-item active">1</a>
-                      <a href="#" class="pagination-item">2</a>
-                      <a href="#" class="pagination-item">3</a>
-                    </div>
-
-                    <a class="next" href="#">التالي</a>
-                  </div>
-                </nav>
-
-
+              <div class="card-footer flex-end gap-2">
+                <button class="custom-btn border-seconadry-btn">
+                  إعادة تعين
+                </button>
+                <button class="custom-btn secondary-btn">بحث الأن</button>
               </div>
             </div>
+
+            <!-- Table Section -->
+            <div class="meetings-table-section custom-card w-100">
+              <div class="head flex-between gap-2 mb-3">
+                <div class="table-title">نشاط السجل</div>
+              </div>
+              <div class="table-responsive">
+                <table class="table custom-table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>الإجراء</th>
+                      <th>الوصف</th>
+                      <th>التاريخ</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>جورجيت جورج ليون created agenda details</td>
+                      <td>name_endescription_ar description</td>
+                      <td>12/5/2025</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>جورجيت جورج ليون created agenda details</td>
+                      <td>name_endescription_ar description</td>
+                      <td>12/5/2025</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>جورجيت جورج ليون created agenda details</td>
+                      <td>name_endescription_ar description</td>
+                      <td>12/5/2025</td>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>جورجيت جورج ليون created agenda details</td>
+                      <td>name_endescription_ar description</td>
+                      <td>12/5/2025</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Pagination -->
+              <nav aria-label="Page navigation w-100">
+                <div class="pagination">
+                  <a class="prev" href="#">السابق</a>
+                  <div class="flex-center gap-2">
+                    <a href="#" class="pagination-item active">1</a>
+                    <a href="#" class="pagination-item">2</a>
+                    <a href="#" class="pagination-item">3</a>
+                  </div>
+
+                  <a class="next" href="#">التالي</a>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
-
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
   </body>
 </html>
