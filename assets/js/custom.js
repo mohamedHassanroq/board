@@ -21,4 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
       fileInfo.style.display = "none";
     }
   });
+
 });

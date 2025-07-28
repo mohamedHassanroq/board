@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+           <div class="links-deatils">
+              <div class="links-data">
+                   <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="table-title">اجتماع مجلس الإدارة 2025/28</div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="custom-btn secondary-btn px-4">البداية</button>
+                                <button class="custom-btn edit-btn px-4">تعديل</button>
+                                <button class="custom-btn success-btn px-4">تأكيد الأجتماع</button>
+                            </div>
+                           
+                        </div>
+                        <div class="card-body inputs-grid-4">
+                            <div class="flex-center gap-2 flex-wrap ">
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">أنشاء من قبل</h6>
+                                        <h6>اجتماع مجلس الإدارة</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">نوع الاجتماع</h6>
+                                        <h6>اجتماع مجلس الإدارة</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-calendar"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">تاريخ النشر</h6>
+                                        <h6>12 مارس 2025</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                    <div class="Details_item_icon">
+                                      <i class="board-wall-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">وقت النشر</h6>
+                                        <h6>10:00 ص</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-wall-clock"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">تاريخ الإستحقاق</h6>
+                                        <h6>12 مارس 2025</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                 <div class="Details_item_icon">
+                                      <i class="board-wall-clock"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">وقت الإستحقاق</h6>
+                                        <h6>10:00 ص</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+
+                   <!-- mission table section -->
+                   <div class="meetings-table-section custom-card">
+                        <div class="head flex-between gap-2 mb-3">
+                            <div class="table-title">المهام</div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table custom-table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>المهام</th>
+                                    <th>محتوى المهمة</th>
+                                    <th>التاريخ</th>
+                                    <th>الحالة</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="flex-column-center gap-1" >
+                                <img src="../assets/images/search.svg" class="no_result_img" />
+                                <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
+                            </div>
+                        </div>
+                   </div>
+
+                   <!-- Attendance table section -->
+                   <div class="meetings-table-section custom-card">
+                        <div class="head flex-between gap-2 mb-3">
+                            <div class="table-title">الحضور و الدعوات</div>
+                            <button class="custom-btn secondary-btn px-4">تسجيل الحضور</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table custom-table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>اسم العضو</th>
+                                    <th>حالة الدعوة</th>
+                                    <th>حالة الحضور</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="index">1</th>
+                                        <td>
+                                            <div class="user_profile">
+                                                <img
+                                                    src="https://github.com/mdo.png"
+                                                    alt="hugenerd"
+                                                    width="40"
+                                                    height="40"
+                                                    class="rounded-circle mx-1 mx-md-2"
+                                                    />
+                                                <h4 class="title">هناء أحمد عبد الله</h4>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="status-type accept"><i class="fas fa-check"></i></div>
+                                        </td>
+                                        <td><span class="status pending">في انتظار بدء الحضور</span></td>
+                                    </tr>
+                                       <tr>
+                                        <th class="index">1</th>
+                                        <td>
+                                            <div class="user_profile">
+                                                <img
+                                                    src="https://github.com/mdo.png"
+                                                    alt="hugenerd"
+                                                    width="40"
+                                                    height="40"
+                                                    class="rounded-circle mx-1 mx-md-2"
+                                                    />
+                                                <h4 class="title">هناء أحمد عبد الله</h4>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="status-type reject"><i class="fas fa-xmark"></i></div>
+                                        </td>
+                                        <td><span class="status pending">في انتظار بدء الحضور</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                   </div>
+
+              </div>
+              <div class="links-records">
+                  <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="table-title">جدول الأعمال</div>
+                            <div class="d-flex align-items-center gap-2">
+                              <a class="custom-anc third fs-14 fw-500"> عرض التفاصيل </a>
+                            </div>
+                           
+                        </div>
+                        <div class="card-body Agenda flex-column-start gap-3">
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>البند الأول : نقطة أولى </h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                  <div class="status waiting rounded-5 px-4">عام</div>
+                                
+                                </div>
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>البند الثاني : نقطة أولى</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                  <div class="status danger rounded-5 px-4">خاص</div>
+                                
+                                </div>
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>البند الثالث : نقطة أولى</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                
+                                </div>
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>البند الأول : نقطة أولى</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                
+                                </div>
+                        </div>
+                  </div>
+                  <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="table-title">الجهات الخارجيه / الجهات الداخليه</div>
+                           
+                        </div>
+                        <div class="card-body Agenda flex-column-start gap-3">
+                            <p class="light-gray mx-auto fs-14 fw-400 py-5">لا يوجد جهات حتي الأن</p>
+                        </div>
+                  </div>
+                  <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="table-title">سجل الاجتماع</div>
+                        </div>
+                        <div class="card-body Agenda flex-column-start gap-3">
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>جورج ليون قام بتعديل إجتماع</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                
+                                </div>
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-edit--1-"></i>
+                                      </div>
+                                      <div>
+                                         <h6>جورج ليون قام بتعديل إجتماع</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                
+                                </div>
+                                <div class="Agenda_Details_item flex-between gap-2 w-100">
+                                  <div class="flex-center gap-2">
+                                      <div class="Details_item_icon">
+                                        <i class="board-add"></i>
+                                      </div>
+                                      <div>
+                                         <h6>جورج ليون قام بتعديل إجتماع</h6>
+                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
+                                      </div>
+                                  </div>
+                                
+                                </div>
+                        </div>
+                  </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+
+  </body>
+</html>

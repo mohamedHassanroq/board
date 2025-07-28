@@ -86,6 +86,9 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 15px 10px;
 }
+.full-width {
+  grid-column: 1 / -1;
+}
 .inputs-grid-4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -447,7 +450,8 @@ textarea.form-control {
   border: 1px solid #d5d7da;
   background: #fff !important;
 }
-.flat_picker_icon {
+.flat_picker_icon ,
+.input-icon {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -733,6 +737,17 @@ select.flatpickr-monthDropdown-months:hover,
   color: var(--secondery-color);
   opacity: 1;
 }
+.sharp-status {
+  border-radius: 8px !important;
+}
+.status-type {
+  border-radius: 50% !important;
+  width: max-content;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .table .status {
   display: inline-block;
   position: relative;
@@ -756,6 +771,15 @@ select.flatpickr-monthDropdown-months:hover,
   color: #fb6514;
   background-color: #fff6ed;
 }
+.accept {
+  background-color: #88C941;
+  color: #fff;
+}
+.reject {
+  background-color: #EE404C;
+  color: #FFF7ED;
+}
+
 .table .status.pending::before {
   background-color: #fb6514;
 }
@@ -781,6 +805,24 @@ select.flatpickr-monthDropdown-months:hover,
 .status.danger {
   color: #FF3D54;
   background-color: #FFECEE;
+}
+.action-icons li {
+  border-radius: 8px;
+  background: #F7F7F7;
+  padding: 2px 8px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action-icons li a {
+  color: #606060;
+}
+.action-icons li:has(i.board-bin) {
+  background-color: #FFECEE;
+}
+i.board-bin {
+  color: #FF3D54;
 }
 .add-mission {
   border-radius: var(--raduis-lg);
@@ -1125,14 +1167,21 @@ select.flatpickr-monthDropdown-months:hover,
   padding-bottom: 8px;
   border-bottom: 1px solid #f0f1f3;
 }
+.custom-checkbox.form-check-input {
+  width: 18px;
+  height: 18px;
+  background-size: 20px 20px;
+  background-position: 25% 29%;
+  border-radius: 6px;
+}
 .custom-checkbox.form-check-input:checked[type="checkbox"] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b6da7' stroke-width='1.5'%3E%3Cpath d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
-  background-size: 17px 17px;
+  background-size: 23px 23px;
   background-position: 25% 29%;
 }
 .custom-checkbox.form-check-input:checked {
   border-color: var(--secondery-color);
-  background-color: #fff;
+  background-color: var(--light-color);
 }
 .no_result_img {
   height: 200px;
@@ -1156,8 +1205,24 @@ select.flatpickr-monthDropdown-months:hover,
   background-color: var(--light-secondary-color) !important;
   border-color: var(--light-secondary-color) !important;
 }
-
-
+.form-group:has(select:required) label ,
+.form-group:has(input:required) label ,
+.form-group:has(textarea:required) label { 
+ position: relative;
+}
+.form-group:has(select:required) label::after ,
+.form-group:has(input:required) label::after ,
+.form-group:has(textarea:required) label::after {
+  content: "*";
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  padding-inline: 2px;
+  color: red;
+}
+.box-btn {
+  text-decoration: none;
+}
 @media screen and (max-width: 991px) {
   .box-head .box-title {
     font-size: 15px;

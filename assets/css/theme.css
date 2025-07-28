@@ -17,6 +17,7 @@
   --raduis-sm: 8px;
   --aside-width: 75px;
   --form-control-padding: 8px 14px;
+  --light-color: #F4F7FB;
 }
 body {
   font-family: "Tajawal", sans-serif;
@@ -67,9 +68,10 @@ input {
   justify-content: center;
   cursor: pointer;
   padding: 0;
+  text-decoration: none;
 }
 .custom-btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .custom-h,
 .custom-p {
@@ -268,9 +270,28 @@ html[dir="rtl"] [type="url"] {
   color: var(--secondery-color);
   border: 1px solid var(--secondery-color);
 }
-
+.edit-btn {
+  background: #FB6514;
+  color: #fff;
+  border: 1px solid #FB6514;
+}
+.success-btn {
+   background-color: #309B0F;
+   color: #fff;
+   border: 1px solid #309B0F;
+}
 .max-height {
   max-height: 100%;
+}
+.position-relative input[type="number"]::-webkit-inner-spin-button,
+.position-relative input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.position-relative input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 @media (max-width: 991px) {

@@ -4,4 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     dateFormat: "d / M / Y",
     // defaultDate: new Date(),
   });
+
+  flatpickr(".timePicker", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+    time_24hr: true,
+    minuteIncrement: 15,
+    disableMobile: true
+  });
+
 });
