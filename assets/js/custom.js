@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const fileInfo = document.getElementById("file-info");
 
   // Click event for the visible input
-  fileNameDisplay.addEventListener("click", function () {
+  fileNameDisplay?.addEventListener("click", function () {
     fileInput.click();
   });
 
   // Change event for the file input
-  fileInput.addEventListener("change", function () {
+  fileInput?.addEventListener("change", function () {
     if (this.files.length > 0) {
       const file = this.files[0];
       fileNameDisplay.value = file.name;
@@ -22,4 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // to let select readonly 
+  document.querySelectorAll("select").forEach(function (select) {
+    select.addEventListener("mousedown", function (e) {
+      e.preventDefault(); // يمنع فتح القائمة بالماوس
+    });
+    select.addEventListener("keydown", function (e) {
+      e.preventDefault(); // يمنع التغيير بالكيبورد
+    });
+  });
+
+
 });
+
+

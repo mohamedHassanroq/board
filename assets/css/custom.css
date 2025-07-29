@@ -522,7 +522,9 @@ select.flatpickr-monthDropdown-months:hover,
   background-color: var(--secondery-color) !important;
   border-radius: 50% !important;
 }
-
+.flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg {
+  fill: rgb(187, 186, 186) !important;
+}
 /* mettings style */
 .metting-grid-container {
   display: grid;
@@ -626,7 +628,9 @@ select.flatpickr-monthDropdown-months:hover,
 .custom-table .icon:hover {
   color: var(--secondery-color);
 }
-
+.custom-table .icon.board-bin:hover {
+  color: var(--red);
+}
 /* status */
 .status-badge {
   padding: 3px 8px;

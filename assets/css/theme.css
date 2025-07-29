@@ -255,6 +255,9 @@ html[dir="rtl"] [type="url"] {
 .custom-btn:hover {
   opacity: 0.7;
 }
+.custom-table-btn {
+  height: unset;
+}
 .secondary-btn {
   background-color: var(--secondery-color);
   color: #fff;
