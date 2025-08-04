@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -26,9 +26,9 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="../../assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -102,7 +102,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="../../assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -219,7 +219,7 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="metting-grid-container">
+          <div class="meeting-grid-container">
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
                 <li class="metting_list_item">
@@ -308,7 +308,55 @@
                         <th>النتيجة</th>
                       </tr>
                     </thead>
-                        <tbody>
+                    <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>8/24</td>
+                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
+                                <td>12/5/2025</td>
+                                <td>لجنة الترشيحات والمكافآت</td>
+                                <td>
+                                <span class="status completed">اكتمل توقيع الأعضاء</span>
+                                </td>
+                                <td>
+                                    <div class="table-actions flex-end gap-3">
+                                        <a class="custom-btn custom-table-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                        <a href="Resolutions-view.html">
+                                            <i class="board-view icon"></i>
+                                        </a>
+                                        <a href="Resolutions-edit.html">
+                                            <i class="board-edit--1- icon"></i>
+                                        </a>
+                                        <a data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="board-bin icon"></i>
+                                        </a> 
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <td>8/24</td>
+                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
+                                <td>12/5/2025</td>
+                                <td>لجنة الترشيحات والمكافآت</td>
+                                <td>
+                                <span class="status waiting">بإنتظار توقيع الاعضاء</span>
+                                </td>
+                                <td>
+                                      <div class="table-actions flex-end gap-3">
+                                        <a class="custom-btn custom-table-btn border-seconadry-btn custom-anc">النتيجه</a>
+                                        <a href="Resolutions-view.html">
+                                            <i class="board-view icon"></i>
+                                        </a>
+                                        <a href="Resolutions-edit.html">
+                                            <i class="board-edit--1- icon"></i>
+                                        </a>
+                                        <a data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                            <i class="board-bin icon"></i>
+                                        </a> 
+                                    </div>
+                                </td>
+                            </tr>
                             <tr>
                                 <th>1</th>
                                 <td>8/24</td>
@@ -321,49 +369,13 @@
                                 <td>
                                     <div class="table-actions flex-end gap-3">
                                         <a class="custom-btn custom-table-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                        <i class="board-view icon"></i>
-                                        <i class="board-edit--1- icon"></i>
-                                        <i class="board-bin icon"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                              <tr>
-                                <th>1</th>
-                                <td>8/24</td>
-                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
-                                <td>12/5/2025</td>
-                                <td>لجنة الترشيحات والمكافآت</td>
-                                <td>
-                                <span class="status waiting">بإنتظار توقيع الاعضاء</span>
-                                </td>
-                                <td>
-                                    <div class="table-actions flex-end gap-3">
-                                        <a class="custom-btn custom-table-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                        <i class="board-view icon"></i>
-                                        <i class="board-edit--1- icon"></i>
-                                        <i class="board-bin icon"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                              <tr>
-                                <th>1</th>
-                                <td>8/24</td>
-                                <td>يرجى التكرم بالموافقة على تجديد ..</td>
-                                <td>12/5/2025</td>
-                                <td>لجنة الترشيحات والمكافآت</td>
-                                <td>
-                                <span class="status pending">معلق</span>
-                                </td>
-                                <td>
-                                    <div class="table-actions flex-end gap-3">
-                                        <a class="custom-btn custom-table-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                        <a href="">
+                                        <a href="Resolutions-view.html">
                                             <i class="board-view icon"></i>
                                         </a>
-                                        <a>
+                                        <a href="Resolutions-edit.html">
                                             <i class="board-edit--1- icon"></i>
                                         </a>
-                                        <a>
+                                        <a data-bs-toggle="modal" data-bs-target="#deleteModal">
                                             <i class="board-bin icon"></i>
                                         </a> 
                                     </div>
@@ -388,6 +400,25 @@
                   </div>
                 </nav>
 
+                <!-- Modal -->
+                <div class="modal fade custom-modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="flex-column-center gap-3">
+                          <img src="../../assets/images/delete_modal.svg">
+                          <h3 class="custom-h fs-18 fw-500">هل أنت متأكد من الحذف</h3>
+                          <p class="custom-p fs-14 fw-400 light-gray">بمجرد الحذف لن تستطيع استعاده البيانات</p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="custom-btn border-danger-btn col" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="custom-btn danger-btn col">استمر احذف</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -395,16 +426,11 @@
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
+    <script src="../../assets/js/flatpicker-custom.js"></script>
   </body>
 </html>

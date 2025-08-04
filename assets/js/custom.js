@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // to let select readonly 
-  document.querySelectorAll("select").forEach(function (select) {
+  document.querySelectorAll(".readonly_select").forEach(function (select) {
     select.addEventListener("mousedown", function (e) {
       e.preventDefault(); // يمنع فتح القائمة بالماوس
     });
@@ -32,7 +32,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  //  <!-- script to appear choosen file -->
+  let input = document.getElementById("myFiles");
+  let label = document.getElementById("fileLabel");
+
+  input?.addEventListener("change", function () {
+    if (this.files.length > 0) {
+        let names = Array.from(this.files).map(file => file.name).join(", ");
+        label.textContent = names;
+        label.classList.remove("text-muted"); // يشيل لون النص الرمادي
+    } else {
+        label.textContent = "";
+        label.classList.add("text-muted");
+    }
+  });
+
+  // tooltip js
+  let tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+  tooltipTriggerList?.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
 
 });
-
 

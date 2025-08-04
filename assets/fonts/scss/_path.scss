@@ -1,0 +1,21 @@
+// Font paths
+// -------------------------
+
+@font-face {
+  font-family: "board";
+  src: url("../fonts/board.eot");
+  src: url("../fonts/board.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/board.woff2") format("woff2"),
+  url("../fonts/board.woff") format("woff"),
+  url("../fonts/board.ttf") format("truetype"),
+  url("../fonts/board.svg#font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "board";
+    src: url("../fonts/board.svg#board") format("svg");
+  }
+}

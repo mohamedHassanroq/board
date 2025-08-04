@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<style>
+/* .tooltip-inner {
+  background-color: var(--primary-color); 
+  color: white !important;  
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--primary-color);
+}
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: var(--primary-color);
+}
+
+.tooltip.bs-tooltip-start .tooltip-arrow::before {
+  border-left-color: var(--primary-color);
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: var(--primary-color);
+} */
+
+</style>
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-task"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+            <div class="flex-column-start gap-3">
+                   <div class="noPadding-card custom-card w-100">
+                        <div class="card-body flex-between flex-wrap gap-2">
+                            <div class="flex-start gap-2">
+                              <h3 class="table-title custom-h">اجتماع لجنة إدارة المخاطر 2025...</h3>
+                              <div class="status sharp-status completed"> مرسلة للأعضاء </div>
+                              <div class="status sharp-status pending">لا يزال في وضع التحرير</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="custom-btn secondary-btn px-4" data-bs-toggle="modal" data-bs-target="#Add_Note">إضأفة مذكرة</button>
+                                <button class="custom-btn border-seconadry-btn px-4" data-bs-toggle="modal" data-bs-target="#Note">مذكرة الإجتماع</button>
+                                <button class="custom-btn border-seconadry-btn px-4 ">تعديل</button>
+                                <button class="custom-btn border-seconadry-btn px-4"> <i class="board-printing"></i> ورقة رسمية </button>
+                            </div>
+                        </div>
+                        <!-- Note Modal -->
+                        <div class="modal fade custom-modal" id="Note" tabindex="-1" data-bs-backdrop="static" aria-labelledby="NoteLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered w-50">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                        <h1 class="modal-title" id="NoteLabel">مذكرة ل اجتماع مجلس الإدارة 2025/3</h1>
+                                        <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                <div class="modal-body pt-0">
+                                    <!-- Table Section -->
+                                    <div class="meetings-table-section custom-card w-100 py-0">
+                                        <div class="table-responsive">
+                                        <table class="table custom-table">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>عنوان المذكرة</th>
+                                                <th>رقم المحضر</th>
+                                                <th>التاريخ</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <td>موضوع</td>
+                                                        <td>45</td>
+                                                        <td>الاثنين 28 يوليو 2025</td>
+                                                        <td>
+                                                            <div class="table-actions flex-end gap-3">
+                                                                <a href="add_note_view.html">
+                                                                    <i class="board-view icon"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <td>موضوع</td>
+                                                        <td>45</td>
+                                                        <td>الاثنين 28 يوليو 2025</td>
+                                                        <td>
+                                                            <div class="table-actions flex-end gap-3">
+                                                                <a href="add_note_view.html">
+                                                                    <i class="board-view icon"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>1</th>
+                                                        <td>موضوع</td>
+                                                        <td>45</td>
+                                                        <td>الاثنين 28 يوليو 2025</td>
+                                                        <td>
+                                                            <div class="table-actions flex-end gap-3">
+                                                                <a href="add_note_view.html">
+                                                                    <i class="board-view icon"></i>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                        </div>
+
+                                        <!-- Pagination -->
+                                        <nav aria-label="Page navigation w-100">
+                                        <div class="pagination">
+                                            <a class="prev" href="#">السابق</a>
+                                            <div class="flex-center gap-2">
+                                            <a href="#" class="pagination-item active">1</a>
+                                            <a href="#" class="pagination-item">2</a>
+                                            <a href="#" class="pagination-item">3</a>
+                                            </div>
+
+                                            <a class="next" href="#">التالي</a>
+                                        </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add_Note Modal -->
+                        <div class="modal fade custom-modal" id="Add_Note" tabindex="-1" data-bs-backdrop="static" aria-labelledby="Add_NoteLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered w-75">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h1 class="modal-title" id="Add_NoteLabel">إضافة مذكرة ل اجتماع لجنة إدارة المخاطر 2025/6</h1>
+                                            <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body pt-0">
+                                        <form class="flex-column-start gap-3">
+                                                <div class="grid-3 w-100">
+                                                    <div class="form-group">
+                                                        <label for="Reference" class="form-label">المرجع</label>
+                                                        <input
+                                                        type="text"
+                                                        id="Reference"
+                                                        placeholder="أدخل"
+                                                        class="form-control"
+                                                        required />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="from" class="form-label">من</label>
+                                                        <input
+                                                        type="text"
+                                                        id="from"
+                                                        placeholder="أدخل"
+                                                        class="form-control"
+                                                        value="نورية محمد أحمد"
+                                                        readonly
+                                                        required />
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="to" class="form-label"> إلى</label>
+                                                            <select id="to" class="form-select">
+                                                            <option selected>مجلس الإدارة</option>
+                                                            <option>في انتظار التوقيع</option>
+                                                            <option>غير مسموح بالتوقيع</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="to" class="form-label"> إلى</label>
+                                                            <select id="to" class="form-select">
+                                                            <option selected>مجلس الإدارة</option>
+                                                            <option>في انتظار التوقيع</option>
+                                                            <option>غير مسموح بالتوقيع</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="redirected " class="form-label">إعادة التوجية إلي</label>
+                                                        <input
+                                                        type="text"
+                                                        id="redirected "
+                                                        placeholder="أدخل"
+                                                        class="form-control"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div class="w-100 flex-center flex-wrap gap-10">
+                                                    <div class="col-sm-12 form-group">
+                                                            <label for="to" class="form-label"> القرارت</label>
+                                                            <select id="to" class="form-select">
+                                                            <option selected disabled>اختر</option>
+                                                            <option>في انتظار التوقيع</option>
+                                                            <option>غير مسموح بالتوقيع</option>
+                                                            </select>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md required">
+                                                        <label for="subject[ar]" class="form-label">الموضوع باللغة العربية <span class="red">*</span></label>
+                                                        <textarea class="form-control custom-textarea" id="subject[ar]" rows="4" placeholder="ادخل" required></textarea>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md required">
+                                                        <label for="subject[en]" class="form-label">الموضوع باللغة الإنجليزية <span class="red">*</span></label>
+                                                        <textarea class="form-control custom-textarea" id="subject[en]" rows="4" placeholder="ُEnter" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-end w-100">  
+                                                    <button type="button" class="custom-btn primary-btn min-btn-width">تأكيد</button>
+                                                </div>
+                                        </form>
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                     
+
+                   </div>
+                    <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="flex-start gap-2">
+                              <h3 class="table-title custom-h"> النقاط الاساسيه</h3>
+                            </div>
+                            <ul class="flex-end gap-2 action-icons custom-ul">
+                                            <li>
+                                                <a href="#" class="custom-anc" data-bs-toggle="modal" data-bs-target="#Add_Task" data-bs-placement="bottom" title="إضافة مهمة لجهة داخلية / خارجية" >
+                                                    <i class="board-task"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="custom-anc"  data-bs-placement="bottom" title="مهام 1 - النقطه الاولي"  data-bs-toggle="modal" data-bs-target="#Task_Details">
+                                                    <i class="board-document"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                               <a href="#" data-bs-toggle="modal" data-bs-target="#addDescision" data-bs-placement="bottom" title="أضف القرار إلى 1 - النقطه الاولي">
+                                                 <i class="board-edit"></i>
+                                               </a>
+                                            </li>
+                                                 <li>
+                                                <a href="#" class="custom-anc"  data-bs-toggle="modal" data-bs-target="#Descision" data-bs-placement="bottom" title="قرار البند الأول">
+                                                    <i class="board-contract"></i>
+                                                </a>
+                                            </li>         
+                            </ul>
+
+                            <!-- Modals -->
+                            <!-- Add_Task Modal -->
+                            <div class="modal fade custom-modal" id="Add_Task" tabindex="-1" data-bs-backdrop="static" aria-labelledby="Add_TaskLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered w-75">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                            <h1 class="modal-title" id="Add_TaskLabel">إضافة مهمة لجهة داخلية / خارجية</h1>
+                                            <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body pt-0">
+                                        <form class="flex-column-start gap-3">
+                                             <div class="w-100">
+                                                    <div class="col-sm-12 required">
+                                                        <label for="task" class="form-label custom-label">المهمة</label>
+                                                        <textarea class="form-control custom-textarea" id="task" rows="4" placeholder="ادخل" required></textarea>
+                                                    </div>
+                                                    <div>
+                                                        <label for="asign_to" class="form-label">تعين إلي</label>
+                                                        <input
+                                                        type="text"
+                                                        id="asign_to"
+                                                        placeholder="اختر"
+                                                        class="form-control"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-3 w-100">
+                                                <div class="position-relative required">
+                                                    <label for="meetingStatus" class="form-label">تاريخ المهمة</label>
+                                                    <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر" rquired>
+                                                    <i class="board-calendar flat_picker_icon"></i>
+                                                </div>
+                                                    <div class="w-100 required">
+                                                        <label class="custom-label">يتكرر</label>
+                                                        <div class="custom-radio flex-between form-control">
+                                                            <span class="text-muted">اختر</span>
+                                                            <div class="radio-group">
+                                                                <div class="form-check form-check-inline">
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="repeated"
+                                                                        id="public"
+                                                                        value="public"
+                                                                        checked
+                                                                    />
+                                                                <label class="form-check-label" for="public"> عام</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input
+                                                                    class="form-check-input"
+                                                                    type="radio"
+                                                                    name="repeated"
+                                                                    id="private"
+                                                                    value="private"
+                                                                    />
+                                                                    <label class="form-check-label" for="private">خاص</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-end w-100">
+                                                    <button type="button" class="custom-btn primary-btn min-btn-width">تأكيد</button>
+                                                </div>
+                                        </form>
+
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Task_Details Modal -->
+                            <div class="modal fade custom-modal" id="Task_Details" tabindex="-1" data-bs-backdrop="static" aria-labelledby="Task_DetailsLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered w-50">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title" id="Task_DetailsLabel">مهام 1 - النقطه الاولي</h1>
+                                    <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pt-0">
+                                    <div class="meetings-table-section custom-card w-100 py-0">
+                                    <div class="table-responsive">
+                                        <table class="table custom-table">
+                                        <thead>
+                                            <tr>
+                                            <th>#</th>
+                                            <th>محتوى المهمة</th>
+                                            <th>تعين ألي</th>
+                                            <th>التاريخ</th>
+                                            <th>الحالة</th>
+                                            <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>مهمة</td>
+                                                <td>محمد أحمد</td>
+                                                <td>28 يوليو 2025</td>
+                                                <td>
+                                                    <div class="dropdown-center status_dropdown status-cell">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="status pending">معلق</span>
+                                                        </button>
+                                                        <i class="board-arrow-down-sign-to-navigate input-icon"></i>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-actions flex-end gap-3">
+                                                    <a href="#"><i class="board-view icon"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>مهمة</td>
+                                                <td>محمد أحمد</td>
+                                                <td>28 يوليو 2025</td>
+                                                <td>
+                                                    <div class="dropdown-center status_dropdown status-cell">
+                                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <span class="status pending">معلق</span>
+                                                        </button>
+                                                        <i class="board-arrow-down-sign-to-navigate input-icon"></i>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="table-actions flex-end gap-3">
+                                                    <a href="#"><i class="board-view icon"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- addDescision Modal -->
+                            <div class="modal fade custom-modal" id="addDescision" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addDescisionLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered w-75">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                                <h1 class="modal-title" id="addDescisionLabel">أضف القرار إلى البند الأول : النقطه الاولي</h1>
+                                                <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body pt-0 ">
+                                            <form class="flex-column-start gap-3">
+                                                <div class="w-100 flex-center flex-wrap gap-10">
+                                                    <div class="col-sm-12 col-md required">
+                                                        <label for="subject[ar]" class="form-label">الموضوع باللغة العربية</label>
+                                                        <textarea class="form-control custom-textarea" id="subject[ar]" rows="4" placeholder="ادخل" required></textarea>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md required">
+                                                        <label for="subject[en]" class="form-label">الموضوع باللغة الإنجليزية</label>
+                                                        <textarea class="form-control custom-textarea" id="subject[en]" rows="4" placeholder="ُEnter" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-end w-100">  
+                                                     <button type="button" class="custom-btn primary-btn min-btn-width">تأكيد</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+
+                            <!-- Descision Modal -->
+                            <div class="modal fade custom-modal" id="Descision" tabindex="-1" data-bs-backdrop="static" aria-labelledby="DescisionLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered w-50">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title" id="DescisionLabel">قرار البند الأول</h1>
+                                    <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-0 pb-4">
+                                    <div class="meetings-table-section custom-card w-100 py-0">
+                                    <div class="table-responsive">
+                                        <table class="table custom-table">
+                                        <thead>
+                                            <tr>
+                                            <th>#</th>
+                                            <th>محتوي القرار</th>
+                                            <th>التاريخ</th>
+                                            <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>قرار</td>
+                                                <td>28 يوليو 2025</td>
+                                                <td>
+                                                    <div class="table-actions flex-end gap-3">
+                                                        <a href="add_note_view.html"><i class="board-view icon"></i></a>
+                                                        <a href="add_note_view.html"><i class="board-bin icon"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>قرار</td>
+                                                <td>28 يوليو 2025</td>
+                                                <td>
+                                                    <div class="table-actions flex-end gap-3">
+                                                        <a href="add_note_view.html"><i class="board-view icon"></i></a>
+                                                        <a href="add_note_view.html"><i class="board-bin icon"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>1</th>
+                                                <td>قرار</td>
+                                                <td>28 يوليو 2025</td>
+                                                <td>
+                                                    <div class="table-actions flex-end gap-3">
+                                                        <a href="add_note_view.html"><i class="board-view icon"></i></a>
+                                                        <a href="add_note_view.html"><i class="board-bin icon"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="card-body">
+                            <h3 class="fs-16 fw-400 pb-2">نقطة فرعية</h3>
+                            <div class="flex-center gap-2 flex-wrap">
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">نقاش</h6>
+                                        <h6>ناقش كلا من أحمد محمد وأمين السر كافة التفاصيل</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-calendar"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">محضر الإجتماع</h6>
+                                        <h6>محضر الإجتماع غير موجود</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item edit_card_item">
+                                    <div class="Details_item_icon">
+                                      <i class="board-pdf-file"></i>
+                                    </div>
+                                    <div class="flex-grow-1 flex-between">
+                                        <h6 class="custom-h fs-14 fw-400">محتوي الإجتماع</h6>
+                                        <div class="flex-end gap-2">
+                                            <i class="board-download"></i>
+                                            <i class="board-bin"></i>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                                <div class="card_Details_item edit_card_item">
+                                    <div class="Details_item_icon">
+                                      <i class="board-pdf-file"></i>
+                                    </div>
+                                    <div class="flex-grow-1 flex-between">
+                                        <h6 class="custom-h fs-14 fw-400">محتوي الإجتماع</h6>
+                                        <div class="flex-end gap-2">
+                                            <i class="board-download"></i>
+                                            <i class="board-bin"></i>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noPadding-card custom-card w-100">
+                        <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="flex-start gap-2">
+                              <h3 class="table-title custom-h"> النقاط الاساسيه</h3>
+                            </div>
+                            <ul class="flex-end gap-2 action-icons custom-ul">
+                                            <li>
+                                                <a href="#" class="custom-anc" data-bs-toggle="modal" data-bs-target="#Add_Task" data-bs-placement="bottom" title="إضافة مهمة لجهة داخلية / خارجية" >
+                                                    <i class="board-task"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="custom-anc"  data-bs-placement="bottom" title="مهام 1 - النقطه الاولي"  data-bs-toggle="modal" data-bs-target="#Task_Details">
+                                                    <i class="board-document"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                               <a href="#" data-bs-toggle="modal" data-bs-target="#addDescision" data-bs-placement="bottom" title="أضف القرار إلى 1 - النقطه الاولي">
+                                                 <i class="board-edit"></i>
+                                               </a>
+                                            </li>
+                                                 <li>
+                                                <a href="#" class="custom-anc"  data-bs-toggle="modal" data-bs-target="#Descision" data-bs-placement="bottom" title="قرار البند الأول">
+                                                    <i class="board-contract"></i>
+                                                </a>
+                                            </li>         
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="fs-16 fw-400 pb-2">نقطة فرعية</h3>
+                            <div class="flex-center gap-2 flex-wrap">
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">نقاش</h6>
+                                        <h6>ناقش كلا من أحمد محمد وأمين السر كافة التفاصيل</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-calendar"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">محضر الإجتماع</h6>
+                                        <h6>محضر الإجتماع غير موجود</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item edit_card_item">
+                                    <div class="Details_item_icon">
+                                      <i class="board-pdf-file"></i>
+                                    </div>
+                                    <div class="flex-grow-1 flex-between">
+                                        <h6 class="custom-h">محتوي الإجتماع</h6>
+                                        <div class="flex-end gap-2">
+                                            <i class="board-bin"></i>
+                                            <i class="board-bin"></i>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                                <div class="card_Details_item edit_card_item">
+                                    <div class="Details_item_icon">
+                                      <i class="board-pdf-file"></i>
+                                    </div>
+                                    <div class="flex-grow-1 flex-between">
+                                        <h6 class="custom-h">محتوي الإجتماع</h6>
+                                        <div class="flex-end gap-2">
+                                            <i class="board-bin"></i>
+                                            <i class="board-bin"></i>
+                                        </div>
+                                  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- confirm_modal Modal -->
+    <div class="modal fade custom-modal" id="confirmModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="flex-column-center gap-3">
+                        <img src="../../assets/images/confirm_modal.svg">
+                        <h3 class="custom-h fs-18 fw-500">هل أنت متأكد من تغير الحالة</h3>
+                        <p class="custom-p fs-14 fw-400 light-gray">بمجرد التغير الي تم لن تستطيع الرجوع </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="custom-btn border-success-btn col" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="custom-btn success-btn col">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+  
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../assets/js/flatpicker-custom.js"></script>
+
+    <!-- To change status  -->
+    <script src="../../assets/js/change-status.js"></script>
+
+  </body>
+</html>

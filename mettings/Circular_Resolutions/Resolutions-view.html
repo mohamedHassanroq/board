@@ -8,17 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   </head>
   <body>
@@ -26,9 +27,9 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="../../assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -102,7 +103,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="../../assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -222,104 +223,196 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-            <form class="filter-section custom-card w-100">
-                <div class="card-header">إضافة قرار</div>
+            <form class="filter-section custom-card w-100" action="Resolutions-edit.html">
+                <div class="card-header">عرض قرار</div>
                 
                 <div class="card-body flex-column-start gap-4"> 
                     <div class="inputs-grid-3 w-100">
-                        <div>
-                            <label for="meetingName" class="form-label">الرقم التسلسلي <span class="red">*</span></label>
-                            <input
+                      <div>
+                        <label for="number" class="form-label">
+                            الرقم التسلسلي <span class="red">*</span>
+                        </label>
+                        <input
                             type="text"
-                            id="meetingName"
-                            class="form-control" disabled
-                            required />
+                            id="number"
+                            class="form-control"
+                            value="145422"
+                            readonly
+                            required
+                        />
                         </div>
                         <div>
-                                <label for="formal_secretary" class="form-label">formal secretary</label>
-                                <select id="formal_secretary" class="form-select">
-                                <option selected disabled>الكل</option>
+                                <label for="formal_secretary" class="form-label">أمين السر الرسمي</label>
+                                <select id="formal_secretary" class="form-select readonly_select" name="formal_secretary">
+                                <option selected>الكل</option>
                                 <option>في انتظار التوقيع</option>
                                 <option>غير مسموح بالتوقيع</option>
                                 </select>
                         </div>
                         <div>
                                 <label for="resolution-type" class="form-label">نوع القرار</label>
-                                <select id="resolution-type" class="form-select">
-                                <option selected disabled>الكل</option>
+                                <select id="resolution-type" class="form-select readonly_select">
+                                <option selected disabled>لجنه</option>
                                 <option>في انتظار التوقيع</option>
                                 <option>غير مسموح بالتوقيع</option>
                                 </select>
+                        </div>
+                        <div>
+                            <label for="Committee" class="form-label">اللجنة</label>
+                            <select id="Committee" class="form-select readonly_select">
+                                <option selected disabled>لجنه</option>
+                                <option>في انتظار التوقيع</option>
+                                <option>غير مسموح بالتوقيع</option>
+                            </select>
                         </div>
                     </div>
                     <div class="w-100 flex-center flex-wrap gap-10">
                       <div class="col-sm-12 col-md required">
-                        <label for="subject[ar]" class="form-label">الموضوع باللغة العربية <span class="red">*</span></label>
-                        <textarea class="form-control custom-textarea" id="subject[ar]" rows="4" placeholder="اختر" required></textarea>
+                        <label for="subject[ar]" class="form-label">الموضوع باللغة العربية</label>
+                        <textarea class="form-control custom-textarea" id="subject[ar]" rows="4" placeholder="اختر" readonly required></textarea>
                       </div>
                       <div class="col-sm-12 col-md required">
-                        <label for="subject[en]" class="form-label">الموضوع باللغة الإنجليزية <span class="red">*</span></label>
-                        <textarea class="form-control custom-textarea" id="subject[en]" rows="4" placeholder="ُEnter" required></textarea>
+                        <label for="subject[en]" class="form-label">الموضوع باللغة الإنجليزية</label>
+                        <textarea class="form-control custom-textarea" id="subject[en]" rows="4" placeholder="ُEnter" readonly required></textarea>
                       </div>
                     </div>
-                    <div class="inputs-grid-3 w-100">
-                        <div>
-                                <label for="upload-type" class="form-label">طريقة تحميل المرفقات</label>
-                                <select id="upload-type" class="form-select">
-                                <option selected disabled>الكل</option>
-                                <option>في انتظار التوقيع</option>
-                                <option>غير مسموح بالتوقيع</option>
-                                </select>
-                        </div>
-                        <div class="w-100 position-relative">
-                                <label for="myFiles" class="form-label">مرفقات <span class="red">*</span></label>
-                                <!-- label شكله input -->
-                                <label for="myFiles" class="file-label-style form-control"></label>
-                                <input type="file" id="myFiles" class="file-input-hidden" name="myFiles[]" multiple />
-                                <span id="file-name-output" class="file-name-display"></span>
+                    <div class="col-12">
+                        <label for="attachment" class="form-label">المرفقات</label>
+                        <div class="attachment-container">
+                           <div class="attachment-item">
+                              <img src="../../assets/images/test2.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
+                            <div class="attachment-item">
+                              <img src="../../assets/images/test1.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
+                            <div class="attachment-item">
+                              <img src="../../assets/images/test2.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
+                            <div class="attachment-item">
+                              <img src="../../assets/images/test1.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
+                            <div class="attachment-item">
+                              <img src="../../assets/images/test2.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
+                            <div class="attachment-item">
+                              <img src="../../assets/images/test1.jpg" class="">
+                              <div class="attachment-item-actions">
+                                <i class="board-view icon"></i>
+                                <i class="board-bin icon"></i>
+                              </div>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
 
                 <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    مسح
-                  </button>
-                  <button class="custom-btn secondary-btn">إضافة</button>
+                  <button class="custom-btn edit-btn">تعديل قرار مجلس الإدارة</button>
                 </div>
             </form>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+  <!-- Modal -->
+  <div class="modal fade" id="attachment-modal-imgs" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="swiper image-swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+              <!-- Slides here -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
-    <!-- script to appear choosen file -->
-    <script>
-    const input = document.getElementById("myFiles");
-    const label = document.getElementById("fileLabel");
+    <script src="../../assets/js/flatpicker-custom.js"></script>
 
-    input.addEventListener("change", function () {
-        if (this.files.length > 0) {
-        const names = Array.from(this.files).map(file => file.name).join(", ");
-        label.textContent = names;
-        label.classList.remove("text-muted"); // يشيل لون النص الرمادي
-        } else {
-        label.textContent = "";
-        label.classList.add("text-muted");
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- swipper in modal -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let swiperInstance;
+    let images = Array.from(document.querySelectorAll('.attachment-item img'));
+    let modal = new bootstrap.Modal(document.getElementById("attachment-modal-imgs"));
+    let swiperWrapper = document.getElementById("swiper-wrapper");
+
+    document.querySelectorAll('.board-bin').forEach((binIcon) => {
+    binIcon.addEventListener('click', () => {
+        let attachmentItem = binIcon.closest('.attachment-item');
+        if (attachmentItem) {
+        attachmentItem.remove();
         }
+    });
+    });
+
+    document.querySelectorAll('.board-view').forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+        // Clear old slides
+        swiperWrapper.innerHTML = "";
+
+        // Add new slides
+        images.forEach(img => {
+            let slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `<img src="${img.src}" style="max-width: 100%; height: auto;" />`;
+            swiperWrapper.appendChild(slide);
+        });
+
+        // Show modal
+        modal.show();
+
+        // Delay swiper init
+        setTimeout(() => {
+            if (swiperInstance) swiperInstance.destroy(true, true);
+            swiperInstance = new Swiper(".image-swiper", {
+            initialSlide: index,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+        }, 200);
+        });
+    });
     });
     </script>
 
-
-  </body>
 </html>

@@ -8,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
   </head>
@@ -26,9 +29,9 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="../../assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -102,7 +105,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="../../assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -219,37 +222,20 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="meeting-grid-container">
-            <div class="metting-sidebar custom-card w-100">
-              <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item active">
-                  <a class="custom-anc" href="Meeting_Minutes.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Resolution.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Circular_Resolutions.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-                  <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Minutes.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Resolution.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Circular_Resolutions.html">https://kfictest.boardgulf.com/tags</a>
-                </li>
-              </ul>
-            </div>
-            <div class="links-deatils">
+           <div class="links-deatils">
               <div class="links-data">
                    <div class="noPadding-card custom-card w-100">
                         <div class="card-header flex-between flex-wrap gap-2">
-                            <div class="table-title">اجتماع مجلس الإدارة 2025/28</div>
+                            <div class="flex-start gap-2">
+                              <h3 class="table-title custom-h">اجتماع مجلس الإدارة 2025/28</h3>
+                              <div class="status sharp-status pending">قيد الإنتظار</div>
+                              <div class="status sharp-status waiting"> BOD-28-2025 </div>
+                            </div>
                             <div class="d-flex align-items-center gap-2">
-                              <div class="status pending"> لم يبدا </div>
-                              <div class="status waiting"> BOD-28-2025 </div>
+                                <button class="custom-btn secondary-btn px-4" onclick="window.location.href='start_meeting.html'" >البداية</button>
+                                <button class="custom-btn edit-btn px-4">تعديل</button>
+                                <button class="custom-btn success-btn px-4">تأكيد الأجتماع</button>
+                                <button class="custom-btn warning-btn px-4">توقيع الدعوة</button>
                             </div>
                            
                         </div>
@@ -257,7 +243,7 @@
                             <div class="flex-center gap-2 flex-wrap ">
                                 <div class="card_Details_item">
                                   <div class="Details_item_icon">
-                                      <i class="board-user--1-"></i>
+                                      <i class="board-user-2"></i>
                                   </div>
                                     <div>
                                         <h6 class="light-gray fs-12 mb-1">أنشاء من قبل</h6>
@@ -266,7 +252,7 @@
                                 </div>
                                 <div class="card_Details_item">
                                   <div class="Details_item_icon">
-                                      <i class="board-user--1-"></i>
+                                      <i class="board-meeting"></i>
                                   </div>
                                     <div>
                                         <h6 class="light-gray fs-12 mb-1">نوع الاجتماع</h6>
@@ -278,7 +264,7 @@
                                       <i class="board-calendar"></i>
                                   </div>
                                     <div>
-                                        <h6 class="light-gray fs-12 mb-1">تاريخ النشر</h6>
+                                        <h6 class="light-gray fs-12 mb-1">التاريخ </h6>
                                         <h6>12 مارس 2025</h6>
                                     </div>
                                 </div>
@@ -287,28 +273,48 @@
                                       <i class="board-wall-clock"></i>
                                     </div>
                                     <div>
-                                        <h6 class="light-gray fs-12 mb-1">وقت النشر</h6>
-                                        <h6>10:00 ص</h6>
+                                        <h6 class="light-gray fs-12 mb-1">الوقت </h6>
+                                        <h6>1:30 م إلي 2:30 م</h6>
                                     </div>
                                 </div>
                                 <div class="card_Details_item">
                                   <div class="Details_item_icon">
-                                      <i class="board-wall-clock"></i>
+                                      <i class="board-address"></i>
                                   </div>
                                     <div>
-                                        <h6 class="light-gray fs-12 mb-1">تاريخ الإستحقاق</h6>
-                                        <h6>12 مارس 2025</h6>
+                                        <h6 class="light-gray fs-12 mb-1">الموقع</h6>
+                                        <h6>زوم ميتنج</h6>
                                     </div>
                                 </div>
                                 <div class="card_Details_item">
                                  <div class="Details_item_icon">
-                                      <i class="board-wall-clock"></i>
+                                      <i class="board-arrow"></i>
                                   </div>
                                     <div>
-                                        <h6 class="light-gray fs-12 mb-1">وقت الإستحقاق</h6>
-                                        <h6>10:00 ص</h6>
+                                        <h6 class="light-gray fs-12 mb-1">متكرر</h6>
+                                        <h6>لا</h6>
                                     </div>
                                 </div>
+                                <h3 class="col-12 urgent-meeting custom-h">إجتماع طارق</h3>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user-2"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">ممثل الشركة</h6>
+                                        <h6>أحمد محمد عادل</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-to-do-list"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">الطلبات</h6>
+                                        <h6>معاينة</h6>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                    </div>
@@ -327,15 +333,49 @@
                                     <th>محتوى المهمة</th>
                                     <th>التاريخ</th>
                                     <th>الحالة</th>
+                                    <th></th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                  <tr>
+                                    <td>1</td>
+                                    <td>مهمة للجهات الداخلية</td>
+                                    <td>أحمد محمد</td>
+                                    <td>12/5/2025</td>
+                                    <td>
+                                         <div class="dropdown-center status_dropdown status-cell">
+                                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  <span class="status pending">معلق</span>
+                                              </button>
+                                              <i class="board-arrow-down-sign-to-navigate input-icon"></i>
+                                              <ul class="dropdown-menu">
+                                                  <li>
+                                                      <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                  </li>
+                                              </ul>
+                                         </div>
+                                    </td>
+                                    <td>
+                                      <div class="table-actions flex-end gap-3">
+                                          <a href="Resolutions-view.html">
+                                              <i class="board-view icon"></i>
+                                          </a>
+                                          <a href="Resolutions-edit.html">
+                                              <i class="board-edit-tool icon"></i>
+                                          </a>
+                                          <a data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                              <i class="board-bin icon"></i>
+                                          </a> 
+                                      </div>
+                                    </td>
+                                  </tr>
                                 </tbody>
                             </table>
-                            <div class="flex-column-center gap-1" >
-                                <img src="../assets/images/search.svg" class="no_result_img" />
+                            <!-- if no result found-->
+                            <!-- <div class="flex-column-center gap-1" >
+                                <img src="../../assets/images/search.svg" class="no_result_img" />
                                 <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
-                            </div>
+                            </div> -->
                         </div>
                    </div>
 
@@ -343,6 +383,7 @@
                    <div class="meetings-table-section custom-card">
                         <div class="head flex-between gap-2 mb-3">
                             <div class="table-title">الحضور و الدعوات</div>
+                            <button class="custom-btn secondary-btn px-4">تسجيل الحضور</button>
                         </div>
                         <div class="table-responsive">
                             <table class="table custom-table">
@@ -369,7 +410,28 @@
                                                 <h4 class="title">هناء أحمد عبد الله</h4>
                                             </div>
                                         </td>
-                                        <td>احمد علي</td>
+                                        <td>
+                                            <div class="status-type accept"><i class="fas fa-check"></i></div>
+                                        </td>
+                                        <td><span class="status pending">في انتظار بدء الحضور</span></td>
+                                    </tr>
+                                       <tr>
+                                        <th class="index">1</th>
+                                        <td>
+                                            <div class="user_profile">
+                                                <img
+                                                    src="https://github.com/mdo.png"
+                                                    alt="hugenerd"
+                                                    width="40"
+                                                    height="40"
+                                                    class="rounded-circle mx-1 mx-md-2"
+                                                    />
+                                                <h4 class="title">هناء أحمد عبد الله</h4>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="status-type reject"><i class="fas fa-xmark"></i></div>
+                                        </td>
                                         <td><span class="status pending">في انتظار بدء الحضور</span></td>
                                     </tr>
                                 </tbody>
@@ -383,61 +445,36 @@
                         <div class="card-header flex-between flex-wrap gap-2">
                             <div class="table-title">جدول الأعمال</div>
                             <div class="d-flex align-items-center gap-2">
-                              <a class="custom-anc third fs-14 fw-500"> عرض التفاصيل </a>
+                              <a href="agenda-discuss.html" class="custom-anc third fs-14 fw-500"> عرض التفاصيل </a>
                             </div>
                            
                         </div>
-                        <div class="card-body Agenda flex-column-start gap-3">
-                                <div class="Agenda_Details_item flex-between gap-2 w-100">
-                                  <div class="flex-center gap-2">
-                                      <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
-                                      </div>
-                                      <div>
-                                         <h6>البند الأول : نقطة أولى </h6>
-                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
-                                      </div>
-                                  </div>
-                                  <div class="status waiting rounded-5 px-4">عام</div>
-                                
-                                </div>
-                                <div class="Agenda_Details_item flex-between gap-2 w-100">
-                                  <div class="flex-center gap-2">
-                                      <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
-                                      </div>
-                                      <div>
-                                         <h6>البند الأول : نقطة أولى</h6>
-                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
-                                      </div>
-                                  </div>
-                                  <div class="status danger rounded-5 px-4">خاص</div>
-                                
-                                </div>
-                                <div class="Agenda_Details_item flex-between gap-2 w-100">
-                                  <div class="flex-center gap-2">
-                                      <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
-                                      </div>
-                                      <div>
-                                         <h6>البند الأول : نقطة أولى</h6>
-                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
-                                      </div>
-                                  </div>
-                                
-                                </div>
-                                <div class="Agenda_Details_item flex-between gap-2 w-100">
-                                  <div class="flex-center gap-2">
-                                      <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
-                                      </div>
-                                      <div>
-                                         <h6>البند الأول : نقطة أولى</h6>
-                                         <h6 class="light-gray fs-12 mb-1">منذ أسبوع</h6>
-                                      </div>
-                                  </div>
-                                
-                                </div>
+                        <div class="card-body flex-column-start gap-3">
+                            <h3 class="fs-14 fw-500 secondary custom-h title">1- النقطة الأولي</h3>
+                            <div class="table-responsive w-100">
+                              <table class="table custom-table">
+                                  <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>عدد التصويت</th>
+                                      <th>نسبة التصويت</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>قبول </td>
+                                          <td>500</td>
+                                          <td>50%</td>
+                                      </tr>
+                                      <tr>
+                                          <td>رفض </td>
+                                          <td>500</td>
+                                          <td>20%</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                            </div>
+                            <a href="#" class="fs-14 fw-500 third custom-h title me-auto" >تفاصيل التصويت</a>
                         </div>
                   </div>
                   <div class="noPadding-card custom-card w-100">
@@ -445,8 +482,14 @@
                             <div class="table-title">الجهات الخارجيه / الجهات الداخليه</div>
                            
                         </div>
-                        <div class="card-body Agenda flex-column-start gap-3">
-                            <p class="light-gray mx-auto fs-14 fw-400 py-5">لا يوجد جهات حتي الأن</p>
+                        <div class="card-body meeting-points flex-column-start gap-3">
+                          <!-- If No result Found -->
+                          <!-- <p class="light-gray mx-auto fs-14 fw-400 py-5">لا يوجد جهات حتي الأن</p> -->
+                           <h3 class="meeting-points-title fs-16 fw-400 custom-h title">شركة كيفك للإستثمار :المدقق الخارجي : أحمد</h3>
+                           <ul class="meeting-points-list custom-ul w-100 flex-column-start gap-2">
+                              <li class="meeting-points-item">1- النقطة الأولي</li>
+                              <li class="meeting-points-item">2- أهم الأعمال</li>
+                           </ul>
                         </div>
                   </div>
                   <div class="noPadding-card custom-card w-100">
@@ -457,7 +500,7 @@
                                 <div class="Agenda_Details_item flex-between gap-2 w-100">
                                   <div class="flex-center gap-2">
                                       <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
+                                        <i class="board-edit-tool"></i>
                                       </div>
                                       <div>
                                          <h6>جورج ليون قام بتعديل إجتماع</h6>
@@ -469,7 +512,7 @@
                                 <div class="Agenda_Details_item flex-between gap-2 w-100">
                                   <div class="flex-center gap-2">
                                       <div class="Details_item_icon">
-                                        <i class="board-edit--1-"></i>
+                                        <i class="board-bin"></i>
                                       </div>
                                       <div>
                                          <h6>جورج ليون قام بتعديل إجتماع</h6>
@@ -493,14 +536,35 @@
                         </div>
                   </div>
               </div>
-            </div>
-          </div>
+           </div>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <!-- confirm_modal Modal -->
+    <div class="modal fade custom-modal" id="confirmModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="flex-column-center gap-3">
+                        <img src="../../assets/images/confirm_modal.svg">
+                        <h3 class="custom-h fs-18 fw-500">هل أنت متأكد من تغير الحالة</h3>
+                        <p class="custom-p fs-14 fw-400 light-gray">بمجرد التغير الي تم لن تستطيع الرجوع </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="custom-btn border-success-btn col" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="custom-btn success-btn col">تأكيد</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+
+    <!-- To change status  -->
+    <script src="../../assets/js/change-status.js"></script>
   </body>
 </html>

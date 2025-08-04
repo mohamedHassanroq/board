@@ -1,39 +1,5 @@
-/*!
- * Icon Font board
- * Made with love by Icons8 [ https://icons8.com/ ] using webfont [ https://github.com/itgalaxy/webfont ]
- *
- * Contacts:
- *    [ https://icons8.com/contact ]
- *
- * Follow Icon8 on
- *    Twitter [ https://twitter.com/icons_8 ]
- *    Facebook [ https://www.facebook.com/Icons8 ]
- *    Google+ [ https://plus.google.com/+Icons8 ]
- *    GitHub [ https://github.com/icons8 ]
- */
-
-@font-face {
-  font-family: "board";
-  src: url("../fonts/board.eot");
-  src: url("../fonts/board.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/board.woff2") format("woff2"),
-  url("../fonts/board.woff") format("woff"),
-  url("../fonts/board.ttf") format("truetype"),
-  url("../fonts/board.svg#font") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "board";
-    src: url("../fonts/board.svg#board") format("svg");
-  }
-}
-
-[data-icons8]:before {
-  content: attr(data-icons8);
-}
+// Icons
+// -------------------------
 
 .board-expand:before,
 .board-activities:before,
@@ -153,374 +119,365 @@
 .board-edit-tool:before,
 .board-decline:before,
 .board-checkmark:before,
-.icons8,
 [data-icons8]:before {
-  display: inline-block;
-  font-family: "board";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  .icons8-font();
 }
 
+[data-icons8]:before {
+  content: attr(data-icons8);
+}
 
 .board-expand:before {
-  content: "\f100";
+  content: "@{icons8-var-expand}";
 }
 .board-activities:before {
-  content: "\f101";
+  content: "@{icons8-var-activities}";
 }
 .board-settings:before {
-  content: "\f102";
+  content: "@{icons8-var-settings}";
 }
 .board-report:before {
-  content: "\f103";
+  content: "@{icons8-var-report}";
 }
 .board-democracy:before {
-  content: "\f104";
+  content: "@{icons8-var-democracy}";
 }
 .board-book:before {
-  content: "\f105";
+  content: "@{icons8-var-book}";
 }
 .board-enterprise:before {
-  content: "\f106";
+  content: "@{icons8-var-enterprise}";
 }
 .board-training:before {
-  content: "\f107";
+  content: "@{icons8-var-training}";
 }
 .board-document:before {
-  content: "\f108";
+  content: "@{icons8-var-document}";
 }
 .board-open-folder:before {
-  content: "\f109";
+  content: "@{icons8-var-open-folder}";
 }
 .board-link--1-:before {
-  content: "\f10a";
+  content: "@{icons8-var-link--1-}";
 }
 .board-kpis:before {
-  content: "\f10b";
+  content: "@{icons8-var-kpis}";
 }
 .board-survey:before {
-  content: "\f10c";
+  content: "@{icons8-var-survey}";
 }
 .board-accounting:before {
-  content: "\f10d";
+  content: "@{icons8-var-accounting}";
 }
 .board-statistics-report:before {
-  content: "\f10e";
+  content: "@{icons8-var-statistics-report}";
 }
 .board-task:before {
-  content: "\f10f";
+  content: "@{icons8-var-task}";
 }
 .board-meeting--1-:before {
-  content: "\f110";
+  content: "@{icons8-var-meeting--1-}";
 }
 .board-dashboard:before {
-  content: "\f111";
+  content: "@{icons8-var-dashboard}";
 }
 .board-certificate:before {
-  content: "\f112";
+  content: "@{icons8-var-certificate}";
 }
 .board-gauge:before {
-  content: "\f113";
+  content: "@{icons8-var-gauge}";
 }
 .board-choices:before {
-  content: "\f114";
+  content: "@{icons8-var-choices}";
 }
 .board-communication:before {
-  content: "\f115";
+  content: "@{icons8-var-communication}";
 }
 .board-planning:before {
-  content: "\f116";
+  content: "@{icons8-var-planning}";
 }
 .board-meeting-room:before {
-  content: "\f117";
+  content: "@{icons8-var-meeting-room}";
 }
 .board-edit:before {
-  content: "\f118";
+  content: "@{icons8-var-edit}";
 }
 .board-link:before {
-  content: "\f119";
+  content: "@{icons8-var-link}";
 }
 .board-advance-search:before {
-  content: "\f11a";
+  content: "@{icons8-var-advance-search}";
 }
 .board-clipboard:before {
-  content: "\f11b";
+  content: "@{icons8-var-clipboard}";
 }
 .board-megaphone:before {
-  content: "\f11c";
+  content: "@{icons8-var-megaphone}";
 }
 .board-meeting:before {
-  content: "\f11d";
+  content: "@{icons8-var-meeting}";
 }
 .board-calendar:before {
-  content: "\f11e";
+  content: "@{icons8-var-calendar}";
 }
 .board-edit--1-:before {
-  content: "\f11f";
+  content: "@{icons8-var-edit--1-}";
 }
 .board-view--1-:before {
-  content: "\f120";
+  content: "@{icons8-var-view--1-}";
 }
 .board-view:before {
-  content: "\f121";
+  content: "@{icons8-var-view}";
 }
 .board-add:before {
-  content: "\f122";
+  content: "@{icons8-var-add}";
 }
 .board-user:before {
-  content: "\f123";
+  content: "@{icons8-var-user}";
 }
 .board-add--1-:before {
-  content: "\f124";
+  content: "@{icons8-var-add--1-}";
 }
 .board-image:before {
-  content: "\f125";
+  content: "@{icons8-var-image}";
 }
 .board-people:before {
-  content: "\f126";
+  content: "@{icons8-var-people}";
 }
 .board-user--1-:before {
-  content: "\f127";
+  content: "@{icons8-var-user--1-}";
 }
 .board-audience:before {
-  content: "\f128";
+  content: "@{icons8-var-audience}";
 }
 .board-businessman:before {
-  content: "\f129";
+  content: "@{icons8-var-businessman}";
 }
 .board-bin:before {
-  content: "\f12a";
+  content: "@{icons8-var-bin}";
 }
 .board-x-mark:before {
-  content: "\f12b";
+  content: "@{icons8-var-x-mark}";
 }
 .board-remove-user:before {
-  content: "\f12c";
+  content: "@{icons8-var-remove-user}";
 }
 .board-closure:before {
-  content: "\f12d";
+  content: "@{icons8-var-closure}";
 }
 .board-management:before {
-  content: "\f12e";
+  content: "@{icons8-var-management}";
 }
 .board-events:before {
-  content: "\f12f";
+  content: "@{icons8-var-events}";
 }
 .board-content:before {
-  content: "\f130";
+  content: "@{icons8-var-content}";
 }
 .board-zoom:before {
-  content: "\f131";
+  content: "@{icons8-var-zoom}";
 }
 .board-loupe:before {
-  content: "\f132";
+  content: "@{icons8-var-loupe}";
 }
 .board-zoom-out:before {
-  content: "\f133";
+  content: "@{icons8-var-zoom-out}";
 }
 .board-zoom-in:before {
-  content: "\f134";
+  content: "@{icons8-var-zoom-in}";
 }
 .board-office:before {
-  content: "\f135";
+  content: "@{icons8-var-office}";
 }
 .board-pdf-file:before {
-  content: "\f136";
+  content: "@{icons8-var-pdf-file}";
 }
 .board-word:before {
-  content: "\f137";
+  content: "@{icons8-var-word}";
 }
 .board-contract:before {
-  content: "\f138";
+  content: "@{icons8-var-contract}";
 }
 .board-paper-plane:before {
-  content: "\f139";
+  content: "@{icons8-var-paper-plane}";
 }
 .board-paper-clip:before {
-  content: "\f13a";
+  content: "@{icons8-var-paper-clip}";
 }
 .board-stationery-stacked-papers:before {
-  content: "\f13b";
+  content: "@{icons8-var-stationery-stacked-papers}";
 }
 .board-printing:before {
-  content: "\f13c";
+  content: "@{icons8-var-printing}";
 }
 .board-wall-clock:before {
-  content: "\f13d";
+  content: "@{icons8-var-wall-clock}";
 }
 .board-pending:before {
-  content: "\f13e";
+  content: "@{icons8-var-pending}";
 }
 .board-eyebrow:before {
-  content: "\f13f";
+  content: "@{icons8-var-eyebrow}";
 }
 .board-closed-eyes:before {
-  content: "\f140";
+  content: "@{icons8-var-closed-eyes}";
 }
 .board-eye-close-up:before {
-  content: "\f141";
+  content: "@{icons8-var-eye-close-up}";
 }
 .board-share:before {
-  content: "\f142";
+  content: "@{icons8-var-share}";
 }
 .board-door:before {
-  content: "\f143";
+  content: "@{icons8-var-door}";
 }
 .board-menu:before {
-  content: "\f144";
+  content: "@{icons8-var-menu}";
 }
 .board-dots:before {
-  content: "\f145";
+  content: "@{icons8-var-dots}";
 }
 .board-menu--1-:before {
-  content: "\f146";
+  content: "@{icons8-var-menu--1-}";
 }
 .board-dots-menu:before {
-  content: "\f147";
+  content: "@{icons8-var-dots-menu}";
 }
 .board-arrow-down-sign-to-navigate:before {
-  content: "\f148";
+  content: "@{icons8-var-arrow-down-sign-to-navigate}";
 }
 .board-viral-marketing:before {
-  content: "\f149";
+  content: "@{icons8-var-viral-marketing}";
 }
 .board-flag:before {
-  content: "\f14a";
+  content: "@{icons8-var-flag}";
 }
 .board-finish:before {
-  content: "\f14b";
+  content: "@{icons8-var-finish}";
 }
 .board-delete:before {
-  content: "\f14c";
+  content: "@{icons8-var-delete}";
 }
 .board-x-mark--1-:before {
-  content: "\f14d";
+  content: "@{icons8-var-x-mark--1-}";
 }
 .board-download:before {
-  content: "\f14e";
+  content: "@{icons8-var-download}";
 }
 .board-add-file:before {
-  content: "\f14f";
+  content: "@{icons8-var-add-file}";
 }
 .board-pen-feather-black-diagonal-shape-of-a-bird-wing:before {
-  content: "\f150";
+  content: "@{icons8-var-pen-feather-black-diagonal-shape-of-a-bird-wing}";
 }
 .board-edit-text:before {
-  content: "\f151";
+  content: "@{icons8-var-edit-text}";
 }
 .board-edit--2-:before {
-  content: "\f152";
+  content: "@{icons8-var-edit--2-}";
 }
 .board-pen:before {
-  content: "\f153";
+  content: "@{icons8-var-pen}";
 }
 .board-file:before {
-  content: "\f155";
+  content: "@{icons8-var-file}";
 }
 .board-document--1-:before {
-  content: "\f156";
+  content: "@{icons8-var-document--1-}";
 }
 .board-people--1-:before {
-  content: "\f157";
+  content: "@{icons8-var-people--1-}";
 }
 .board-user--2-:before {
-  content: "\f158";
+  content: "@{icons8-var-user--2-}";
 }
 .board-address:before {
-  content: "\f159";
+  content: "@{icons8-var-address}";
 }
 .board-report--1-:before {
-  content: "\f15a";
+  content: "@{icons8-var-report--1-}";
 }
 .board-download-2:before {
-  content: "\f15b";
+  content: "@{icons8-var-download-2}";
 }
 .board-document-2:before {
-  content: "\f15c";
+  content: "@{icons8-var-document-2}";
 }
 .board-group:before {
-  content: "\f15d";
+  content: "@{icons8-var-group}";
 }
 .board-check-box--1-:before {
-  content: "\f15e";
+  content: "@{icons8-var-check-box--1-}";
 }
 .board-help:before {
-  content: "\f15f";
+  content: "@{icons8-var-help}";
 }
 .board-clip:before {
-  content: "\f160";
+  content: "@{icons8-var-clip}";
 }
 .board-to-do-list:before {
-  content: "\f163";
+  content: "@{icons8-var-to-do-list}";
 }
 .board-meeting--1--2:before {
-  content: "\f164";
+  content: "@{icons8-var-meeting--1--2}";
 }
 .board-arrow:before {
-  content: "\f165";
+  content: "@{icons8-var-arrow}";
 }
 .board-location:before {
-  content: "\f166";
+  content: "@{icons8-var-location}";
 }
 .board-meeting-2:before {
-  content: "\f168";
+  content: "@{icons8-var-meeting-2}";
 }
 .board-user-2:before {
-  content: "\f169";
+  content: "@{icons8-var-user-2}";
 }
 .board-check-box:before {
-  content: "\f16a";
+  content: "@{icons8-var-check-box}";
 }
 .board-radio-button:before {
-  content: "\f16b";
+  content: "@{icons8-var-radio-button}";
 }
 .board-radio:before {
-  content: "\f16c";
+  content: "@{icons8-var-radio}";
 }
 .board-down-arrow:before {
-  content: "\f16d";
+  content: "@{icons8-var-down-arrow}";
 }
 .board-clock:before {
-  content: "\f16e";
+  content: "@{icons8-var-clock}";
 }
 .board-calendar-2:before {
-  content: "\f16f";
+  content: "@{icons8-var-calendar-2}";
 }
 .board-close-button:before {
-  content: "\f170";
+  content: "@{icons8-var-close-button}";
 }
 .board-plus:before {
-  content: "\f171";
+  content: "@{icons8-var-plus}";
 }
 .board-link-2:before {
-  content: "\f172";
+  content: "@{icons8-var-link-2}";
 }
 .board-delete-2:before {
-  content: "\f173";
+  content: "@{icons8-var-delete-2}";
 }
 .board-edit-text-2:before {
-  content: "\f174";
+  content: "@{icons8-var-edit-text-2}";
 }
 .board-hide:before {
-  content: "\f175";
+  content: "@{icons8-var-hide}";
 }
 .board-view-2:before {
-  content: "\f176";
+  content: "@{icons8-var-view-2}";
 }
 .board-edit-tool:before {
-  content: "\f177";
+  content: "@{icons8-var-edit-tool}";
 }
 .board-decline:before {
-  content: "\f178";
+  content: "@{icons8-var-decline}";
 }
 .board-checkmark:before {
-  content: "\f179";
+  content: "@{icons8-var-checkmark}";
 }

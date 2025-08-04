@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">إضافة قرار</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+            <form class="flex-column-start gap-3">
+                <div class="filter-section custom-card w-100" action="Resolutions-edit.html">
+                    <div class="card-header">تعديل محضر لإجتماع</div>
+                      <div class="card-body flex-column-start gap-4"> 
+                        <div class="inputs-grid-3 w-100">
+                            <div class="form-group">
+                                    <label for="meeting-leader" class="form-label">مترأس الإجتماع</label>
+                                    <select id="meeting-leader" class="form-select" name="meeting-leader" >
+                                    <option selected disabled>اختر</option>
+                                    <option>في انتظار التوقيع</option>
+                                    <option>غير مسموح بالتوقيع</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="position-title" class="form-label">
+                                    المسمي الوظيفي 
+                                </label>
+                                <input
+                                    type="text"
+                                    id="position-title"
+                                    class="form-control"
+                                    placeholder="ادخل"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="meeting-end-time" class="form-label">
+                                    الوقت الرسمي لانتهاء الاجتماع 
+                                </label>
+                                <input
+                                    type="text"
+                                    id="meeting-end-time"
+                                    class="form-control"
+                                    placeholder="ادخل"
+                                    required
+                                />
+                            </div>
+                            <div class="form-group">
+                                    <label for="Top-Third-Party" class="form-label">Top Third Party</label>
+                                    <select id="Top-Third-Party" class="form-select" name="Top-Third-Party" >
+                                    <option selected disabled>اختر</option>
+                                    <option>في انتظار التوقيع</option>
+                                    <option>غير مسموح بالتوقيع</option>
+                                    </select>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="filter-section custom-card w-100" action="Resolutions-edit.html">
+                    <div class="card-header">البند الأول : البند الأول</div>
+                    <div class="card-body">
+                        <div class="flex-column-start gap-3 w-100">
+                            <div class="w-100">
+                                <h3 class="fs-16 fw-400 pb-2">نقطة فرعية</h3>
+                                <div class="flex-center gap-2 flex-wrap">
+                                    <div class="card_Details_item">
+                                    <div class="Details_item_icon">
+                                        <i class="board-report--1-"></i>
+                                    </div>
+                                        <div>
+                                            <h6 class="light-gray fs-12 mb-1">نقاش</h6>
+                                            <h6>لا يوجد</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="w-100">
+                                <h3 class="fs-16 fw-400 pb-2">نقطة فرعية</h3>
+                                <div class="flex-center gap-2 flex-wrap">
+                                    <div class="card_Details_item">
+                                    <div class="Details_item_icon">
+                                        <i class="board-report--1-"></i>
+                                    </div>
+                                        <div>
+                                            <h6 class="light-gray fs-12 mb-1">نقاش</h6>
+                                            <h6>لا يوجد</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="form-group w-100">
+                                <label for="template-content" class="form-label">محضر الإجتماع</label>
+                                <textarea class="form-control custom-textarea" id="template-content" rows="5" placeholder="ادخل " ></textarea>
+                            </div>
+                        </div>
+ 
+                    </div>
+                    <div class="card-footer flex-between gap-2">
+                        <button class="custom-btn border-seconadry-btn">
+                        حفظ مسودة
+                        </button>
+                        <div class="flex-end gap-2">
+                            <button class="custom-btn border-seconadry-btn">مسح</button>
+                            <button class="custom-btn secondary-btn">حفظ وإرسال نهائي</button>
+                            <button class="custom-btn border-seconadry-btn"><i class="board-printing"></i> ورقة رسمية </button>
+                        </div>
+          
+                    </div>
+                </div>
+            </form>
+      
+        </div>
+      </div>
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="attachment-modal-imgs" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="swiper image-swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+              <!-- Slides here -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../assets/js/flatpicker-custom.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- swipper in modal -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let swiperInstance;
+    let images = Array.from(document.querySelectorAll('.attachment-item img'));
+    let modal = new bootstrap.Modal(document.getElementById("attachment-modal-imgs"));
+    let swiperWrapper = document.getElementById("swiper-wrapper");
+
+    document.querySelectorAll('.board-bin').forEach((binIcon) => {
+    binIcon.addEventListener('click', () => {
+        let attachmentItem = binIcon.closest('.attachment-item');
+        if (attachmentItem) {
+        attachmentItem.remove();
+        }
+    });
+    });
+
+    document.querySelectorAll('.board-view').forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+        // Clear old slides
+        swiperWrapper.innerHTML = "";
+
+        // Add new slides
+        images.forEach(img => {
+            let slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `<img src="${img.src}" style="max-width: 100%; height: auto;" />`;
+            swiperWrapper.appendChild(slide);
+        });
+
+        // Show modal
+        modal.show();
+
+        // Delay swiper init
+        setTimeout(() => {
+            if (swiperInstance) swiperInstance.destroy(true, true);
+            swiperInstance = new Swiper(".image-swiper", {
+            initialSlide: index,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+        }, 200);
+        });
+    });
+    });
+    </script>
+
+</html>

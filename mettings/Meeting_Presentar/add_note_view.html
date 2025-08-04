@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -26,9 +26,9 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="../../assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
@@ -102,7 +102,7 @@
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="../../assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -209,7 +209,7 @@
             <a href="#" class="custom-anc">الإجتماعات</a>
           </li>
           <li>
-            <a href="#" class="custom-anc">قرارات الإجتماع</a>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
           </li>
         </ul>
       </div>
@@ -219,98 +219,88 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="metting-grid-container">
-            <div class="metting-sidebar custom-card w-100">
-              <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Meeting_Minutes.html">محاضر الاجتماعات</a>
-                </li>
-                <li class="metting_list_item active">
-                  <a class="custom-anc" href="Meeting_Resolution.html">قرار الاجتماع</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="Circular_Resolutions.html">قرارات بالتمرير</a>
-                </li>
-              </ul>
+            <div class="flex-column-start gap-3">
+                <div class="noPadding-card custom-card w-100">
+                    <div class="card-header flex-between flex-wrap gap-2">
+                            <div class="flex-start gap-2">
+                              <h3 class="table-title custom-h">موضوع</h3>
+                            </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="flex-center gap-2 flex-wrap">
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-calendar"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">التاريخ</h6>
+                                        <h6>12 نوفمبر 2025</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-calendar"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">المرجع</h6>
+                                        <h6>56</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">من</h6>
+                                        <h6>مجلس الإدارة</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">إلي</h6>
+                                        <h6>مجلس الإدارة</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">نسخة</h6>
+                                        <h6>نسخة</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">العنوان</h6>
+                                        <h6>موضوع</h6>
+                                    </div>
+                                </div>
+                                <div class="card_Details_item">
+                                  <div class="Details_item_icon">
+                                      <i class="board-user--1-"></i>
+                                  </div>
+                                    <div>
+                                        <h6 class="light-gray fs-12 mb-1">محتوى المذكره </h6>
+                                        <h6>بالإشاره إلي إجتماع اجتماع مجلس الإدارة رقم "2025-3" المُنعقد يوم "الاثنين" الموافق "2025/07/28" نود أن نفيدكم علماً بأن مجلس الإدارة قد اعتمد التالي - قرار قرار</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="metting-details flex-column-center">
-              <!-- filter section -->
-              <div class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body inputs-grid-4">
-                  <div>
-                    <label for="meetingName" class="form-label"
-                      >اسم الاجتماع</label
-                    >
-                    <input
-                      type="text"
-                      id="meetingName"
-                      class="form-control"
-                      placeholder="الاسم"
-                    />
-                  </div>
-                  <div class="position-relative">
-                    <label for="meetingStatus" class="form-label">التاريخ من</label>
-                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
-                        <i class="board-calendar flat_picker_icon"></i>
-                  </div>
-                   <div class="position-relative">
-                    <label for="meetingStatus" class="form-label">التاريخ إلي</label>
-                        <input type="datetime-local" class="form-control input_flat_picker" id="date_to" placeholder="اختر">
-                        <i class="board-calendar flat_picker_icon"></i>
-                  </div>
-                </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
-                </div>
-              </div>
-
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="table-title">سجل قررات الإجتماعات</div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>المهمة</th>
-                        <th>التاريخ</th>
-                        <th>الجهة المختصة بالتنفيذ</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                            </td>
-                        </tr>
-                    </tbody>
-                  </table>
-                  <!-- If No results found  -->
-                  <div class="flex-column-center gap-1" >
-                    <img src="../assets/images/search.svg" class="no_result_img" />
-                    <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
 
-    <!-- Flatpicker (for date picker)  -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
   </body>
 </html>
