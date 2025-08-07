@@ -2,23 +2,22 @@
 <html lang="ar" dir="rtl">
   <head>
     <!-- META -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
 
   </head>
   <body>
@@ -26,83 +25,83 @@
     <aside class="sidebar">
       <div class="aside_container">
         <div class="aside_logo flex-start gap-2">
-          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img src="../../assets/images/favicon.svg" class="img max-height" />
           <img
-            src="../assets/images/logo_text.svg"
+            src="../../assets/images/logo_text.svg"
             class="img max-height logo_title"
           />
         </div>
-        <div class="aside_menu flex-column-center" id="aside_menu">
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
           <!-- active li -->
-          <a href="" class="custom-anc parent-nav-item">
+          <li class="parent-nav-item aside_active">
             <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
             <i class="board-dashboard"></i>
-          </a>
-          <a href="../mettings/Meeting_Minutes.html" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">الإجتماعات</h6>
             <i class="board-meeting--1-"></i>
-          </a>
-          <a href="../missions/missions.html" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">المهام</h6>
             <i class="board-task"></i>
-          </a>
-          <a href="../Disclosures/Disclosures.html" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">إفصاحات</h6>
             <i class="board-accounting"></i>
-          </a>
-          <a href="../rating/rating.html" class="custom-anc parent-nav-item aside_active">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">التقيمات</h6>
             <i class="board-survey"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
             <i class="board-kpis"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">روابط سريعة</h6>
             <i class="board-link--1-"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
             <i class="board-open-folder"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">المستندات</h6>
             <i class="board-document"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
             <i class="board-training"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
             <i class="board-enterprise"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
             <i class="board-book"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
             <i class="board-democracy"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">تقارير</h6>
             <i class="board-report"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">الإعداادات</h6>
             <i class="board-settings"></i>
-          </a>
-          <a href="" class="custom-anc parent-nav-item">
+          </li>
+          <li class="parent-nav-item">
             <h6 class="aside_item_title custom-h">نشاط السجل</h6>
             <i class="board-activities"></i>
-          </a>
-        </div>
+          </li>
+        </ul>
         <div class="aside_footer_logo text-center flex-end gap-2">
           <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
           <img
-            src="../assets/images/mazaya_logo.svg"
+            src="../../assets/images/mazaya_logo.svg"
             class="img max-height mx-0"
           />
         </div>
@@ -205,8 +204,9 @@
               <i class="board-user--1-"></i>
             </a>
           </li>
+        
           <li>
-            <a href="#" class="custom-anc">التقيمات</a>
+            <a href="#" class="custom-anc">إضافة إجتماع</a>
           </li>
         </ul>
       </div>
@@ -216,101 +216,61 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-          <div class="meeting-grid-container">
-            <div class="metting-sidebar custom-card w-100">
-              <ul class="custom-ul flex-column-start gap-2">
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="rating.html">مؤشرات الأداء لعضو مجلس الإدارة</a>
-                </li>
-                <li class="metting_list_item active">
-                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html">مؤشرات الأداء لعضو اللجنة</a>
-                </li>
-                <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للرئيس التنفيذي</a>
-                </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشر أداء مجلس الإدارة</a>
-                </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للجنة</a>
-                </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء الخاصة بالتدريب</a>
-                </li>
-              </ul>
+            <div class="flex-column-start gap-3">
+                <form class="filter-section custom-card w-100">
+                    <div class="card-header">تعديل حقوق أصحاب المصالح</div>
+                    <div class="card-body flex-column-center flex-wrap w-100 gap-3">
+                        <div class="inputs-grid-2 w-100">
+                            <div class="form-group">
+                                <label for="position_title(ar)" class="form-label"
+                                >المسمى الوظيفي باللغة العربية</label
+                                >
+                                <input
+                                value="المسمى الوظيفي"
+                                type="text"
+                                id="position_title(ar)"
+                                class="form-control"
+                                placeholder="أدخل"
+                                required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="position_title(en)" class="form-label">المسمى الوظيفى باللغة الإنجليزية</label>
+                                <input
+                                value="position title"
+                                type="text"
+                                id="position_title(en)"
+                                class="form-control"
+                                placeholder="أدخل"
+                                required
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="describtion(ar)" class="form-label">الوصف باللغة العربية </label>
+                                <textarea class="form-control custom-textarea" id="describtion(ar)" rows="4" placeholder="ادخل">الوصف</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="describtion(en)" class="form-label">الوصف باللغة الإنجليزية </label>
+                                <textarea class="form-control custom-textarea" id="describtion(en)" rows="4" placeholder="ادخل">الوصف</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer flex-end gap-2 w-100">
+                        <button class="custom-btn border-seconadry-btn min-btn-width fltr-btn">مسح</button>
+                        <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
+                    </div>
+                </form>
             </div>
-            <div class="metting-details flex-column-center">
-              <!-- filter section -->
-              <form class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body">
-                   <div class="col-sm-12 col-md-5">
-                    <label for="rating-year" class="form-label">سنة التقيم</label>
-                    <select id="rating-year" class="form-select">
-                      <option selected disabled>الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
-                </div>
-              </form>
-
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="head flex-between gap-2 mb-3">
-                   <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>سنة التقييم</th>
-                        <th>اسم اللجنة</th>
-                        <th>التقيم</th>
-                      </tr>
-                    </thead>
-                        <tbody>
-                            <tr>
-                              <th>1</th>
-                              <td>2024</td>
-                              <td>احمد علي</td>
-                              <td>
-                                  <div class="table-actions flex-start gap-3">
-                                        <a class="custom-btn border-seconadry-btn custom-anc px-4" href="">
-                                          تقيم
-                                        </a>
-                                  </div>
-                              </td>
-                            </tr>
-                    </tbody>
-                  </table>
-                  <!-- If No results found  -->
-                  <!-- <div class="flex-column-center gap-1" >
-                    <img src="../assets/images/search.svg" class="no_result_img" />
-                    <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
-                  </div> -->
-                </div>
-
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
 
     <!-- Flatpicker (for date picker)  -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="../assets/js/flatpicker-custom.js"></script>
+    <script src="../../assets/js/flatpickr.min.js"></script>
+    <script src="../../assets/js/flatpicker-custom.js"></script>
 
   </body>
 </html>

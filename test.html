@@ -1,0 +1,133 @@
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let calendarEl = document.getElementById("examinationCalendar");
+        let tooltip = document.getElementById("eventTooltip");
+
+        let calendar = new FullCalendar.Calendar(calendarEl, {
+          locale: "ar", // 👉 Arabic language
+          direction: "rtl",
+          initialView: "dayGridMonth",
+          initialDate: "2025-07-01",
+          events: [
+              {
+                title: "إجتماع مجلس الإدارة 32/5025",
+                start: "2025-07-15",
+                className: "event meeting",
+                start_time: "5:00 ص",
+                end_time: "10:00 ص"
+              },
+              {
+                title: "إجتماع مجلس الإدارة 32/5025",
+                start: "2025-07-20",
+                className: "event meeting",
+                start_time: "5:00 ص",
+                end_time: "10:00 ص"
+              },
+              {
+                title: "إجتماع مجلس الإدارة 32/5025",
+                start: "2025-07-02",
+                className: "event meeting",
+                start_time: "5:00 ص",
+                end_time: "10:00 ص"
+              },
+              {
+                title: "إجتماع مجلس الإدارة 32/5025",
+                start: "2025-07-18",
+                className: "event meeting",
+                start_time: "7:00 ص",
+                end_time: "10:00 ص"
+              },
+              {
+                title: "مهمة تسليم التقرير", // ✅ Event جديد
+                start: "2025-07-22",
+                className: "event task",
+                start_time: "5:00 ص",
+                end_time: "10:00 ص"
+              },
+            ],
+
+          eventContent: function (arg) {
+            // const start_time = event.extendedProps.start_time || "غير محدد";
+            // const end_time = event.extendedProps.end_time || "غير محدد";
+            const time = arg.event.extendedProps.time || "";
+            const title = arg.event.title;
+            const classNames = arg.event.classNames;
+
+            if (classNames.includes("meeting")) {
+              // ✅ شكل الـ meeting
+              return {
+                html: `
+                      <div class="flex-start flex-wrap gap-2">
+                        <div class="event-time">${
+                          arg.event.extendedProps.time || ""
+                        }</div>
+                        <div class="event-title">${arg.event.title}</div>
+                      </div>
+                    `,
+              };
+            } else if (classNames.includes("task")) {
+              // ✅ شكل الـ task
+              return {
+                html: `
+                  <div class="task-event flex-center">
+                    <div>${title}</div>
+                  </div>
+                `,
+              };
+            } else {
+              // شكل افتراضي لأي نوع تاني
+              return {
+                html: `
+                  <div class="flex-start flex-wrap">
+                    <div class="event-time">${time}</div>
+                    <div class="event-title">${title}</div>
+                  </div>
+                `,
+              };
+            }
+          },
+          // open modal
+          eventClick: function (info) {
+            const event = info.event;
+            const title = event.title;
+            const date = event.start.toLocaleDateString("ar-EG");
+            const time = event.extendedProps.time || "غير محدد";
+            // const start_time = event.extendedProps.start_time || "غير محدد";
+            // const end_time = event.extendedProps.end_time || "غير محدد";
+            const type = event.classNames.includes("meeting")
+              ? "إجتماع"
+              : event.classNames.includes("task")
+              ? "مهمة"
+              : "حدث";
+
+            document.getElementById("eventTitle").textContent = title;
+            document.getElementById("eventDate").textContent = date;
+            document.getElementById("eventTime").textContent = time;
+            // document.getElementById("eventStartTime").textContent = start_time;
+            // document.getElementById("eventEndTime").textContent = end_time;
+            document.getElementById("eventType").textContent = type;
+
+            const modal = new bootstrap.Modal(document.getElementById("eventModal"));
+            modal.show();
+          }
+        });
+        calendar.render();
+        // إخفاء التولتيب عند الضغط خارج الحدث
+        document.addEventListener("click", function (e) {
+          if (!e.target.closest(".fc-event")) {
+            tooltip.style.display = "none";
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let headerToolbar = document.querySelector(".fc-header-toolbar");
+        let targetContainer = document.querySelector("#toolbar_parent");
+        if (headerToolbar && targetContainer && targetContainer.firstChild) {
+          targetContainer.insertBefore(
+            headerToolbar,
+            targetContainer.firstChild
+          );
+        }
+      });
+    </script>

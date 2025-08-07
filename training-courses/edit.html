@@ -18,8 +18,7 @@
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-    <!-- Link Swiper's CSS -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   </head>
@@ -224,98 +223,132 @@
     <div id="content">
       <div class="container-fluid">
         <div class="main-content">
-            <form class="filter-section custom-card w-100">
-                <div class="card-header">إضافة قرار</div>
+            <form class="filter-section custom-card w-100" action="Resolutions-edit.html">
+                <div class="card-header">تعديل مكافحة غسل الأموال و...</div>
                 
                 <div class="card-body flex-column-start gap-4"> 
-                    <div class="inputs-grid-3 w-100">
-                        <div class="required">
-                            <label for="number" class="form-label">الرقم التسلسلي </label>
-                            <input
+                    <div class="inputs-grid-2 w-100">
+                        <div class="form-group">
+                        <label for="name(Ar)" class="form-label">
+                            الاسم باللغة العربية 
+                        </label>
+                        <input
                             type="text"
-                            id="number"
-                            value="12345"
+                            id="name(Ar)"
                             class="form-control"
-                            required />
+                            value="سلمي"
+                            required
+                        />
                         </div>
-                        <div>
-                                <label for="formal_secretary" class="form-label">أمين السر الرسمي</label>
-                                <select id="formal_secretary" class="form-select">
-                                  <option selected disabled>اختر</option>
-                                  <option>الكل</option>
-                                  <option>في انتظار التوقيع</option>
-                                  <option>غير مسموح بالتوقيع</option>
-                                </select>
+                        <div class="form-group">
+                        <label for="name(En)" class="form-label">
+                            الاسم باللغة الإنجليزية 
+                        </label>
+                        <input
+                            type="text"
+                            id="name(En)"
+                            class="form-control"
+                            value="salma"
+                            required
+                        />
                         </div>
-                        <div>
-                                <label for="resolution-type" class="form-label">نوع القرار</label>
-                                <select id="resolution-type" class="form-select">
-                                  <option selected disabled>اختر</option>
-                                  <option>الكل</option>
-                                  <option>في انتظار التوقيع</option>
-                                  <option>غير مسموح بالتوقيع</option>
-                                </select>
+                        <div class="form-group">
+                        <label for="question_no" class="form-label">
+                            عدد الاسئلة 
+                        </label>
+                        <input
+                            type="text"
+                            id="question_no"
+                            class="form-control"
+                            value="3"
+                            required
+                        />
+                        </div>
+                        <div class="form-group">
+                            <label for="exam_duration" class="form-label">
+                                مدة الامتحان 
+                            </label>
+                            <input
+                                type="text"
+                                id="exam_duration"
+                                class="form-control"
+                                value="2h"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="exam_degree" class="form-label">
+                                درجة النجاح
+                            </label>
+                            <input
+                                type="text"
+                                id="exam_degree"
+                                class="form-control"
+                                value="60"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="file-upload" class="custom-label"
+                            >الأسئلة</label
+                            >
+                            <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="استعراض"
+                                readonly
+                                required
+                                id="file-name"
+                                style="cursor: pointer"
+                            />
+                            <input type="file" id="file-upload" hidden accept=".json"/>
+                            </div>
+                            <div id="file-info"></div>
+                        </div>
+                        <div class="form-group position-relative">
+                            <label for="myFiles" class="form-label">معاينة</label>
+                            <label for="myFiles" class="file-label-style form-control" id="fileLabel">استعراض</label>
+                            <input type="file" id="myFiles" class="file-input-hidden" name="myFiles[]" required multiple />
+                        </div>
+                        <div class="full-width">
+                            <div class="attachment-container" id="attachmentContainer">
+                            </div>
                         </div>
                     </div>
-                    <div class="w-100 inputs-grid-2">
-                      <div class="form-group required">
-                        <label for="subject[ar]" class="form-label">الموضوع باللغة العربية</label>
-                        <textarea class="form-control custom-textarea" id="subject[ar]" rows="4" placeholder="اختر" required></textarea>
-                      </div>
-                      <div class="form-group required">
-                        <label for="subject[en]" class="form-label">الموضوع باللغة الإنجليزية</label>
-                        <textarea class="form-control custom-textarea" id="subject[en]" rows="4" placeholder="ُEnter" required></textarea>
-                      </div>
-                      <div class="form-group">
-                                <label for="upload-type" class="form-label">طريقة تحميل المرفقات</label>
-                                <select id="upload-type" class="form-select">
-                                <option selected disabled>الكل</option>
-                                <option>في انتظار التوقيع</option>
-                                <option>غير مسموح بالتوقيع</option>
-                                </select>
-                      </div>
-                      <div class="form-group position-relative">
-                        <label for="myFiles" class="form-label">مرفقات</label>
-                        <label for="myFiles" class="file-label-style form-control" id="fileLabel">استعراض</label>
-                        <input type="file" id="myFiles" class="file-input-hidden" name="myFiles[]" required multiple />
-                      </div>
-                      <div class="full-width">
-                          <div class="attachment-container" id="attachmentContainer">
-                          </div>
-                      </div>
-                    </div>
+                    
                 </div>
 
                 <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    مسح
-                  </button>
-                  <button class="custom-btn secondary-btn">إضافة</button>
+                  <button class="custom-btn border-seconadry-btn fltr-btn min-btn-width">مسح</button>
+                  <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
                 </div>
             </form>
         </div>
       </div>
     </div>
 
-     <!-- Modal -->
-    <div class="modal fade" id="attachment-modal-imgs" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="swiper image-swiper">
-              <div class="swiper-wrapper" id="swiper-wrapper">
-                <!-- Slides here -->
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+  <!-- Modal -->
+  <div class="modal fade" id="attachment-modal-imgs" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="swiper image-swiper">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+              <!-- Slides here -->
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  </body>
 
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/custom.js"></script>
@@ -324,13 +357,11 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../../assets/js/flatpicker-custom.js"></script>
 
-    
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- swipper in modal -->
     <!-- Add attachment js -->
     <script src="../../assets/js/attachment.js"></script>
-   
-  </body>
+
 </html>

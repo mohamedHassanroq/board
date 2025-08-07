@@ -232,7 +232,8 @@
                   </span>
                 </div>
                 <ul class="custom-ul flex-column-start gap-2 search-results">
-                  <li class="file-item flex-between w-100">
+                  <!-- add active class to selected file -->
+                  <li class="file-item flex-between w-100 active">
                     <div class="file-content flex-center gap-3">
                       <span class="file-icon">
                         <i class="board-open-folder"></i>
@@ -243,7 +244,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -251,7 +252,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                   <li class="file-item flex-between w-100">
@@ -265,7 +266,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -273,7 +274,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                   <li class="file-item flex-between w-100">
@@ -287,7 +288,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -295,7 +296,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                   <li class="file-item flex-between w-100">
@@ -309,7 +310,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -317,7 +318,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                   <li class="file-item flex-between w-100">
@@ -331,7 +332,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -339,7 +340,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                   <li class="file-item flex-between w-100">
@@ -353,7 +354,7 @@
                         </h4>
                         <p class="file-description custom-p gray fs-12">
                           أضيفت من قبل :
-                          <a class="custom-anc" href="#"> النظام</a>
+                          <a class="custom-anc secondary" href="#"> النظام</a>
                         </p>
                         <span class="file-time gray fs-12"
                           >2021/1/11 9:40 ص</span
@@ -361,7 +362,7 @@
                       </div>
                     </div>
                     <a href="#" class="view-icon custom-anc secondary"
-                      ><i class="board-eye-close-up"></i
+                      ><i class="board-view-2 fs-16"></i
                     ></a>
                   </li>
                 </ul>
@@ -376,6 +377,7 @@
                   <div class="btn-group">
                     <button
                       class="custom-btn primary-btn fs-20 ms-2"
+                      data-bs-placement="bottom" title="انشاء مجلد"  
                       data-bs-toggle="modal"
                       data-bs-target="#addFolder"
                     >
@@ -383,6 +385,7 @@
                     </button>
                     <button
                       class="custom-btn primary-btn fs-20 ms-2"
+                      data-bs-placement="bottom" title="انشاء ملف" 
                       data-bs-toggle="modal"
                       data-bs-target="#addFile"
                     >
@@ -403,7 +406,7 @@
                           </h4>
                           <p class="file-description custom-p gray fs-12">
                             أضيفت من قبل :
-                            <a class="custom-anc" href="#"> النظام</a>
+                            <a class="custom-anc secondary" href="#"> النظام</a>
                           </p>
                           <span class="file-time gray fs-12"
                             >2021/1/11 9:40 ص</span
@@ -411,7 +414,7 @@
                         </div>
                       </div>
                       <a href="#" class="view-icon custom-anc secondary"
-                        ><i class="board-eye-close-up"></i
+                        ><i class="board-view-2 fs-16"></i
                       ></a>
                     </div>
                   </div>
@@ -427,7 +430,7 @@
                           </h4>
                           <p class="file-description custom-p gray fs-12">
                             أضيفت من قبل :
-                            <a class="custom-anc" href="#"> النظام</a>
+                            <a class="custom-anc secondary" href="#"> النظام</a>
                           </p>
                           <span class="file-time gray fs-12"
                             >2021/1/11 9:40 ص</span
@@ -435,7 +438,7 @@
                         </div>
                       </div>
                       <a href="#" class="view-icon custom-anc secondary"
-                        ><i class="board-eye-close-up"></i
+                        ><i class="board-view-2 fs-16"></i
                       ></a>
                     </div>
                   </div>
@@ -451,7 +454,7 @@
                           </h4>
                           <p class="file-description custom-p gray fs-12">
                             أضيفت من قبل :
-                            <a class="custom-anc" href="#"> النظام</a>
+                            <a class="custom-anc secondary" href="#"> النظام</a>
                           </p>
                           <span class="file-time gray fs-12"
                             >2021/1/11 9:40 ص</span
@@ -459,7 +462,7 @@
                         </div>
                       </div>
                       <a href="#" class="view-icon custom-anc secondary"
-                        ><i class="board-eye-close-up"></i
+                        ><i class="board-view-2 fs-16"></i
                       ></a>
                     </div>
                   </div>
@@ -475,7 +478,7 @@
                           </h4>
                           <p class="file-description custom-p gray fs-12">
                             أضيفت من قبل :
-                            <a class="custom-anc" href="#"> النظام</a>
+                            <a class="custom-anc secondary" href="#"> النظام</a>
                           </p>
                           <span class="file-time gray fs-12"
                             >2021/1/11 9:40 ص</span
@@ -483,7 +486,7 @@
                         </div>
                       </div>
                       <a href="#" class="view-icon custom-anc secondary"
-                        ><i class="board-eye-close-up"></i
+                        ><i class="board-view-2 fs-16"></i
                       ></a>
                     </div>
                   </div>
@@ -496,148 +499,125 @@
     </div>
 
     <!-- add folder modal -->
-    <div
-      class="modal fade custom-modal"
-      id="addFolder"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content bg-white">
-          <div class="modal-header">
-            <h5 class="modal-title custom-h fs-20 fw-700">انشاء مجلد</h5>
-            <button
-              type="button"
-              class="close custom-btn primary-btn"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-group mb-3">
-                <label for="folderName" class="custom-label">اسم المجلد</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="folderName"
-                  id="folderName"
-                  placeholder="اسم المجلد"
-                />
-              </div>
-              <div class="form-group mb-3">
-                <label class="custom-label">الخصوصية</label>
-                <div class="custom-radio flex-between form-control">
-                  <span class="text-muted">اختر</span>
-                  <div class="radio-group">
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="privacy"
-                        id="public"
-                        value="public"
-                        checked
-                      />
-                      <label class="form-check-label" for="public"> عام</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="privacy"
-                        id="private "
-                        value="private "
-                      />
-                      <label class="form-check-label" for="private"> خاص</label>
-                    </div>
+    <div class="modal fade custom-modal" id="addFolder" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addFolderLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered w-50">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title" id="addFolderLabel">انشاء مجلد</h1>
+                      <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                </div>
+                  <div class="modal-body pt-0">
+                   <form action="">
+                      <div class="form-group mb-3">
+                        <label for="folderName" class="custom-label">اسم المجلد</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="folderName"
+                          id="folderName"
+                          placeholder="اسم المجلد"
+                        />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label class="custom-label">الخصوصية</label>
+                        <div class="custom-radio flex-between form-control">
+                          <span class="text-muted">اختر</span>
+                          <div class="radio-group">
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="privacy"
+                                id="public"
+                                value="public"
+                                checked
+                              />
+                              <label class="form-check-label" for="public"> عام</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="privacy"
+                                id="private "
+                                value="private "
+                              />
+                              <label class="form-check-label" for="private"> خاص</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group flex-end">
+                        <button class="custom-btn primary-btn form-btn" type="submit">
+                          تأكيد
+                        </button>
+                      </div>
+                    </form>
+                                      
+                  </div>
               </div>
-              <div class="form-group flex-end">
-                <button class="custom-btn primary-btn form-btn" type="submit">
-                  تأكيد
-                </button>
-              </div>
-            </form>
           </div>
-        </div>
-      </div>
     </div>
 
     <!-- add file modal -->
-    <div
-      class="modal fade custom-modal"
-      id="addFile"
-      tabindex="-1"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content bg-white">
-          <div class="modal-header">
-            <h5 class="modal-title custom-h fs-20 fw-700">انشاء ملف</h5>
-            <button
-              type="button"
-              class="close custom-btn primary-btn"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+    <div class="modal fade custom-modal" id="addFile" tabindex="-1" data-bs-backdrop="static" aria-labelledby="addFileLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered w-50">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h1 class="modal-title" id="addFileLabel">انشاء ملف</h1>
+                      <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body pt-0">
+                    <form action="">
+                      <div class="form-group mb-3">
+                        <label for="addFile" class="custom-label">
+                          اضافة ملف في: General folder</label
+                        >
+                        <select class="form-control" name="addFile" id="addFile">
+                          <option selected disabled>General folder</option>
+                          <option>General folder</option>
+                          <option>General folder</option>
+                          <option>General folder</option>
+                          <option>General folder</option>
+                          >
+                        </select>
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="fileName" class="custom-label">اسم الملف</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="fileName"
+                          id="fileName"
+                          placeholder="اسم الملف"
+                        />
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="file-upload" class="custom-label"
+                          >تحميل الملف</label
+                        >
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="ارفع الملفات"
+                            readonly
+                            id="file-name"
+                            style="cursor: pointer"
+                          />
+                          <input type="file" id="file-upload" hidden />
+                        </div>
+                        <div id="file-info"></div>
+                      </div>
+                      <div class="form-group flex-end">
+                        <button class="custom-btn primary-btn form-btn" type="submit">
+                          تأكيد
+                        </button>
+                      </div>
+                    </form>              
+                  </div>
+              </div>
           </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-group mb-3">
-                <label for="addFile" class="custom-label">
-                  اضافة ملف في: General folder</label
-                >
-                <select class="form-control" name="addFile" id="addFile">
-                  <option selected disabled>General folder</option>
-                  <option>General folder</option>
-                  <option>General folder</option>
-                  <option>General folder</option>
-                  <option>General folder</option>
-                  >
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label for="fileName" class="custom-label">اسم الملف</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="fileName"
-                  id="fileName"
-                  placeholder="اسم الملف"
-                />
-              </div>
-              <div class="form-group mb-3">
-                <label for="file-upload" class="custom-label"
-                  >تحميل الملف</label
-                >
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="استعراض"
-                    readonly
-                    id="file-name"
-                    style="cursor: pointer"
-                  />
-                  <input type="file" id="file-upload" hidden />
-                </div>
-                <div id="file-info"></div>
-              </div>
-              <div class="form-group flex-end">
-                <button class="custom-btn primary-btn form-btn" type="submit">
-                  تأكيد
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>

@@ -18,35 +18,6 @@
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-<style>
-/* .tooltip-inner {
-  background-color: var(--primary-color); 
-  color: white !important;  
-  font-size: 14px;
-  font-weight: 400;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.tooltip.bs-tooltip-top .tooltip-arrow::before {
-  border-top-color: var(--primary-color);
-}
-
-.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-  border-bottom-color: var(--primary-color);
-}
-
-.tooltip.bs-tooltip-start .tooltip-arrow::before {
-  border-left-color: var(--primary-color);
-}
-
-.tooltip.bs-tooltip-end .tooltip-arrow::before {
-  border-right-color: var(--primary-color);
-} */
-
-</style>
   </head>
   <body>
     <!-- aside -->
@@ -565,16 +536,23 @@
                                                 <td>28 يوليو 2025</td>
                                                 <td>
                                                     <div class="dropdown-center status_dropdown status-cell">
-                                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <span class="status pending">معلق</span>
+                                                        <button 
+                                                          class="btn btn-secondary dropdown-toggle custom-status-btn" 
+                                                          type="button"
+                                                          data-dropdown-id="dropdown-1" >
+                                                          <!-- data-bs-toggle="dropdown" aria-expanded="false" -->
+                                                          <span class="status pending">معلق</span>
                                                         </button>
                                                         <i class="board-arrow-down-sign-to-navigate input-icon"></i>
-                                                        <ul class="dropdown-menu">
-                                                            <li>
-                                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
-                                                            </li>
+                                                        <!-- dropdown الأصلي جوه الجدول -->
+                                                        <ul id="dropdown-1" class="custom-dropdown dropdown-menu">
+                                                          <li>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">رفض</a>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم القبول عليها</a>
+                                                          </li>
                                                         </ul>
-                                                    </div>
+                                                    </div>  
                                                 </td>
                                                 <td>
                                                     <div class="table-actions flex-end gap-3">
@@ -588,17 +566,24 @@
                                                 <td>محمد أحمد</td>
                                                 <td>28 يوليو 2025</td>
                                                 <td>
-                                                    <div class="dropdown-center status_dropdown status-cell">
-                                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <span class="status pending">معلق</span>
+                                                     <div class="dropdown-center status_dropdown status-cell">
+                                                        <button 
+                                                          class="btn btn-secondary dropdown-toggle custom-status-btn" 
+                                                          type="button"
+                                                          data-dropdown-id="dropdown-1" >
+                                                          <!-- data-bs-toggle="dropdown" aria-expanded="false" -->
+                                                          <span class="status pending">معلق</span>
                                                         </button>
                                                         <i class="board-arrow-down-sign-to-navigate input-icon"></i>
-                                                        <ul class="dropdown-menu">
-                                                            <li>
-                                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
-                                                            </li>
+                                                        <!-- dropdown الأصلي جوه الجدول -->
+                                                        <ul id="dropdown-1" class="custom-dropdown dropdown-menu">
+                                                          <li>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">رفض</a>
+                                                            <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم القبول عليها</a>
+                                                          </li>
                                                         </ul>
-                                                    </div>
+                                                    </div>  
                                                 </td>
                                                 <td>
                                                     <div class="table-actions flex-end gap-3">

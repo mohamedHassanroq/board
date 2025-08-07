@@ -8,17 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICONS ICON -->
-    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <link rel="icon" type="image/png" href="../../assets//images/favicon.svg" />
     <!-- PAGE TITLE HERE -->
     <title>Board</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/fonts.css" />
-    <link rel="stylesheet" href="../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
 
     <!-- Flatpicker (for date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   </head>
   <body>
@@ -225,7 +227,7 @@
                 <div class="card-body flex-column-start gap-4"> 
                     <div class="inputs-grid-3 w-100">
                          <div class="required">
-                                <label for="Disclosures-type" class="form-label">نوع الـ إفصاح / إقرار <span class="red">*</span></label>
+                                <label for="Disclosures-type" class="form-label">نوع الـ إفصاح / إقرار</label>
                                 <select id="Disclosures-type" class="form-select" required>
                                 <option selected disabled>نوع الـ إفصاح / إقرار</option>
                                 <option>في انتظار التوقيع</option>
@@ -233,7 +235,7 @@
                                 </select>
                         </div>
                         <div class="required">
-                            <label for="member" class="form-label">عضو <span class="red">*</span></label>
+                            <label for="member" class="form-label">عضو</label>
                             <select id="member" class="form-select" required>
                               <option selected disabled>عضو</option>
                               <option>في انتظار التوقيع</option>
@@ -241,20 +243,40 @@
                             </select>
                         </div>
                         <div class="required">
-                            <label for="upload-type" class="form-label">إدراج الملفات من خلال <span class="red">*</span></label>
+                            <label for="upload-type" class="form-label">إدراج الملفات من خلال</label>
                             <select id="upload-type" class="form-select" required>
                               <option selected disabled>إدراج الملفات من خلال</option>
                               <option>في انتظار التوقيع</option>
                               <option>غير مسموح بالتوقيع</option>
                             </select>
                         </div>
-                        <div class="position-relative required">
-                                <label for="myFiles" class="form-label">مرفقات <span class="red">*</span></label>
-                                <!-- label شكله input -->
-                                <label for="myFiles" class="file-label-style form-control"></label>
-                                <input type="file" id="myFiles" class="file-input-hidden" name="myFiles[]" multiple required />
-                                <span id="file-name-output" class="file-name-display"></span>
-                        </div>
+                        <!-- <div class="form-group required">
+                          <label for="file-upload" class="custom-label"
+                            >المرفقات</label
+                          >
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="استعراض"
+                              readonly
+                              id="file-name"
+                              style="cursor: pointer"
+                            />
+                            <input type="file" id="file-upload" hidden/>
+                          </div>
+                          <div id="file-info"></div>
+                        </div> -->
+                      <div class="form-group position-relative">
+                        <label for="myFiles" class="form-label">مرفقات</label>
+                        <label for="myFiles" class="file-label-style form-control" id="fileLabel">استعراض</label>
+                        <input type="file" id="myFiles" class="file-input-hidden" name="myFiles[]" required multiple />
+                      </div>
+                      <div class="full-width">
+                          <div class="attachment-container" id="attachmentContainer">
+                          </div>
+                      </div>
+
                     </div>
                 </div>
 
@@ -266,34 +288,40 @@
       </div>
     </div>
 
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+<!-- Modal -->
+    <div class="modal fade" id="attachment-modal-imgs" tabindex="-1" aria-labelledby="attachmentModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close action-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="swiper image-swiper">
+              <div class="swiper-wrapper" id="swiper-wrapper">
+                <!-- Slides here -->
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
-    <!-- script to appear choosen file -->
-    <script>
-    const input = document.getElementById("myFiles");
-    const label = document.getElementById("fileLabel");
+    <script src="../../assets/js/flatpicker-custom.js"></script>
 
-    input.addEventListener("change", function () {
-        if (this.files.length > 0) {
-        const names = Array.from(this.files).map(file => file.name).join(", ");
-        label.textContent = names;
-        label.classList.remove("text-muted"); // يشيل لون النص الرمادي
-        } else {
-        label.textContent = "";
-        label.classList.add("text-muted");
-        }
-    });
-    </script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
+    <!-- swipper in modal -->
+    <!-- Add attachment js -->
+    <script src="../../assets/js/attachment.js"></script>
+   
   </body>
 </html>

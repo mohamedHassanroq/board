@@ -326,7 +326,7 @@
                                 <td>
                                     <div class="table-actions flex-end gap-3">
                                         <i class="board-view icon"></i>
-                                        <i class="board-edit--1- icon"></i>
+                                        <i class="board-edit-text-2 icon"></i>
                                         <i class="board-bin icon"></i>
                                     </div>
                                 </td>
@@ -377,29 +377,7 @@
 
     <!-- Flatpicker (for date picker)  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        flatpickr("input[type=datetime-local]", {
-            dateFormat: "d / M / Y",
-            // defaultDate: new Date(),
-        });
-    </script>
-    <!-- script to appear choosen file -->
-    <script>
-    const input = document.getElementById("myFiles");
-    const label = document.getElementById("fileLabel");
-
-    input.addEventListener("change", function () {
-        if (this.files.length > 0) {
-        const names = Array.from(this.files).map(file => file.name).join(", ");
-        label.textContent = names;
-        label.classList.remove("text-muted"); // يشيل لون النص الرمادي
-        } else {
-        label.textContent = "";
-        label.classList.add("text-muted");
-        }
-    });
-    </script>
-
+    <script src="../assets/js/flatpicker-custom.js"></script>
 
   </body>
 </html>

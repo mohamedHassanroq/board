@@ -220,112 +220,101 @@
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="rating.html">مؤشرات الأداء لعضو اللجنة</a>
+                  <a class="custom-anc" href="#">إرشادات حول تعبئة الطلب</a>
                 </li>
-                <li class="metting_list_item active">
-                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html">مؤشرات الأداء الخاصة بالتدريب</a>
+                <li class="metting_list_item ">
+                  <a class="custom-anc" href="#">تفاصيل الشخص المرخص له</a>
                 </li>
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للجنة</a>
+                  <a class="custom-anc" href="#">البيانات الشخصية للمرشح</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للرئيس التنفيذي</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">المنصب المرشح له</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء لعضو مجلس الإدارة</a>
+                <li class="metting_list_item active">
+                  <a class="custom-anc" href="#">المؤهلات العلمية و المهنية الحاصل عليها المرشح</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشر أداء مجلس الإدارة</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">برنامج المؤهلات المهنية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">تفاصيل الخبرة الحالية للمرشح</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">عضوية مجلس الإدارة التي شغلها المرشح</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">إجمالي سنوات الخبرة وفقا لما ورد بنماذج الخبرات الوظيفية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">معايير النزاهة والسلامة المالية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">معلومات تكميلية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">قائمة المستندات المطلوبة عند تقديم الطلب</a>
                 </li>
               </ul>
             </div>
-            <div class="metting-details flex-column-center">
+            <div class="metting-details flex-column-start">
               <!-- filter section -->
-              <div class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body">
-                   <div class="col-sm-12 col-md-5">
-                    <label for="rating-year" class="form-label">سنة التقيم</label>
-                    <select id="rating-year" class="form-select">
-                      <option selected disabled>الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
-                </div>
-              </div>
+              <form class="filter-section custom-card w-100">
+                <div class="card-header">المنصب المرشح له</div>
+                   <div class="card-body flex-column-center flex-wrap w-100 gap-3">
+                            <div class="grid-2 w-100">
+                                <div class="form-group">
+                                    <label for="position" class="form-label custom-label"
+                                    >المؤهل العلمي / المهني</label
+                                    >
+                                    <input
+                                    type="text"
+                                    id="position"
+                                    class="form-control"
+                                    placeholder="أدخل"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="public" class="form-label">الرئيسي</label>
+                                    <input
+                                    type="text"
+                                    id="public"
+                                    class="form-control"
+                                    placeholder="أدخل"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="upload_method" class="form-label">الجهة المصدرة للتأهيل</label>
+                                    <select id="upload_method" class="form-select" required>
+                                    <option selected disabled>الكل</option>
+                                    <option>في انتظار التوقيع</option>
+                                    <option>غير مسموح بالتوقيع</option>
+                                    </select>
+                                </div>
+                                <div class="form-group position-relative">
+                                    <label for="date" class="custom-label">سنة الحصول على المؤهل</label>
+                                    <input
+                                        type="datetime-local"
+                                        class="form-control input_flat_picker"
+                                        placeholder="التاريخ"
+                                        id="date"
+                                        name="date"
+                                    />
+                                    <i class="board-calendar flat_picker_icon"></i>
+                                </div>
+                                <div class="danger_card full-width">
+                                    <img src="../assets/images/icons/danger_icon.svg">
+                                    <p class="custom-p">ملاحظة:- لن يتم قبول أي طلب ما لم يعبأ هذا النموذج بشكل كامل. .</p>
+                                </div>
 
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="head flex-between gap-2 mb-3">
-                   <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>سنة التقييم</th>
-                        <th>اسم العضو</th>
-                        <th>التقيم</th>
-                      </tr>
-                    </thead>
-                        <tbody>
-                             <tr>
-                                <th>1</th>
-                                <td>2024</td>
-                                <td>احمد علي</td>
-                                <td>
-                                    <div class="table-actions flex-start gap-3">
-                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                    </div>
-                                </td>
-                            </tr>
-                                <tr>
-                                <th>1</th>
-                                <td>2024</td>
-                                <td>احمد علي</td>
-                                <td>
-                                    <div class="table-actions flex-start gap-3">
-                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                    </div>
-                                </td>
-                            </tr>
-                                <tr>
-                                <th>1</th>
-                                <td>2024</td>
-                                <td>احمد علي</td>
-                                <td>
-                                    <div class="table-actions flex-start gap-3">
-                                        <a class="custom-btn border-seconadry-btn custom-anc">النتيجه</a>
-                                    </div>
-                                </td>
-                            </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <!-- Pagination -->
-                <nav aria-label="Page navigation w-100">
-                  <div class="pagination">
-                    <a class="prev" href="#">السابق</a>
-                    <div class="flex-center gap-2">
-                      <a href="#" class="pagination-item active">1</a>
-                      <a href="#" class="pagination-item">2</a>
-                      <a href="#" class="pagination-item">3</a>
+                            </div>
                     </div>
+                    <div class="card-footer flex-between gap-2 w-100">
+                        <a class="custom-btn border-seconadry-btn min-btn-width">السابق</a>
+                        <a class="custom-btn secondary-btn min-btn-width">التالي</a>
+                    </div>
+              </form>
 
-                    <a class="next" href="#">التالي</a>
-                  </div>
-                </nav>
-
-              </div>
             </div>
           </div>
         </div>
@@ -334,6 +323,10 @@
 
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../assets/js/flatpicker-custom.js"></script>
 
   </body>
 </html>

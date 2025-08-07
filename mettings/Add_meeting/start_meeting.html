@@ -342,17 +342,24 @@
                                     <td>أحمد محمد</td>
                                     <td>12/5/2025</td>
                                     <td>
-                                         <div class="dropdown-center status_dropdown status-cell">
-                                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <span class="status pending">معلق</span>
-                                              </button>
-                                              <i class="board-arrow-down-sign-to-navigate input-icon"></i>
-                                              <ul class="dropdown-menu">
-                                                  <li>
-                                                      <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
-                                                  </li>
-                                              </ul>
-                                         </div>
+                                        <div class="dropdown-center status_dropdown status-cell">
+                                            <button 
+                                            class="btn btn-secondary dropdown-toggle custom-status-btn" 
+                                            type="button"
+                                            data-dropdown-id="dropdown-1" >
+                                            <!-- data-bs-toggle="dropdown" aria-expanded="false" -->
+                                            <span class="status pending">معلق</span>
+                                            </button>
+                                            <i class="board-arrow-down-sign-to-navigate input-icon"></i>
+                                            <!-- dropdown الأصلي جوه الجدول -->
+                                            <ul id="dropdown-1" class="custom-dropdown dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">رفض</a>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم القبول عليها</a>
+                                            </li>
+                                            </ul>
+                                        </div>  
                                     </td>
                                     <td>
                                       <div class="table-actions flex-end gap-3">

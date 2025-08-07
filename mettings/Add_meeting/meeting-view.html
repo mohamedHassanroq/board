@@ -344,16 +344,23 @@
                                     <td>12/5/2025</td>
                                     <td>
                                          <div class="dropdown-center status_dropdown status-cell">
-                                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <span class="status pending">معلق</span>
-                                              </button>
-                                              <i class="board-arrow-down-sign-to-navigate input-icon"></i>
-                                              <ul class="dropdown-menu">
-                                                  <li>
-                                                      <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
-                                                  </li>
-                                              </ul>
-                                         </div>
+                                            <button 
+                                              class="btn btn-secondary dropdown-toggle custom-status-btn" 
+                                              type="button"
+                                              data-dropdown-id="dropdown-1" >
+                                              <!-- data-bs-toggle="dropdown" aria-expanded="false" -->
+                                              <span class="status pending">معلق</span>
+                                            </button>
+                                            <i class="board-arrow-down-sign-to-navigate input-icon"></i>
+                                            <!-- dropdown الأصلي جوه الجدول -->
+                                            <ul id="dropdown-1" class="custom-dropdown dropdown-menu">
+                                              <li>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم</a>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">رفض</a>
+                                                <a class="dropdown-item change-status" href="#" data-status-target="#status-1" data-bs-toggle="modal" data-bs-target="#confirmModal">تم القبول عليها</a>
+                                              </li>
+                                            </ul>
+                                        </div>  
                                     </td>
                                     <td>
                                       <div class="table-actions flex-end gap-3">
@@ -399,6 +406,7 @@
                                     <tr>
                                         <th class="index">1</th>
                                         <td>
+                                            <!-- if has only specific points -->
                                             <div class="user_profile">
                                                 <img
                                                     src="https://github.com/mdo.png"
@@ -407,7 +415,11 @@
                                                     height="40"
                                                     class="rounded-circle mx-1 mx-md-2"
                                                     />
-                                                <h4 class="title">هناء أحمد عبد الله</h4>
+                                                <div class="flex-column-start user_specific_points">
+                                                  <h4 class="title user_specific_name">هناء أحمد عبد الله</h4>
+                                                  <h4 class="title secondary user_specific_title custom-h"><span>المدقق الخارجي : أحمد</span> <i class="board-help icon"></i></h4>
+                                                </div>
+                                             
                                             </div>
                                         </td>
                                         <td>

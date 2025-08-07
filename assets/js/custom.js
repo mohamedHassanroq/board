@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const file = this.files[0];
       fileNameDisplay.value = file.name;
       fileInfo.textContent = file.name; // Just show the file name
-      fileInfo.style.display = "block";
+      fileInfo.style.display = "none";
     } else {
       fileNameDisplay.value = "";
-      fileInfo.style.display = "none";
+      // fileInfo.style.display = "none";
     }
   });
 

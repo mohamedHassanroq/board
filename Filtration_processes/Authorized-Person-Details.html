@@ -220,85 +220,143 @@
             <div class="metting-sidebar custom-card w-100">
               <ul class="custom-ul flex-column-start gap-2">
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="rating.html">مؤشرات الأداء لعضو مجلس الإدارة</a>
+                  <a class="custom-anc" href="#">إرشادات حول تعبئة الطلب</a>
                 </li>
                 <li class="metting_list_item active">
-                  <a class="custom-anc" href="(KPIs)CommitteeMembers.html">مؤشرات الأداء لعضو اللجنة</a>
+                  <a class="custom-anc" href="#">تفاصيل الشخص المرخص له</a>
                 </li>
                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للرئيس التنفيذي</a>
+                  <a class="custom-anc" href="#">البيانات الشخصية للمرشح</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشر أداء مجلس الإدارة</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">المنصب المرشح له</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء للجنة</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">المؤهلات العلمية و المهنية الحاصل عليها المرشح</a>
                 </li>
-                 <li class="metting_list_item">
-                  <a class="custom-anc" href="#">مؤشرات الأداء الخاصة بالتدريب</a>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">برنامج المؤهلات المهنية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">تفاصيل الخبرة الحالية للمرشح</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">عضوية مجلس الإدارة التي شغلها المرشح</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">إجمالي سنوات الخبرة وفقا لما ورد بنماذج الخبرات الوظيفية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">معايير النزاهة والسلامة المالية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">معلومات تكميلية</a>
+                </li>
+                <li class="metting_list_item">
+                  <a class="custom-anc" href="#">قائمة المستندات المطلوبة عند تقديم الطلب</a>
                 </li>
               </ul>
             </div>
-            <div class="metting-details flex-column-center">
+            <div class="metting-details flex-column-start">
               <!-- filter section -->
               <form class="filter-section custom-card w-100">
-                <div class="card-header">فلتر</div>
-                <div class="card-body">
-                   <div class="col-sm-12 col-md-5">
-                    <label for="rating-year" class="form-label">سنة التقيم</label>
-                    <select id="rating-year" class="form-select">
-                      <option selected disabled>الكل</option>
-                      <option>في انتظار التوقيع</option>
-                      <option>غير مسموح بالتوقيع</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="card-footer flex-end gap-2">
-                  <button class="custom-btn border-seconadry-btn">
-                    إعادة تعين
-                  </button>
-                  <button class="custom-btn secondary-btn">بحث الأن</button>
-                </div>
+                <div class="card-header">تفاصيل الشخص المرخص له</div>
+                   <div class="card-body flex-column-center flex-wrap w-100 gap-3">
+                        <div class="inputs-grid-2 w-100">
+                            <div class="form-group">
+                                <label for="name" class="form-label"
+                                >اسم الشخص المرخص له</label
+                                >
+                                <input
+                                value="نوريه محمد احمد"
+                                type="text"
+                                id="name"
+                                class="form-control"
+                                placeholder="أدخل"
+                                readonly
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="activity-type" class="form-label">طبيعة النشاط</label>
+                                <input
+                                type="text"
+                                id="activity-type"
+                                class="form-control"
+                                placeholder="أدخل"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="License_Number" class="form-label">رقم الترخيص الصادر عن الهيئة</label>
+                                <input
+                                type="text"
+                                id="License_Number"
+                                class="form-control"
+                                placeholder="أدخل"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="Registration_Number" class="form-label">رقم التسجيل الصادر عن الهيئة</label>
+                                <input
+                                type="text"
+                                id="Registration_Number"
+                                class="form-control"
+                                placeholder="أدخل"
+                                />
+                            </div>
+                            <div class="form-group">
+                                    <label for="position" class="form-label">المنصب</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="position"
+                                        placeholder="ادخل"
+                                    />
+                            </div>
+                            <div class="form-group">
+                                    <label for="phone_no" class="form-label"
+                                    >رقم الهاتف
+                                    </label>
+                                    <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="phone_no"
+                                    placeholder="ادخل"
+                                    />
+                            </div>
+                            <div class="form-group position-relative">
+                                    <label for="Fax_Number" class="form-label"
+                                    >رقم الفاكس
+                                    </label>
+                                    <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Fax_Number"
+                                    placeholder="ادخل"
+                                    />
+                            </div>
+                            <div class="form-group">
+                                    <label for="email" class="form-label"
+                                    >رقم الفاكس
+                                    </label>البريد الإلكتروني
+                                    <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="ادخل"
+                                    />
+                            </div>
+                            <div class="danger_card full-width">
+                                <img src="../assets/images/icons/danger_icon.svg">
+                               <p class="custom-p">ملاحظة:- لن يتم قبول أي طلب ما لم يعبأ هذا النموذج بشكل كامل. .</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer flex-between gap-2 w-100">
+                        <a class="custom-btn border-seconadry-btn min-btn-width">السابق</a>
+                        <a class="custom-btn secondary-btn min-btn-width">التالي</a>
+                    </div>
               </form>
 
-              <!-- Table Section -->
-              <div class="meetings-table-section custom-card w-100">
-                <div class="head flex-between gap-2 mb-3">
-                   <div class="table-title">مؤشرات الأداء لعضو اللجنة</div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table custom-table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>سنة التقييم</th>
-                        <th>اسم اللجنة</th>
-                        <th>التقيم</th>
-                      </tr>
-                    </thead>
-                        <tbody>
-                            <tr>
-                              <th>1</th>
-                              <td>2024</td>
-                              <td>احمد علي</td>
-                              <td>
-                                  <div class="table-actions flex-start gap-3">
-                                        <a class="custom-btn border-seconadry-btn custom-anc px-4" href="">
-                                          تقيم
-                                        </a>
-                                  </div>
-                              </td>
-                            </tr>
-                    </tbody>
-                  </table>
-                  <!-- If No results found  -->
-                  <!-- <div class="flex-column-center gap-1" >
-                    <img src="../assets/images/search.svg" class="no_result_img" />
-                    <h6 class="gray fs-14 fw-400">لا يوجد نتائج متاحة</h6>
-                  </div> -->
-                </div>
-
-              </div>
             </div>
           </div>
         </div>

@@ -267,16 +267,11 @@
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="form-group required">
-                    <label for="missions" class="form-label"> المهمة </label>
-                    <textarea
-                      class="form-control"
-                      name="missions"
-                      id="missions"
-                      rows="3"
-                      placeholder="  ادخل تفاصيل المهمة"
-                    ></textarea>
+                  <div class="required">
+                      <label for="missions" class="form-label">المهمة</label>
+                      <textarea class="form-control custom-textarea"  name="missions" id="missions" rows="4" placeholder="ادخل تفاصيل المهمة" required></textarea>
                   </div>
+
                 </div>
                 <div class="col-lg-4">
                   <div class="form-group required">
@@ -308,7 +303,7 @@
                         id="file-name"
                         style="cursor: pointer"
                       />
-                      <input type="file" id="file-upload" hidden />
+                      <input type="file" id="file-upload" hidden/>
                     </div>
                     <div id="file-info"></div>
                   </div>
