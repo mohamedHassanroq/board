@@ -221,6 +221,9 @@ html[dir="rtl"] [type="url"] {
 .fs-24 {
   font-size: 24px;
 }
+.fw-300 {
+  font-weight: 300;
+}
 .fw-400 {
   font-weight: 400;
 }
@@ -254,6 +257,9 @@ html[dir="rtl"] [type="url"] {
 .red {
   color: var(--red);
 }
+.green {
+  color: #309B0F;
+}
 .primary-bg {
   background-color: var(--primary-color) !important;
 }
@@ -276,6 +282,19 @@ html[dir="rtl"] [type="url"] {
   -ms-grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   gap: 12px;
+}
+/* errors / in-valid */
+.error {
+  color: var(--red) !important;
+  margin-top: 4px;
+  display: none;
+}
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+  box-shadow: unset !important;
+  border: 1px solid var(--red) !important;
+}
+.userlogin_input:has(.form-control.is-invalid) label {
+  color: var(--red) !important;
 }
 /* buttons */
 .secondary-btn {
@@ -337,7 +356,13 @@ html[dir="rtl"] [type="url"] {
   border: 1px solid var(--light-secondary-color);
 }
 .max-height {
-  max-height: 100%;
+  max-height: 100% !important;
+}
+.h-img {
+  height: 100%;
+}
+ i.custom-i {
+  transform: translate(0px,1px);
 }
 .position-relative input[type="number"]::-webkit-inner-spin-button,
 .position-relative input[type="number"]::-webkit-outer-spin-button {
@@ -364,24 +389,6 @@ html[dir="rtl"] [type="url"] {
   text-decoration: none;
 }
 
-
-@media (max-width: 991px) {
-  /* .fs-12 {
-    font-size: 8px;
-  }
-  .fs-14 {
-    font-size: 10px;
-  }
-  .fs-16 {
-    font-size: 12px;
-  }
-  .fs-20 {
-    font-size: 16px;
-  }
-  .fs-24 {
-    font-size: 20px;
-  } */
-}
 @media (min-width: 768px) and (max-width: 991px) {
   .grid-3 {
     -ms-grid-template-columns: repeat(2, 1fr);

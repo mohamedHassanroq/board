@@ -334,14 +334,10 @@ aside .aside_container::-webkit-scrollbar {
 }
 .boxs-content .box {
   border-radius: var(--raduis-lg);
-  border: 1px solid #ccc;
 }
 .box-head {
   padding: 16px 24px;
   border-bottom: 1px solid #e4e4e4;
-}
-.box-head .box-title {
-  color: var(--gray-color);
 }
 .mettings-box .box-head .box-title {
   color: var(--white-color);
@@ -418,11 +414,16 @@ aside .aside_container::-webkit-scrollbar {
 .edit-task {
   color: #309b0f;
 }
+.advertise-box .box-body ,
 .fastLinks-box .box-body {
   padding: 10px 0;
 }
+.advertise-box .box-cell ,
 .fastLinks-box .box-cell {
   padding: 0;
+}
+.advertise-box .box-body .fast-link:hover {
+  background-color: unset;
 }
 .fast-link {
   width: 100%;
@@ -495,9 +496,6 @@ textarea.form-control {
   display: inline-flex;
   gap: 8px;
   align-items: start;
-}
-.form-check-inline > input {
-  margin-top: 3px !important;
 }
 .accept-radio-card {
   border-radius: 8px;
@@ -613,6 +611,52 @@ select.flatpickr-monthDropdown-months:hover,
 .flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg {
   fill: rgb(187, 186, 186) !important;
 }
+
+
+
+
+
+
+
+/* prev / next bts style */
+.page_filter .fc-header-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.page_filter .fc-button-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.page_filter .fc-toolbar-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+  white-space: nowrap;
+}
+.page_filter .fc-prev-button,
+.page_filter .fc-next-button {
+  background: transparent;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  color: var(--secondary);
+  font-weight: 900;
+  padding-inline: 0px;
+}
+.page_filter .fc-today-button {
+  display: none;
+}
+
+
+
+
+
 /* meetings style */
 .meeting-grid-container {
   display: grid;
@@ -625,6 +669,7 @@ select.flatpickr-monthDropdown-months:hover,
 }
 .metting-sidebar ul {
   padding: 12px;
+  border: 0px;
 }
 .metting_list_item {
   font-size: 14px;
@@ -633,13 +678,20 @@ select.flatpickr-monthDropdown-months:hover,
   color: #606060;
   width: 100%;
   border-radius: 6px;
+  text-align: start;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    isolation: isolate;
+    border-color: transparent !important;
 }
 .metting_list_item a {
   color: #606060;
 }
 .metting_list_item.active {
-  background-color: var(--light-secondary-color);
-  color: var(--secondery-color);
+  background-color: var(--light-secondary-color) !important;
+  color: var(--secondery-color) !important;
+  border: 0px !important;
+  width: 100%;
 }
 .metting_list_item.active a {
   color: var(--secondery-color);
@@ -758,6 +810,8 @@ select.flatpickr-monthDropdown-months:hover,
   color: #606060 !important;
   font-size: 14px !important;
   font-weight: 400 !important;
+  min-width: 100px;
+  text-align: center;
 }
 .pagination-item {
   font-size: 14px;
@@ -1594,6 +1648,257 @@ i.board-bin {
     aspect-ratio: 1/1.05;
     inset-inline-start: 0px;
   }
+
+  /* user login */
+.userLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.login_lang {
+  position: absolute;
+  inset-inline-end: 30px;
+  inset-block-start: 30px;
+}
+.lang-dropdown i {
+   transform: translate(0px, 2px);
+   font-size: 18px;
+}
+.userlogin_content {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
+   gap: 20px;
+   padding: clamp(12px,10vw, 200px);
+   height: 100vh;
+   background-color: #fff;
+}
+.login-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.login-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+}
+.login-logo-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85px;
+}
+.userlogin_content .is-invalid {
+   background-image:unset !important;
+   padding: .375rem .75rem !important;
+}
+#togglePasswordIcon {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  inset-inline-end: 15px;
+  font-size: 16px;
+  color: var(--gray-color);
+  cursor: pointer;
+}
+.imgs_login {
+  height: 100vh;
+}
+.login_swiper {
+  height: 100%;
+  width: 100%;
+  position: relative !important;
+}
+.login_swiper .swiper-slide {
+  position: relative;
+}
+.login_swiper .swiper-slide > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+} 
+.swiper-pagination{
+  bottom: var(--swiper-pagination-bottom, 40px) !important;
+}
+.login_swiper .swiper-pagination-bullet {
+  background: #D1D1D1;
+  opacity: 0.7;
+}
+.login_swiper .swiper-pagination-bullet-active {
+  background: #fff;
+  width: 31px;
+  opacity: 1;
+  border-radius: 50px;
+}
+.imgs_login_text {
+  position: absolute;
+  bottom: 50px;
+  color: #ffff;
+  inset-inline-end: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+  z-index: 11;
+}
+.login-logo-vector {
+  top: 0px;
+  position: absolute;
+  z-index: 1;
+}
+.userlogin_inputs {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.userlogin_input {
+   position: relative;
+}
+#userlogin_label , #passwordlogin_label{
+   position: absolute;
+   top: -11px;
+   right: 1rem;
+   transform: translate(0px,0px);
+   background-color: #fff;
+   color: #1977CC;
+   padding: 0px 7px;
+   visibility: hidden;
+   opacity: 0;
+   z-index: 1;
+   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.correct_input {
+   border: 2px solid #1977CC !important;
+}
+.userlogin_logoimg {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.userlogin_logoimg img {
+   /* width: 17vw; */
+   min-width: 40px;
+   /* height: 9vw; */
+   margin-bottom: 10px;
+   min-height: 40px;
+}
+.userlogin_logoText {
+   color: #FFF;
+   font-size: 2.3vh;
+   font-style: normal;
+   font-weight: 700;
+   white-space: nowrap;
+}
+
+.adv-card-img {
+  width: auto;
+  height: 61px;
+  aspect-ratio: 1.3/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--body-bg);
+}
+.adv-card-title {
+font-size: 14px;
+font-weight: 500;
+}
+.adv-card-desc {
+  color: #A7A7A7;
+  font-size: 12px;
+  font-weight: 700;
+}
+/* chart */
+.chart_card .box-body {
+  padding: 10px;
+}
+.apexcharts-canvas {
+ direction: ltr !important;
+}
+/* legend */
+.apexcharts-legend-series {
+  margin: 0px !important;
+}
+#Meeting_Invitation_Response .apexcharts-legend {
+  top: 0px !important;
+  gap: 8px;
+  padding: 0px;
+}
+#Meeting_Invitation_Response .apexcharts-legend {
+  display: none;
+}
+.apexcharts-legend {
+   gap: 15px;
+}
+.Meeting_Invitation_chart .apexcharts-legend {
+  position: relative !important;
+  gap: 10px;
+  overflow: hidden;
+  top: 0px !important;
+}
+.apexcharts-legend-series {
+  gap: 8px;
+  direction: rtl !important;
+}
+.apexcharts-legend-text {
+    padding-right: 15px;
+    margin-right: -15px;
+    padding-left: unset !important;
+    margin-left: unset !important;
+
+}
+.chart {
+  max-width: 100%;
+  overflow: hidden;
+}
+.chart_parent {
+  overflow: auto;
+}
+#Meeting_Invitation_Response {
+  min-width: 600px;
+}
+.img_uplod {
+  position: relative;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.img_upload_icon {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  background: var(--light-secondary-color);
+  color: var(--secondery-color);
+  padding: 7px 9.4px;
+  inset-block-end: 2px;
+  inset-inline-end: 10px;
+  pointer-events: none;
+}
+.user_img_upload {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user_img_upload img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media screen and (max-width: 991px) {
   .box-head .box-title {

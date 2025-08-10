@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/flatpickr.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <style>
+    /* .swiper {
+      width: 100%;
+      height: 100%;
+    } */
+
+    /* .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+
+    /* .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+  </style>
+</head>
+<body>
+
+    <div class="userLogin">
+                <div class="imgs_login col-md-6 d-none d-sm-block">
+                    <div class="swiper mySwiper login_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"> 
+                                <img src="../assets/images/login2.png">
+                            </div>
+                            <div class="swiper-slide"> <img src="../assets/images/login1.png"></div>
+                            <div class="swiper-slide"> <img src="../assets/images/login2.png"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <img src="../assets/images/Vector.svg" class="login-logo-vector">
+                        <div class="imgs_login_text">
+                            <h3 class="fw-700 fs-24 custom-h">Connect with your team</h3>
+                            <p class="fs-18 fw-300">Collaborate seamlessly across projects and timezones</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_login col-sm-12 col-md-6">
+                    <div class="login_lang">
+                        <div class="dropdown lang-dropdown status_dropdown">
+                            <button
+                                class="dropdown-toggle flex-center gap-1"
+                                type="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <img src="../assets/images/icons/lang.svg">
+                                <h4 class="fs-14 fw-500 custom-h">العربية</h4>
+                                <i class="board-down-arrow"></i>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form class="userlogin_content">
+                            <div class="login-logo-img w-100">
+                                <img src="../assets/images/logo.svg">
+                            </div>
+                            <div>
+                                <h2 class="Title login-title">تسجيل الدخول</h2>
+                                <p class="login-desc mb-2">يرجى تسجيل الدخول لمواصلة الدخول إلى حسابك.</p>
+                            </div>          
+                            <div class="userlogin_inputs w-100">
+                                <div class="userlogin_input">
+                                    <label id="userlogin_label">اسم المستخدم</label>
+                                    <!-- add is-invalid class to input in case error -->
+                                    <input type="text" class="form-control formInput" id="userlogin" placeholder="اسم المستخدم" rows="4" cols="50" style="resize: none;" required>
+                                    <div class="error">اسم المستخدم غير صحيح </div>
+                                </div>
+                                <div class="userlogin_input">
+                                    <!-- add is-invalid class to input in case error -->
+                                    <label id="passwordlogin_label"> رقم المرور</label>
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control formInput is-invalid" id="passwordlogin" placeholder="رقم المرور" rows="4" cols="50" style="resize: none;" required>
+                                        <i class="board-closed-eyes" id="togglePasswordIcon"></i>
+                                    </div>
+                                    <div class="error">رجاء ادخل رقم المرور</div>
+                                </div>
+                                <div class="flex-between gap-2">
+                                                <div class="form-check form-check-inline">
+                                                    <input
+                                                        class="form-check-input custom-checkbox"
+                                                        type="checkbox"
+                                                        id="checkboxBoardMember"
+                                                        value="board_member"/>
+                                                    <label class="form-check-label" for="checkboxBoardMember">تذكرني</label>
+                                                </div>
+                                                <h4 class="secondary fs-14 fw-500">نسيت كلمة السر ؟</h4>
+                                </div>
+                            
+                            </div>
+                            <a class="custom-btn secondary-btn w-100">تسجيل الدخول</a>
+                    </form>
+                </div>
+                
+    </div>
+    
+</body>
+
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/password_icon_toggle.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+<!-- inputs animation -->
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+    let username = document.getElementById('userlogin');
+    let userlabel = document.getElementById('userlogin_label');
+    // password
+    let password = document.getElementById('passwordlogin');
+    let passwordlabel = document.getElementById('passwordlogin_label');
+
+    function showLabel(label,name) {
+        label.style.visibility = "visible";
+        label.style.opacity = "1";
+        label.classList.remove('error');
+        name.classList.add("correct_input");
+    }
+
+    function hideLabel(label) {
+        label.style.visibility = "hidden";
+        label.style.opacity = "0";
+    }
+
+    username.addEventListener('click', function(event) {
+        showLabel(userlabel,username);
+        username.placeholder = ' ';
+        event.stopPropagation();
+    });
+    
+
+    username.addEventListener('input', function() {
+        if (username.value.trim() === '') {
+            hideLabel(userlabel);
+            username.placeholder = 'اسم المستخدم';
+            username.classList.remove("correct_input");
+        } else {
+            showLabel(userlabel,username);
+        }
+    });
+
+    // password
+    password.addEventListener('click', function(event) {
+        showLabel(passwordlabel,password);
+        password.placeholder = ' ';
+        event.stopPropagation();
+    });
+
+    password.addEventListener('input', function() {
+        if (password.value.trim() === '') {
+            hideLabel(passwordlabel);
+            password.placeholder = 'اسم المستخدم';
+            password.classList.remove("correct_input");
+        } else {
+            showLabel(passwordlabel,password);
+        }
+    });
+
+    document.addEventListener('click', function() {
+        if (username.value.trim() === '') {
+            hideLabel(userlabel);
+            username.placeholder = 'اسم المستخدم';
+        }
+        if (username.value.trim() !== '') {
+            showLabel(userlabel,username);
+            if (username.classList.contains('is-invalid')) {
+                userlabel.classList.add('error');
+                username.classList.remove("correct_input");
+            } 
+        }
+        if (password.value.trim() === '') {
+            hideLabel(passwordlabel);
+            password.placeholder = 'الرقم السري';
+        }
+        if (password.value.trim() !== '') {
+            showLabel(passwordlabel,password);
+            if (password.classList.contains('is-invalid')) {
+                passwordlabel.classList.add('error');
+                password.classList.remove("correct_input");
+            } 
+        }
+        
+    });
+
+    userlabel.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+    passwordlabel.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});
+</script>
+
+</html>

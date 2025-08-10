@@ -312,6 +312,39 @@
           </div>
           <div class="boxs-content">
             <div class="boxs-row grid grid-2">
+              <div class="box chart_card Meeting_Invitation_chart bg-white">
+                    <div class="box-head flex-between">
+                      <h4 class="box-title custom-h fw-500 fs-20">الرد على دعوات الاجتماع</h4>
+                      <div id="legend-section">
+                      
+                      </div>
+                    </div>
+                    <div class="box-body">
+                      <div class="chart_parent">
+                        <div class="chart col" id="Meeting_Invitation_Response"></div>
+                      </div>
+                    </div>
+              </div>
+              <div class="box chart_card mission_chart bg-white">
+                    <div class="box-head flex-between">
+                      <h4 class="box-title custom-h fw-500 fs-20">المهمات</h4>
+                      <div id="legend-section">
+                      
+                      </div>
+                    </div>
+                    <div class="box-body missions_chart">    
+                               <div>
+                                <select id="all" class="form-select">
+                                  <option selected disabled>الكل</option>
+                                  <option>في انتظار التوقيع</option>
+                                  <option>غير مسموح بالتوقيع</option>
+                                </select>
+                              </div>
+                              <div class="chart_parent">
+                                  <div class="chart" id="missions"></div>
+                              </div>
+                    </div>
+              </div>
               <div class="box mettings-box secondary-bg">
                 <div class="box-head flex-between">
                   <h4 class="box-title custom-h fw-700 fs-20">الإجتماعات</h4>
@@ -480,7 +513,91 @@
                 </div>
               </div>
 
-              <div class="box attendance-box bg-white">chart</div>
+              <div class="box advertise-box bg-white">
+                  <div class="box-head flex-between">
+                    <h4 class="box-title custom-h fw-700 fs-20">الإعلانات</h4>
+                    <a class="box-btn secondary fw-700 p-0" href="#">
+                      <i class="board-add ms-2 fs-12"></i> اضافة إعلان 
+                    </a>
+                  </div>
+                    <div class="box-body">
+                      <ul class="custom-ul box-list">
+                        <li class="box-cell flex-between">
+                          <a href="#" class="custom-anc flex-between fast-link">
+                            <div class="flex-start gap-2">
+                              <div class="adv-card-img">
+                               <img src="../../assets/images/test1.jpg" class="h-img">
+                              </div>
+                               <div class="flex-column-start gap-1">
+                                 <h4 class="custom-h adv-card-title"> شركة المستقبل للإستثمار </h4>
+                                 <p class="custom-p adv-card-desc">30/5/2026</p>
+                               </div>
+                            </div>
+                            <span class="view-link flex-end gap-2">
+                              <i class="board-view-2 secondary"></i>
+                              <i class="board-edit-tool green"></i>
+                              <i class="board-bin"></i>
+                            </span>
+                          </a>
+                        </li>
+                           <li class="box-cell flex-between">
+                          <a href="#" class="custom-anc flex-between fast-link">
+                            <div class="flex-start gap-2">
+                              <div class="adv-card-img">
+                               <img src="../../assets/images/test1.jpg" class="h-img">
+                              </div>
+                               <div class="flex-column-start gap-1">
+                                 <h4 class="custom-h adv-card-title"> شركة المستقبل للإستثمار </h4>
+                                 <p class="custom-p adv-card-desc">30/5/2026</p>
+                               </div>
+                            </div>
+                            <span class="view-link flex-end gap-2">
+                              <i class="board-view-2 secondary"></i>
+                              <i class="board-edit-tool green"></i>
+                              <i class="board-bin"></i>
+                            </span>
+                          </a>
+                        </li>
+                           <li class="box-cell flex-between">
+                          <a href="#" class="custom-anc flex-between fast-link">
+                            <div class="flex-start gap-2">
+                              <div class="adv-card-img">
+                               <img src="../../assets/images/test1.jpg" class="h-img">
+                              </div>
+                               <div class="flex-column-start gap-1">
+                                 <h4 class="custom-h adv-card-title"> شركة المستقبل للإستثمار </h4>
+                                 <p class="custom-p adv-card-desc">30/5/2026</p>
+                               </div>
+                            </div>
+                            <span class="view-link flex-end gap-2">
+                              <i class="board-view-2 secondary"></i>
+                              <i class="board-edit-tool green"></i>
+                              <i class="board-bin"></i>
+                            </span>
+                          </a>
+                        </li>
+                           <li class="box-cell flex-between">
+                          <a href="#" class="custom-anc flex-between fast-link">
+                            <div class="flex-start gap-2">
+                              <div class="adv-card-img">
+                               <img src="../../assets/images/test1.jpg" class="h-img">
+                              </div>
+                               <div class="flex-column-start gap-1">
+                                 <h4 class="custom-h adv-card-title"> شركة المستقبل للإستثمار </h4>
+                                 <p class="custom-p adv-card-desc">30/5/2026</p>
+                               </div>
+                            </div>
+                            <span class="view-link flex-end gap-2">
+                              <i class="board-view-2 secondary"></i>
+                              <i class="board-edit-tool green"></i>
+                              <i class="board-bin"></i>
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
               <div class="box attendance-box bg-white">
                 <div class="box-head flex-between">
                   <h4 class="box-title custom-h fw-700 fs-20">المهام</h4>
@@ -1051,5 +1168,10 @@
     <script src="../../assets/js/custom.js"></script>
     <!-- To change status  -->
     <script src="../../assets/js/change-status.js"></script>
+    <!-- apex chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="../../assets/js/chart.js"></script>
+
+
   </body>
 </html>

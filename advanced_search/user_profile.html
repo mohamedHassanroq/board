@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FAVICONS ICON -->
+    <link rel="icon" type="image/png" href="../assets//images/favicon.svg" />
+    <!-- PAGE TITLE HERE -->
+    <title>Board</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Flatpicker (for date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<style>
+   
+</style>
+
+
+  </head>
+  <body>
+    <!-- aside -->
+    <aside class="sidebar">
+      <div class="aside_container">
+        <div class="aside_logo flex-start gap-2">
+          <img src="../assets/images/favicon.svg" class="img max-height" />
+          <img
+            src="../assets/images/logo_text.svg"
+            class="img max-height logo_title"
+          />
+        </div>
+        <ul class="aside_menu custom-ul flex-column-center" id="aside_menu">
+          <!-- active li -->
+          <li class="parent-nav-item aside_active">
+            <h6 class="aside_item_title custom-h">لوحة التحكم</h6>
+            <i class="board-dashboard"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإجتماعات</h6>
+            <i class="board-meeting--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المهام</h6>
+            <i class="board-task"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">إفصاحات</h6>
+            <i class="board-accounting"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">التقيمات</h6>
+            <i class="board-survey"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">مؤشرات الأداء</h6>
+            <i class="board-kpis"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">روابط سريعة</h6>
+            <i class="board-link--1-"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نماذج الملفات</h6>
+            <i class="board-open-folder"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">المستندات</h6>
+            <i class="board-document"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الخطة التدريبية</h6>
+            <i class="board-training"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">حوكمة الشركات</h6>
+            <i class="board-enterprise"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الدورات لتدريبية</h6>
+            <i class="board-book"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">عملية الترشيح</h6>
+            <i class="board-democracy"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">تقارير</h6>
+            <i class="board-report"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">الإعداادات</h6>
+            <i class="board-settings"></i>
+          </li>
+          <li class="parent-nav-item">
+            <h6 class="aside_item_title custom-h">نشاط السجل</h6>
+            <i class="board-activities"></i>
+          </li>
+        </ul>
+        <div class="aside_footer_logo text-center flex-end gap-2">
+          <h6 class="aside_footer_title fs-16 custom-h">Powered by</h6>
+          <img
+            src="../assets/images/mazaya_logo.svg"
+            class="img max-height mx-0"
+          />
+        </div>
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-content flex-between flex-wrap gap-3">
+          <div class="mainNav">
+            <div class="custom-ul flex-start mainNav-list">
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-calendar"></i>
+                <h4 class="mainNav-title custom-h">التقويم</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-meeting"></i>
+                <h4 class="mainNav-title custom-h">الاجتماعات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-megaphone"></i>
+                <h4 class="mainNav-title custom-h">الاعلانات</h4>
+              </a>
+              <a href="#" class="mainNav-item flex-column-center custom-anc">
+                <i class="board-advance-search"></i>
+                <h4 class="mainNav-title custom-h">بحث متقدم</h4>
+              </a>
+            </div>
+          </div>
+          <div class="navActions flex-center gap-2">
+            <div class="dropdown notification navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <div class="indicator icon">10</div>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown comment navAction_item">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="board-report"></i>
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown nav-userProfile">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://github.com/mdo.png"
+                  alt="hugenerd"
+                  width="40"
+                  height="40"
+                  class="rounded-circle mx-1 mx-md-2"
+                />
+              </button>
+              <ul class="dropdown-menu custom-dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start breadcrumb -->
+    <div class="breadcrumb-content">
+      <div class="container-fluid">
+        <ul class="breadcrumb custom-ul d-flex">
+          <li class="active">
+            <a href="index.html" class="custom-anc">
+              <i class="board-user--1-"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">الإجتماعات</a>
+          </li>
+          <li>
+            <a href="#" class="custom-anc">قرارات بالتمرير</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End breadcrumb -->
+    <!-- main -->
+    <div id="content">
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="meeting-grid-container">
+           <div class="metting-sidebar custom-card w-100">
+                <ul class="custom-ul flex-column-start gap-2 nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item w-100" role="presentation">
+                        <button class="metting_list_item  nav-link active" id="user_data-tab" data-bs-toggle="tab" data-bs-target="#user_data" type="button" role="tab">
+                         بيانات العضوية  
+                        </button>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <button class="metting_list_item  nav-link" id="user_location-tab" data-bs-toggle="tab" data-bs-target="#user_location" type="button" role="tab">
+                        العنوان الشخصي
+                        </button>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <button class="metting_list_item  nav-link" id="company_data-tab" data-bs-toggle="tab" data-bs-target="#company_data" type="button" role="tab">
+                         بيانات الشركة  
+                        </button>
+                    </li>
+                    <li class="nav-item w-100" role="presentation">
+                        <button class="metting_list_item  nav-link" id="document-tab" data-bs-toggle="tab" data-bs-target="#document" type="button" role="tab">
+                        المستندات
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="metting-details flex-column-start">
+                <!-- Tab content -->
+                <div class="tab-content w-100" id="myTabContent">
+                    <div class="tab-pane fade show active" id="user_data" role="tabpanel" >
+                        <form class="filter-section custom-card w-100">
+                        <div class="card-header">
+                        <div class="table-title">بيانات العضوية</div>                           
+                        </div>
+                        <div class="card-body mb-3">
+                            <div class="img_uplod">
+                                <div class="user_img_upload" onclick="document.getElementById('uploadInput').click()">
+                                    <img id="userImage" src="../assets/images/default.png" alt="User Image">
+                                </div>
+                                <div class="img_upload_icon icon">
+                                   <i class="fa-solid fa-camera custom-i"></i>
+                                </div>
+                                <input type="file" id="uploadInput" accept="image/*" style="display:none" onchange="previewImage(event)">
+                            </div>
+                           
+                            <div class="grid-2 w-100">
+                                <div class="form-group">
+                                <label for="name(Ar)" class="form-label">
+                                    الاسم باللغة العربية 
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name(Ar)"
+                                    class="form-control"
+                                    value="أحمد محمد عبد الله"
+                                    required
+                                />
+                                </div>
+                                <div class="form-group">
+                                <label for="name(En)" class="form-label">
+                                    الاسم باللغة الإنجليزية 
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name(En)"
+                                    class="form-control"
+                                    value="Ahmed Mohamed"
+                                    required
+                                />
+                                </div>
+                                <div class="form-group">
+                                <label for="password" class="form-label">
+                                كلمة المرور
+                                </label>
+                                <input
+                                    type="password"
+                                    value="ssss"
+                                    id="password"
+                                    class="form-control"
+                                    required
+                                />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">
+                                    البريد الإلكتروني
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        class="form-control"
+                                        value="info@gmail.com"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email2" class="form-label">
+                                        بريد النسخه الاخرى
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email2"
+                                        class="form-control"
+                                        value="info@gmail.com"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group ">
+                                    <label for="number" class="form-label">
+                                        رقم المباشر
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="number"
+                                        class="form-control"
+                                        value="123333"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group ">
+                                    <label for="number" class="form-label">
+                                        رقم البدالة / الرقم الداخلى
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="number"
+                                        class="form-control"
+                                        value="123333"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group w-100">
+                                        <label class="custom-label">الجنس</label>
+                                        <div class="custom-radio flex-between form-control">
+                                            <span class="text-muted">اختر</span>
+                                            <div class="radio-group">
+                                                <div class="form-check form-check-inline">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="gender"
+                                                        id="male"
+                                                        value="male"
+                                                        checked
+                                                    />
+                                                <label class="form-check-label" for="male"> ذكر</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input
+                                                    class="form-check-input"
+                                                    type="radio"
+                                                    name="gender"
+                                                    id="female"
+                                                    value="female"
+                                                    />
+                                                    <label class="form-check-label" for="female">أنثي</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="number" class="form-label">
+                                        رقم البدالة / الرقم الداخلى
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="number"
+                                        class="form-control"
+                                        value="123333"
+                                        required
+                                    />
+                                </div>
+                                <div class="position-relative">
+                                    <label for="date_from" class="form-label">تاريخ العضوية</label>
+                                    <input
+                                    type="datetime-local"
+                                    class="form-control input_flat_picker"
+                                    id="date_from"
+                                    placeholder="اختر"
+                                    />
+                                    <i class="board-calendar flat_picker_icon"></i>
+                                </div>
+                                <div class="required">
+                                    <label for="Disclosures-type" class="form-label">اللجان</label>
+                                    <select id="Disclosures-type" class="form-select" required>
+                                    <option selected disabled>إدرة المخاطر | لجنة رقم 2</option>
+                                    <option>في انتظار التوقيع</option>
+                                    <option>غير مسموح بالتوقيع</option>
+                                    </select>
+                                </div>
+                                <div class="form-check form-check-inline full-width">
+                                                        <input
+                                                            class="form-check-input custom-checkbox"
+                                                            type="checkbox"
+                                                            id="checkboxBoardMember"
+                                                            value="board_member"/>
+                                                        <label class="form-check-label" for="checkboxBoardMember">عضو مطلع</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer flex-end gap-2">
+                            <button class="custom-btn border-seconadry-btn min-btn-width fltr-btn">
+                            مسح
+                            </button>
+                            <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="user_location" role="tabpanel">
+                        <form class="filter-section custom-card w-100">
+                            <div class="card-header">
+                                <div class="table-title">بيانات العضوية</div>                           
+                            </div>
+                            <div class="card-body mb-3">
+                                    <div class="grid-2 w-100">
+                                        <div class="form-group">
+                                        <label for="name(Ar)" class="form-label">
+                                            الاسم باللغة العربية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(Ar)"
+                                            class="form-control"
+                                            value="أحمد محمد عبد الله"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="name(En)" class="form-label">
+                                            الاسم باللغة الإنجليزية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(En)"
+                                            class="form-control"
+                                            value="Ahmed Mohamed"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="password" class="form-label">
+                                        كلمة المرور
+                                        </label>
+                                        <input
+                                            type="password"
+                                            value="ssss"
+                                            id="password"
+                                            class="form-control"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                            البريد الإلكتروني
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                class="form-control"
+                                                value="info@gmail.com"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email2" class="form-label">
+                                                بريد النسخه الاخرى
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email2"
+                                                class="form-control"
+                                                value="info@gmail.com"
+                                                required
+                                            />
+                                        </div>
+                                    
+                                    </div>
+                            </div>
+                            <div class="card-footer flex-end gap-2">
+                                    <button class="custom-btn border-seconadry-btn min-btn-width fltr-btn">
+                                    مسح
+                                    </button>
+                                    <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="company_data" role="tabpanel">
+                        <form class="filter-section custom-card w-100">
+                            <div class="card-header">
+                                <div class="table-title">بيانات العضوية</div>                           
+                            </div>
+                            <div class="card-body mb-3">
+                                    <div class="grid-2 w-100">
+                                        <div class="form-group">
+                                        <label for="name(Ar)" class="form-label">
+                                            الاسم باللغة العربية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(Ar)"
+                                            class="form-control"
+                                            value="أحمد محمد عبد الله"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="name(En)" class="form-label">
+                                            الاسم باللغة الإنجليزية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(En)"
+                                            class="form-control"
+                                            value="Ahmed Mohamed"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="password" class="form-label">
+                                        كلمة المرور
+                                        </label>
+                                        <input
+                                            type="password"
+                                            value="ssss"
+                                            id="password"
+                                            class="form-control"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                            البريد الإلكتروني
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                class="form-control"
+                                                value="info@gmail.com"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email2" class="form-label">
+                                                بريد النسخه الاخرى
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email2"
+                                                class="form-control"
+                                                value="info@gmail.com"
+                                                required
+                                            />
+                                        </div>
+                                    
+                                    </div>
+                            </div>
+                            <div class="card-footer flex-end gap-2">
+                                    <button class="custom-btn border-seconadry-btn min-btn-width fltr-btn">
+                                    مسح
+                                    </button>
+                                    <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="document" role="tabpanel">
+                       <form class="filter-section custom-card w-100">
+                            <div class="card-header">
+                                <div class="table-title">المستندات</div>                           
+                            </div>
+                            <div class="card-body mb-3">
+                                    <div class="grid-2 w-100">
+                                        <div class="form-group">
+                                        <label for="name(Ar)" class="form-label">
+                                            المسمى الوظيفي باللغة العربية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(Ar)"
+                                            class="form-control"
+                                            value="أحمد محمد عبد الله"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="name(En)" class="form-label">
+                                            المسمى الوظيفي باللغة الإنجليزية 
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name(En)"
+                                            class="form-control"
+                                            value="Ahmed Mohamed"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="password" class="form-label">
+                                        كلمة المرور
+                                        </label>
+                                        <input
+                                            type="password"
+                                            value="ssss"
+                                            id="password"
+                                            class="form-control"
+                                            required
+                                        />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">
+                                            البريد الإلكتروني
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                class="form-control"
+                                                value="info@gmail.com"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form-group required">
+                                            <label for="file-upload" class="custom-label"
+                                            >السيرة الذاتية</label
+                                            >
+                                            <div class="input-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="تحميل"
+                                                readonly
+                                                id="file-name"
+                                                style="cursor: pointer"
+                                            />
+                                            <input type="file" id="file-upload" hidden/>
+                                            </div>
+                                            <div id="file-info"></div>
+                                        </div>
+                                          <div class="form-group required">
+                                            <label for="file-upload" class="custom-label"
+                                            >صورة جواز السفر</label
+                                            >
+                                            <div class="input-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="تحميل"
+                                                readonly
+                                                id="file-name"
+                                                style="cursor: pointer"
+                                            />
+                                            <input type="file" id="file-upload" hidden/>
+                                            </div>
+                                            <div id="file-info"></div>
+                                        </div>
+                                          <div class="form-group required">
+                                            <label for="file-upload" class="custom-label"
+                                            >صورة البطاقة المدنية</label
+                                            >
+                                            <div class="input-group">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="تحميل"
+                                                readonly
+                                                id="file-name"
+                                                style="cursor: pointer"
+                                            />
+                                            <input type="file" id="file-upload" hidden/>
+                                            </div>
+                                            <div id="file-info"></div>
+                                        </div>
+                                    
+                                    </div>
+                            </div>
+                            <div class="card-footer flex-end gap-2">
+                                    <button class="custom-btn border-seconadry-btn min-btn-width fltr-btn">
+                                    مسح
+                                    </button>
+                                    <button class="custom-btn secondary-btn min-btn-width">حفظ التعديلات</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         
+
+                    
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+
+    <!-- Flatpicker (for date picker)  -->
+    <script src="../assets/js/flatpickr.min.js"></script>
+    <script src="../assets/js/flatpicker-custom.js"></script>
+
+    <script>
+function previewImage(event) {
+  const reader = new FileReader();
+  reader.onload = function(){
+    document.getElementById('userImage').src = reader.result;
+  }
+  reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+
+  </body>
+</html>

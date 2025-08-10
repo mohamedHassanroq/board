@@ -466,16 +466,14 @@
         });
       });
 
-      document.addEventListener("DOMContentLoaded", function () {
-        let headerToolbar = document.querySelector(".fc-header-toolbar");
-        let targetContainer = document.querySelector("#toolbar_parent");
-        if (headerToolbar && targetContainer && targetContainer.firstChild) {
-          targetContainer.insertBefore(
-            headerToolbar,
-            targetContainer.firstChild
-          );
-        }
-      });
+      //add headerToolbar in div(pagefilter) section 
+     document.addEventListener('DOMContentLoaded', function () {
+  let headerToolbar = document.querySelector('.fc-header-toolbar');
+  let targetContainer = document.querySelector('#toolbar_parent');
+  if (headerToolbar && targetContainer) {
+    targetContainer.appendChild(headerToolbar);
+  }
+});
     </script>
   </body>
 </html>
